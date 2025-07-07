@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noble Life Co. | Free Plan Review</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,11 +66,12 @@
         .form-input {
              display: block;
              width: 100%;
-             padding: 0.75rem;
+             padding: 1rem; /* Increased padding for taller fields */
              background-color: white;
              border: 1px solid #D1D5DB;
              border-radius: 0.5rem;
              box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+             font-size: 1rem; /* Ensure consistent font size */
         }
         .form-input:focus {
              outline: 2px solid transparent;
@@ -178,24 +180,21 @@
 </head>
 <body class="text-[#1f2937]">
 
-    <header class="container mx-auto max-w-6xl px-4 py-4 flex justify-between items-center no-print">
-        <a href="#" aria-label="Noble Life Co. Home">
-            <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-12 md:h-14 logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x60/0d9488/ffffff?text=Noble+Life+Co.';">
-        </a>
-        <p class="text-sm font-semibold text-gray-500 hidden md:block">Peace of mind for your loved ones.</p>
-    </header>
-    <hr class="no-print"/>
-
     <main class="container mx-auto max-w-6xl px-4 pt-12 pb-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <!-- Left Sidebar: Step Indicator -->
             <aside class="hidden md:block md:col-span-1">
-                <div class="sticky top-28">
-                    <div class="bg-teal-50 border border-teal-200 rounded-lg p-6">
-                        <h3 class="font-bold text-lg text-teal-800 mb-4">Your Progress</h3>
-                        <ol id="step-indicator" class="space-y-4">
-                            <!-- Step indicator items will be injected here -->
-                        </ol>
+                <div class="sticky top-8">
+                    <div class="bg-teal-50 border border-teal-200 rounded-lg p-6 text-center">
+                        <a href="#" aria-label="Noble Life Co. Home" class="block mb-6">
+                            <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-12 md:h-14 logo-teal inline-block" onerror="this.onerror=null;this.src='https://placehold.co/240x60/0d9488/ffffff?text=Noble+Life+Co.';">
+                        </a>
+                        <div class="pt-6 border-t border-teal-200">
+                             <h3 class="font-bold text-lg text-teal-800 mb-4">Your Progress</h3>
+                             <ol id="step-indicator" class="text-left">
+                                 <!-- Step indicator items will be injected here -->
+                             </ol>
+                        </div>
                     </div>
                 </div>
             </aside>
@@ -242,7 +241,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // --- CONFIGURATION & CONSTANTS ---
-            const MOCK_CURRENT_DATE = new Date('2025-07-06T17:05:00-04:00'); // Sunday, July 6, 2025, 5:05 PM EDT
+            const MOCK_CURRENT_DATE = new Date('2025-07-07T10:57:00-04:00'); // Monday, July 7, 2025, 10:57 AM EDT
 
             // --- ELEMENT REFERENCES ---
             const formContainer = document.getElementById('form-container');
@@ -659,17 +658,24 @@
                 phases.forEach((phase, index) => {
                     const li = document.createElement('li');
                     li.id = `phase-${phase.id}`;
-                    li.className = 'flex items-start';
+                    li.className = 'relative';
+                    // Add padding-bottom to all but the last item to make space for the line
+                    if (index < phases.length - 1) {
+                        li.classList.add('pb-12');
+                    }
+
                     li.innerHTML = `
-                        <div class="flex flex-col items-center mr-4">
-                            <div class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-300 text-gray-500 font-bold transition-colors duration-300">
-                                <span class="check-icon hidden text-white">✓</span>
+                        <!-- Connecting line -->
+                        ${index < phases.length - 1 ? '<div class="line absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-300 transition-colors duration-300"></div>' : ''}
+                        
+                        <div class="relative flex items-center space-x-4">
+                            <div class="circle-container z-10 w-8 h-8 rounded-full flex items-center justify-center bg-gray-300 text-gray-500 font-bold transition-colors duration-300 flex-shrink-0">
+                                <span class="check-icon hidden text-white">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                </span>
                                 <span class="number-icon">${phase.id}</span>
                             </div>
-                            ${index < phases.length - 1 ? '<div class="w-px h-12 bg-gray-300 transition-colors duration-300"></div>' : ''}
-                        </div>
-                        <div class="pt-1">
-                            <p class="font-bold text-gray-500 transition-colors duration-300">${phase.title}</p>
+                            <p class="text-container font-bold text-gray-500 transition-colors duration-300">${phase.title}</p>
                         </div>
                     `;
                     stepIndicator.appendChild(li);
@@ -695,36 +701,45 @@
                 if (stepIndicator) {
                     phases.forEach(phase => {
                         const phaseEl = document.getElementById(`phase-${phase.id}`);
-                        const circle = phaseEl.querySelector('.w-8.h-8');
+                        const line = phaseEl.querySelector('.line');
+                        const circle = phaseEl.querySelector('.circle-container');
                         const check = phaseEl.querySelector('.check-icon');
                         const number = phaseEl.querySelector('.number-icon');
-                        const text = phaseEl.querySelector('p');
-                        const line = phaseEl.querySelector('.w-px');
+                        const text = phaseEl.querySelector('.text-container');
 
                         if (phase.id < currentPhase) { // Completed phase
+                            if (line) {
+                                line.classList.remove('bg-gray-300');
+                                line.classList.add('bg-teal-600');
+                            }
                             circle.classList.remove('bg-gray-300', 'text-gray-500');
                             circle.classList.add('bg-teal-600', 'text-white');
                             check.classList.remove('hidden');
                             number.classList.add('hidden');
                             text.classList.remove('text-gray-500');
-                            text.classList.add('text-teal-700');
-                            if (line) line.classList.add('bg-teal-600');
+                            text.classList.add('text-teal-800');
                         } else if (phase.id === currentPhase) { // Current phase
+                            if (line) {
+                                line.classList.remove('bg-teal-600');
+                                line.classList.add('bg-gray-300');
+                            }
                             circle.classList.remove('bg-gray-300', 'text-gray-500');
                             circle.classList.add('bg-teal-600', 'text-white');
                             check.classList.add('hidden');
                             number.classList.remove('hidden');
                             text.classList.remove('text-gray-500');
-                            text.classList.add('text-teal-700');
-                             if (line) line.classList.remove('bg-teal-600');
+                            text.classList.add('text-teal-800');
                         } else { // Future phase
+                            if (line) {
+                                line.classList.remove('bg-teal-600');
+                                line.classList.add('bg-gray-300');
+                            }
                             circle.classList.remove('bg-teal-600', 'text-white');
                             circle.classList.add('bg-gray-300', 'text-gray-500');
                             check.classList.add('hidden');
                             number.classList.remove('hidden');
-                            text.classList.remove('text-teal-700');
+                            text.classList.remove('text-teal-800');
                             text.classList.add('text-gray-500');
-                             if (line) line.classList.remove('bg-teal-600');
                         }
                     });
                 }
