@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noble Life Co. | Secure Your Family's Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFDFD;
+        }
+        .font-serif {
+            font-family: 'Lora', serif;
+        }
+        .cta-button {
+            background-color: #0d9488; /* Teal 600 */
+            color: white;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
+        }
+        .cta-button:hover {
+            background-color: #0f766e; /* Teal 700 */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+        }
+        .section-padding {
+            padding: 4rem 1.5rem;
+        }
+        /* Styles for Sticky Header */
+        #sticky-header {
+            transition: all 0.3s ease-in-out;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 1rem;
+            }
+        }
+        /* Custom styles for the range slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: var(--track-bg-color, #d1fae5); 
+            border-radius: 5px;
+            outline: none;
+            transition: background 0.3s ease;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            background: var(--thumb-color, #0d9488);
+            cursor: pointer;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease;
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            background: var(--thumb-color, #0d9488);
+            cursor: pointer;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: background 0.3s ease;
+        }
+        .logo-teal {
+            filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(130deg) saturate(5);
+        }
+        .logo-white {
+            filter: brightness(0) invert(1);
+        }
+        .hero-gradient {
+            background-color: #ffffff;
+            background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 88%, 0.5) 0, transparent 40%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header id="sticky-header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center">
+            <a href="form.html" aria-label="Noble Life Co. Home">
+                <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+            </a>
+            <a href="form.html" class="cta-button !py-3 !px-8 text-base">Calculate My Payment</a>
+        </div>
+    </header>
+
+    <main style="padding-top: 90px;"> <!-- Adjust padding to prevent content from hiding behind sticky header -->
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="section-padding hero-gradient">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                     <h1 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight">When You Pass Away, Will Your Family Get a $12,000 Bill or a $12,000 Check?</h1>
+                    <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0">With the average funeral costing over $9,000, that bill is due immediately. Protect your family from that sudden expense with a plan that locks in a low monthly payment forever. No medical exam required.</p>
+                    <a href="form.html" class="cta-button inline-flex items-center justify-center mt-8 text-lg">
+                        <span>Calculate My Monthly Payment</span>
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </a>
+                     <div class="mt-8 flex flex-col sm:flex-row sm:flex-nowrap justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Rates Locked-In For Life</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>No Medical Exam Required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center p-4">
+                     <img src="https://i.imgur.com/Si0ul4i.png" class="rounded-lg shadow-2xl w-full max-w-md" alt="Happy senior couple enjoying peace of mind on a beach">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Credibility Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto max-w-5xl text-center">
+            <h2 class="text-sm font-bold text-gray-500 tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center px-4">
+                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/HeR4byL.png" alt="Mutual of Omaha Logo" class="max-h-12 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
+                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/Iq5ZyJK.png" alt="Prudential Logo" class="max-h-12 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
+                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/VwSpm9h.png" alt="Gerber Life Logo" class="max-h-12 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
+                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/rgUZFXC.png" alt="Transamerica Logo" class="max-h-12 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem & The Proof Section -->
+    <section id="how-it-works" class="section-padding" style="background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="flex justify-center mb-12">
+                    <img src="https://i.imgur.com/ZJi1yxh.jpeg" alt="A happy senior woman, representing peace of mind" class="w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg">
+                </div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Don't Let Your Family's Last Memory<br class="hidden md:block"> Be a Financial Burden.</h2>
+                <p class="mt-4 text-lg text-gray-600">Many families assume other sources will cover the cost, but the reality is a shock to most:</p>
+                <div class="mt-10 text-left bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 divide-y divide-gray-100">
+                    <!-- Social Security -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+                        <div class="flex-shrink-0 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-orange-600">$255</span></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg">Social Security</h3>
+                            <p class="text-gray-600 mt-1">Provides a one-time payment of just <strong class="text-orange-600 font-bold">$255</strong>—an amount that hasn't changed since 1954.</p>
+                        </div>
+                    </div>
+                    <!-- Veterans Benefits -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+                        <div class="flex-shrink-0 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-orange-600">$796</span></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg">Veterans Benefits (VA)</h3>
+                            <p class="text-gray-600 mt-1">For most non-service-related deaths, the VA provides only <strong class="text-orange-600 font-bold">$796</strong>.</p>
+                        </div>
+                    </div>
+                    <!-- GoFundMe -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+                        <div class="flex-shrink-0 w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-xl font-bold text-yellow-600">$1.2k</span></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg">GoFundMe</h3>
+                            <p class="text-gray-600 mt-1">The average campaign raises only <strong class="text-yellow-600 font-bold">$1,200</strong>, leaving a huge shortfall.</p>
+                        </div>
+                    </div>
+                    <!-- Medicare -->
+                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+                        <div class="flex-shrink-0 w-16 h-16 bg-red-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-3xl font-bold text-red-600">$0</span></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-lg">Medicare</h3>
+                            <p class="text-gray-600 mt-1">Provides <strong class="text-red-600 font-bold">$0</strong> for funeral expenses. Health insurance does not cover funeral costs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- NEW "Dignity, Family, Legacy" Section -->
+    <section class="relative bg-gray-900">
+        <img src="https://i.imgur.com/cGKhN7n.png" alt="Couple looking out over the ocean at sunset" class="absolute inset-0 w-full h-full object-cover object-center opacity-20">
+        <div class="relative container mx-auto max-w-6xl px-4 py-24 sm:py-32 text-center text-white">
+             <h2 class="text-4xl lg:text-5xl font-serif font-bold leading-tight">Dignity, Family, Legacy.</h2>
+             <p class="mt-4 text-lg text-teal-200 max-w-2xl mx-auto">Ensure your final wishes are honored and your loved ones are cared for. That's the promise of a final expense plan from Noble Life Co.</p>
+             <a href="form.html" class="cta-button inline-block mt-8 !py-3 !px-8">Secure Your Legacy</a>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="final-cta" class="section-padding" style="background: linear-gradient(180deg, #f9fafb 0%, #eef2ff 100%);">
+        <div class="container mx-auto max-w-3xl text-center">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Lock In Your Rate Before<br class="hidden md:block"> Your Next Birthday</h2>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Your age is the #1 factor in your premium. The rate you lock in today can never be increased, but the longer you wait, the more it will cost. See your personalized rate in seconds.</p>
+            
+            <div class="mt-12 bg-white p-8 rounded-2xl shadow-xl border border-gray-200 max-w-2xl mx-auto">
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="text-sm text-gray-500">Your Current Age</p>
+                        <p id="ageDisplay" class="text-3xl font-bold text-gray-900">55</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 text-right">Illustrative Monthly Payment</p>
+                        <p id="rateDisplay" class="text-3xl font-bold text-teal-600">$42</p>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <input type="range" min="50" max="85" value="55" id="ageSlider">
+                </div>
+                <div id="tooltipContainer" class="mt-6 rounded-lg p-4 text-center transition-colors duration-300">
+                    <p id="savingsMessage"></p>
+                </div>
+                <a href="form.html" class="cta-button inline-flex items-center justify-center mt-6 text-lg w-full sm:w-auto">
+                    <span>Calculate My Final Rate</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                 </a>
+                 <p class="text-xs text-gray-500 mt-4">30-Day Money-Back Guarantee. No questions asked.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto max-w-6xl py-12 px-4">
+            <div class="text-center mb-8">
+                <a href="form.html" aria-label="Noble Life Co. Home">
+                    <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 mb-2 mx-auto logo-white" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';">
+                </a>
+                <p class="text-sm text-gray-400">Complete protection for your loved ones.</p>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-400">
+                 <div class="max-w-4xl mx-auto space-y-2">
+                    <p>&copy; 2025 Noble Life Co. All rights reserved. Not available in all states.</p>
+                    <p>Final expense insurance policies are designed to help cover costs associated with end-of-life expenses. Acceptance and final rates are based on answers to health questions and other factors including age and gender. Insurance policies are issued by various highly-rated insurance carriers based on qualification.</p>
+                    <p>By providing your information, you agree to be contacted by a licensed insurance professional about final expense coverage options, even if your number is on any state or federal "Do Not Call" list. This is an invitation to receive information about insurance coverage options, not an offer of insurance.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header Shadow on Scroll
+        const stickyHeader = document.getElementById('sticky-header');
+        if (stickyHeader) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    stickyHeader.classList.add('shadow-lg');
+                    stickyHeader.classList.remove('shadow-sm');
+                } else {
+                    stickyHeader.classList.remove('shadow-lg');
+                    stickyHeader.classList.add('shadow-sm');
+                }
+            });
+        }
+
+        // Rate-Lock Simulator
+        const ageSlider = document.getElementById('ageSlider');
+        const ageDisplay = document.getElementById('ageDisplay');
+        const rateDisplay = document.getElementById('rateDisplay');
+        const tooltipContainer = document.getElementById('tooltipContainer');
+        const savingsMessage = document.getElementById('savingsMessage');
+
+        function calculateRate(age) {
+            // Using an exponential formula for more realistic rate increases
+            const baseRate = 30; 
+            const growthFactor = 1.07; // Represents a 7% increase per year of age
+            return baseRate * Math.pow(growthFactor, age - 50);
+        }
+
+        function updateSimulator() {
+            if (!ageSlider) return; 
+            const currentAge = parseInt(ageSlider.value);
+            
+            // Update displays
+            ageDisplay.textContent = currentAge;
+            const currentRate = calculateRate(currentAge);
+            rateDisplay.textContent = `$${Math.round(currentRate)}`;
+
+            const root = document.documentElement;
+            
+            // Handle savings message
+            if (currentAge <= 80) { // Only show savings comparison up to age 80
+                const annualCostOfWaiting = (calculateRate(currentAge + 1) - currentRate) * 12;
+
+                savingsMessage.innerHTML = `Waiting just one year could cost <strong>$${Math.round(annualCostOfWaiting)} more annually.</strong> Lock in your rate at age <strong>${currentAge}</strong> to protect your family and your wallet.`;
+                
+                if (currentAge <= 65) {
+                    root.style.setProperty('--thumb-color', '#10B981'); 
+                    root.style.setProperty('--track-bg-color', '#D1FAE5');
+                    tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-green-100 text-green-800';
+                } else {
+                    root.style.setProperty('--thumb-color', '#F59E0B'); 
+                    root.style.setProperty('--track-bg-color', '#FEF3C7');
+                    tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-yellow-100 text-yellow-800';
+                }
+            } else { // Message for ages over 80
+                root.style.setProperty('--thumb-color', '#EF4444'); 
+                root.style.setProperty('--track-bg-color', '#FEE2E2');
+                tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-red-100 text-red-800';
+                savingsMessage.innerHTML = `At age <strong>${currentAge}</strong>, coverage options become more limited and costs are significantly higher. Act now to ensure you're protected.`;
+            }
+        }
+        
+        if (ageSlider) {
+            ageSlider.addEventListener('input', updateSimulator);
+            // Initial call to set the values on page load
+            updateSimulator();
+        }
+    </script>
+</body>
+</html>
