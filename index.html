@@ -3,39 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noble Life Co. | Secure Your Family's Future</title>
+    <title>Noble Life Co. | Protect What Matters Most</title>
+    <meta name="description" content="Protect your family's future with Noble Life Co.'s life insurance plans. Get personalized coverage in seconds.">
+    <meta name="keywords" content="life insurance, final expense, mortgage protection, Noble Life Co.">
 
-    <!-- Favicon for browser tabs -->
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
 
-    <!-- Open Graph / Social Media Meta Tags for Link Previews -->
-    <meta property="og:title" content="Noble Life Co. | Secure Your Family's Future">
-    <meta property="og:description" content="Protect your family's future with a personalized final expense plan. Get a free, no-obligation quote in minutes.">
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Noble Life Co. | Protect What Matters Most">
+    <meta property="og:description" content="Get the life insurance coverage your family needs. Find your personalized plan in seconds.">
     <meta property="og:image" content="https://i.imgur.com/sIzPnyV.png">
     <meta property="og:url" content="https://noblelifeco.com">
     <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Noble Life Co. | Secure Your Family's Future">
-    <meta name="twitter:description" content="Protect your family's future with a personalized final expense plan. Get a free, no-obligation quote in minutes.">
-    <meta name="twitter:image" content="https://i.imgur.com/sIzPnyV.png">
 
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Scripts and Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-   
-   <style>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Alpine.js for Interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Lora', 'serif']
+                    },
+                     colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg-color: #FDFDFD;
+            --text-color: #1f2937;
+            --teal-600: #0d9488;
+            --teal-700: #0f766e;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FDFDFD;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
         .font-serif {
             font-family: 'Lora', serif;
         }
         .cta-button {
-            background-color: #0d9488; /* Teal 600 */
+            background-color: var(--teal-600);
             color: white;
             font-weight: 700;
             padding: 1rem 2.5rem;
@@ -44,235 +79,238 @@
             box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
         }
         .cta-button:hover {
-            background-color: #0f766e; /* Teal 700 */
+            background-color: var(--teal-700);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
         }
-        .section-padding {
-            padding: 4rem 1.5rem;
+        .cta-button:focus-visible {
+            outline: 3px solid var(--teal-600);
+            outline-offset: 2px;
         }
-        /* Styles for Sticky Header */
-        #sticky-header {
-            transition: all 0.3s ease-in-out;
+        .product-link {
+            border-color: #e5e7eb; /* gray-200 */
+            transition: all 0.3s ease;
         }
-        @media (min-width: 768px) {
-            .section-padding {
-                padding: 6rem 1rem;
-            }
+        .product-link:hover {
+            border-color: var(--teal-600);
+            box-shadow: 0 4px 14px 0 rgba(13, 148, 136, 0.1);
+            transform: translateY(-2px);
         }
-        /* Custom styles for the range slider */
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 100%;
-            height: 8px;
-            background: var(--track-bg-color, #d1fae5); 
-            border-radius: 5px;
-            outline: none;
-            transition: background 0.3s ease;
+        .product-link:focus-visible {
+            outline: 3px solid var(--teal-600);
+            outline-offset: -1px;
+            border-color: var(--teal-600);
         }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            background: var(--thumb-color, #0d9488);
-            cursor: pointer;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 5px rgba(0,0,0,0.2);
-            transition: background 0.3s ease;
-        }
-        input[type="range"]::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
-            background: var(--thumb-color, #0d9488);
-            cursor: pointer;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 5px rgba(0,0,0,0.2);
-            transition: background 0.3s ease;
-        }
-        .logo-teal {
-            filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(130deg) saturate(5);
-        }
-        .logo-white {
-            filter: brightness(0) invert(1);
-        }
-        .hero-gradient {
-            background-color: #ffffff;
-            background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 88%, 0.5) 0, transparent 40%);
-        }
-        /* Exit-Intent Modal Styles */
-        .modal-overlay {
-            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: radial-gradient(circle at center, rgba(15, 76, 71, 0.85), rgba(5, 25, 23, 0.95));
-        }
-        .modal-content {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border-radius: 1rem;
-        }
-        /* NEW: Custom class for the subtle inner bottom shadow */
         .inner-shadow-bottom {
             box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.05);
         }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        #hero-section {
+            background-color: #f3f4f6;
+        }
+        /* Animation for sections */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Noble Life Co.",
+      "url": "https://noblelifeco.com",
+      "logo": "https://i.imgur.com/AJ0ugyo.png",
+      "description": "Noble Life Co. provides life insurance, final expense, and mortgage protection plans to secure your family's future.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "support@noblelifeco.com"
+      }
+    }
+    </script>
 </head>
 <body class="text-gray-800 antialiased">
 
     <!-- Header -->
-    <header id="sticky-header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
-        <div class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center">
-            <a href="form.html" aria-label="Noble Life Co. Home">
-                <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+    <header id="sticky-header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm" role="banner">
+        <nav class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
+            <a href="/" aria-label="Noble Life Co. Home">
+                 <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. logo" class="h-14 md:h-16 w-auto" style="filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(130deg) saturate(5);" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
             </a>
-            <a href="form.html" class="cta-button !py-3 !px-8 text-base">Calculate My&nbsp;Payment</a>
-        </div>
+        </nav>
     </header>
 
-    <main style="padding-top: 90px;"> <!-- Adjust padding to prevent content from hiding behind sticky header -->
+    <main id="main-content">
 
-    <!-- Section 1: Hero -->
-    <section id="hero" class="section-padding hero-gradient">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                     <h1 class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight">When You Pass Away, Will Your Family Get a $12,000 Bill or a $12,000 Check?</h1>
-                    <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0">With the average funeral costing over $9,000, that bill is due immediately. Protect your family from that sudden expense with a plan that locks in a low monthly payment forever. No medical exam required.</p>
-                    <a href="form.html" class="cta-button inline-flex items-center justify-center mt-8 text-lg">
-                        <span>Calculate My&nbsp;Monthly&nbsp;Payment</span>
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                    </a>
-                     <div class="mt-8 flex flex-col sm:flex-row sm:flex-nowrap justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-gray-600">
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>Rates Locked-In For Life</span>
-                        </div>
-                        <div class="flex items-center">
-                            <svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            <span>No Medical Exam Required</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center p-4">
-                     <img src="https://i.imgur.com/6Xa7utw.jpeg" class="rounded-lg shadow-2xl w-full max-w-md" alt="Happy family with multiple generations">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust & Credibility Section -->
-    <!-- UPDATED: Added the inner-shadow-bottom class -->
-    <section class="py-12 bg-gray-50 inner-shadow-bottom">
-        <div class="container mx-auto max-w-5xl text-center">
-            <h2 class="text-sm font-bold text-gray-500 tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
-            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center px-4">
-                <!-- Carrier Logos - Increased size -->
-                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/HeR4byL.png" alt="Mutual of Omaha Logo" class="h-16 md:h-16 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
-                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/Iq5ZyJK.png" alt="Prudential Logo" class="h-16 md:h-16 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
-                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/VwSpm9h.png" alt="Gerber Life Logo" class="h-20 md:h-20 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
-                <div class="flex justify-center items-center h-20"><img src="https://i.imgur.com/rgUZFXC.png" alt="Transamerica Logo" class="h-16 md:h-16 max-w-full grayscale hover:grayscale-0 transition-all duration-300"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Problem & The Proof Section -->
-    <section id="how-it-works" class="section-padding" style="background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);">
-        <div class="container mx-auto max-w-5xl">
-            <div class="text-center max-w-3xl mx-auto">
-                <div class="flex justify-center mb-12">
-                    <img src="https://i.imgur.com/Si0ul4i.png" alt="A happy family, representing peace of mind" class="w-56 h-56 rounded-full object-cover border-4 border-white shadow-lg">
-                </div>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Don't Let Your Family's Last Memory<br class="hidden md:block"> Be a Financial Burden.</h2>
-                <p class="mt-4 text-lg text-gray-600">Many families assume other sources will cover the cost, but the reality is a shock to most:</p>
-                <div class="mt-10 text-left bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-100 divide-y divide-gray-100">
-                    <!-- Social Security -->
-                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
-                        <div class="flex-shrink-0 w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-orange-600">$255</span></div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Social Security</h3>
-                            <p class="text-gray-600 mt-1">Provides a one-time payment of just <strong class="text-orange-600 font-bold">$255</strong>—an amount that hasn't changed since 1954.</p>
-                        </div>
-                    </div>
-                    <!-- Veterans Benefits -->
-                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
-                        <div class="flex-shrink-0 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-blue-600">$796</span></div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Veterans Benefits (VA)</h3>
-                            <p class="text-gray-600 mt-1">For most non-service-related deaths, the VA provides only <strong class="text-blue-600 font-bold">$796</strong>.</p>
-                        </div>
-                    </div>
-                    <!-- GoFundMe -->
-                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
-                        <div class="flex-shrink-0 w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-yellow-600">$1.2k</span></div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg">GoFundMe</h3>
-                            <p class="text-gray-600 mt-1">The average campaign raises only <strong class="text-yellow-600 font-bold">$1,200</strong>, leaving a huge shortfall.</p>
-                        </div>
-                    </div>
-                    <!-- Medicare -->
-                    <div class="flex items-center space-x-4 sm:space-x-6 py-5">
-                        <div class="flex-shrink-0 w-20 h-20 bg-red-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-red-600">$0</span></div>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg">Medicare</h3>
-                            <p class="text-gray-600 mt-1">Provides <strong class="text-red-600 font-bold">$0</strong> for funeral expenses. Health insurance does not cover funeral costs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- NEW "Dignity, Family, Legacy" Section -->
-    <section class="relative bg-gray-900">
-        <img src="https://i.imgur.com/cGKhN7n.png" alt="Couple looking out over the ocean at sunset" class="absolute inset-0 w-full h-full object-cover object-center opacity-20">
-        <div class="relative container mx-auto max-w-6xl px-4 py-24 sm:py-32 text-center text-white">
-             <h2 class="text-4xl lg:text-5xl font-serif font-bold leading-tight">Dignity. Family. Legacy.</h2>
-             <p class="mt-4 text-lg text-teal-200 max-w-2xl mx-auto">Ensure your final wishes are honored and your loved ones are cared for. That's the promise of a final expense plan from Noble Life Co.</p>
-             <a href="form.html" class="cta-button inline-block mt-8 !py-3 !px-8">Secure Your Legacy</a>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section id="final-cta" class="section-padding" style="background: linear-gradient(180deg, #f9fafb 0%, #eef2ff 100%);">
-        <div class="container mx-auto max-w-3xl text-center">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Lock In Your Rate Before<br class="hidden md:block"> Your Next Birthday</h2>
-            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Your age is the #1 factor in your premium. The rate you lock in today can never be increased, but the longer you wait, the more it will cost. See your personalized rate in seconds.</p>
+        <!-- Hero Section -->
+        <section 
+            id="hero-section"
+            class="relative min-h-screen w-full flex items-center justify-center md:justify-start p-6 md:py-12 md:pr-12 md:pl-0 bg-cover bg-center" 
+            style="background-image: url('https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg');"
+            role="region" 
+            aria-labelledby="hero-heading">
             
-            <div class="mt-12 bg-white p-8 rounded-2xl shadow-xl border border-gray-200 max-w-2xl mx-auto">
-                <div class="grid grid-cols-2 gap-4 items-end">
-                    <div class="text-left">
-                        <p class="text-sm text-gray-500">Your Current Age</p>
-                        <p id="ageDisplay" class="text-3xl sm:text-4xl font-bold text-gray-900">55</p>
-                    </div>
-                    <div class="text-right">
-                        <p class="text-sm text-gray-500">Illustrative Monthly Payment</p>
-                        <p id="rateDisplay" class="text-3xl sm:text-4xl font-bold text-teal-600">$42</p>
-                    </div>
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+
+            <div class="relative w-full max-w-2xl bg-white rounded-lg md:rounded-l-none shadow-xl p-8 md:p-12">
+                <h1 id="hero-heading" class="text-4xl md:text-5xl font-serif font-bold text-gray-800">
+                    A Promise Kept, <br>A Future Secured.
+                </h1>
+                <p class="mt-4 text-lg text-gray-600">
+                    Ensure their dreams are always protected. Create a lasting legacy of love and support in just a few clicks.
+                </p>
+                <div id="product-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    
+                    <!-- Link 1: Final Expense -->
+                    <a href="final-expense.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                        <div class="flex flex-col items-center text-center">
+                            <svg class="h-14 w-14 text-teal-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                            </svg>
+                            <span class="font-bold text-gray-800 text-lg leading-tight">A Gift of Peace</span>
+                            <div class="w-8 my-2 border-t border-gray-300"></div>
+                            <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Final Expense</span>
+                        </div>
+                    </a>
+
+                    <!-- Link 2: Mortgage Protection -->
+                     <a href="mortgage-protection.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                         <div class="flex flex-col items-center text-center">
+                            <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
+                            <span class="font-bold text-gray-800 text-lg leading-tight">Keep Their Home Safe</span>
+                            <div class="w-8 my-2 border-t border-gray-300"></div>
+                            <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Mortgage Protection</span>
+                        </div>
+                    </a>
+
+                    <!-- Link 3: Life Insurance -->
+                    <a href="life-insurance.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                        <div class="flex flex-col items-center text-center">
+                            <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                             <span class="font-bold text-gray-800 text-lg leading-tight">Provide for Their Future</span>
+                             <div class="w-8 my-2 border-t border-gray-300"></div>
+                             <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Life Insurance</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="mt-6">
-                    <input type="range" min="50" max="85" value="55" id="ageSlider">
-                </div>
-                <div id="tooltipContainer" class="mt-6 rounded-lg p-4 text-center transition-colors duration-300">
-                    <p id="savingsMessage"></p>
-                </div>
-                <a href="form.html" class="cta-button inline-flex items-center justify-center mt-6 text-lg w-full sm:w-auto">
-                    <span>Calculate My Final Rate</span>
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                 </a>
-                 <p class="text-xs text-gray-500 mt-4">30-Day Money-Back Guarantee. No questions asked.</p>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Trust & Credibility Section -->
+        <section class="py-12 bg-gray-50 inner-shadow-bottom fade-in-section" role="region" aria-labelledby="trust-heading">
+            <div class="container mx-auto max-w-5xl text-center px-4">
+                <h2 id="trust-heading" class="text-sm font-bold text-gray-500 tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/HeR4byL.png" alt="Mutual of Omaha logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/Iq5ZyJK.png" alt="Prudential logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/VwSpm9h.png" alt="Gerber Life logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/rgUZFXC.png" alt="Transamerica logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- A Tale of Two Tomorrows Section -->
+        <section class="py-20 bg-gray-50 fade-in-section" role="region" aria-labelledby="legacy-heading">
+            <div class="container mx-auto max-w-6xl text-center px-4">
+                <h2 id="legacy-heading" class="text-3xl md:text-4xl font-serif font-bold text-gray-900">A Tale of Two Tomorrows</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    The choice you make today determines the legacy you leave behind.
+                </p>
+                <p class="mt-2 text-lg text-gray-800 max-w-3xl mx-auto font-bold">
+                    Which path will your family take?
+                </p>
+                <div class="mt-16 bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <!-- Column 1: Legacy of Worry -->
+                        <div class="p-8 md:p-12 text-left">
+                            <h3 class="text-2xl font-serif font-bold text-gray-800 text-center">A Legacy of Worry</h3>
+                            <p class="mt-2 text-center text-sm text-gray-500">Without a plan, their future is uncertain.</p>
+                            <ul class="mt-8 space-y-5">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-red-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">A Time of Stress & Hardship</h4>
+                                        <p class="text-gray-600">Loved ones are left to figure out how to cover immediate costs and an uncertain financial future.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-red-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Dreams Put on Hold</h4>
+                                        <p class="text-gray-600">The loss of your support could mean sacrificing goals like a college education or keeping the family home.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-red-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">A Burden of Difficult Choices</h4>
+                                        <p class="text-gray-600">Your family may be forced to make painful decisions about their home, their lifestyle, and their future.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Column 2: Legacy of Love -->
+                        <div class="p-8 md:p-12 bg-teal-50 border-t md:border-t-0 md:border-l border-gray-200 text-left">
+                            <h3 class="text-2xl font-serif font-bold text-teal-800 text-center">A Legacy of Love</h3>
+                            <p class="mt-2 text-center text-sm text-teal-700">With a plan, their future is secure.</p>
+                            <ul class="mt-8 space-y-5">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-teal-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">A Time of Peace & Healing</h4>
+                                        <p class="text-gray-600">Loved ones are given the financial space to grieve and support one another without worry.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-teal-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Dreams Protected</h4>
+                                        <p class="text-gray-600">Your support continues, ensuring their opportunities remain intact and their future is bright.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-teal-500 mr-4 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">A Final Gift of Support</h4>
+                                        <p class="text-gray-600">Your final act is one of profound love, providing a foundation of security that lasts a lifetime.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16">
+                    <a href="#hero-section" class="cta-button inline-block">Choose Your Legacy</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="bg-gray-800 text-gray-300">
+    <footer class="bg-gray-800 text-gray-300" role="contentinfo">
         <div class="container mx-auto max-w-6xl py-12 px-4">
             <div class="text-center mb-8">
-                <a href="form.html" aria-label="Noble Life Co. Home">
-                    <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 mb-2 mx-auto logo-white" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';">
+                <a href="/" aria-label="Noble Life Co. Home">
+                    <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 w-auto mb-2 mx-auto" style="filter: brightness(0) invert(1);" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';">
                 </a>
-                <p class="text-sm text-gray-400">Complete protection for your loved ones.</p>
+                <p class="text-sm text-gray-400">A promise for their future.</p>
             </div>
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="terms.html" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
@@ -280,8 +318,7 @@
             </div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-400">
                  <div class="max-w-4xl mx-auto space-y-2">
-                    <p>&copy; 2025 Noble Life Co. All rights reserved. Not available in all states.</p>
-                    <p>Final expense insurance policies are designed to help cover costs associated with end-of-life expenses. Acceptance and final rates are based on answers to health questions and other factors including age and gender. Insurance policies are issued by various highly-rated insurance carriers based on qualification.</p>
+                    <p>© 2025 Noble Life Co. All rights reserved. <br>Not available in all states.</p>
                     <p>By providing your information, you agree to be contacted by a licensed insurance professional about final expense coverage options, even if your number is on any state or federal "Do Not Call" list. This is an invitation to receive information about insurance coverage options, not an offer of insurance.</p>
                     <p class="pt-6 text-gray-500 italic">"A good man leaves an inheritance to his children's children." - Proverbs 13:22</p>
                 </div>
@@ -289,30 +326,54 @@
         </div>
     </footer>
 
-    <!-- Exit-Intent Modal -->
-    <div id="exit-intent-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 hidden">
-        <div class="modal-content w-full shadow-2xl overflow-hidden transform scale-95 opacity-0" style="max-width: 836px;">
-            <div class="grid md:grid-cols-2">
-                <div class="bg-white p-8 md:p-12 flex flex-col justify-center text-center md:text-left">
-                    <h2 class="text-3xl lg:text-4xl font-serif font-bold text-gray-900 leading-tight">Is Your Family's Future Secure?</h2>
-                    <p class="mt-4 text-lg text-gray-600">It takes less than 60 seconds to find out. Complete your free plan review now and get the peace of mind you deserve.</p>
-                    <a href="form.html" class="cta-button flex items-center justify-center mt-3 text-lg w-full whitespace-nowrap">Calculate My Monthly Payment</a>
-                </div>
-                <div class="hidden md:block relative">
-                    <img src="https://i.imgur.com/xYBwOsj.png" alt="Family on a sailboat" class="absolute inset-0 w-full h-full object-cover">
-                </div>
-            </div>
-            <button id="close-modal-btn" class="absolute top-3 right-3 text-gray-800 hover:text-black">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-    </div>
+    <!-- Back to Top Button -->
+    <button x-data="{ shown: false }" x-init="window.addEventListener('scroll', () => { shown = window.scrollY > 400 })" x-show="shown" x-transition @click="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition-all duration-300 z-50" aria-label="Back to top" style="display: none;">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
 
     <script>
-        // Sticky Header Shadow on Scroll
-        const stickyHeader = document.getElementById('sticky-header');
-        if (stickyHeader) {
-            window.addEventListener('scroll', () => {
+    document.addEventListener('DOMContentLoaded', () => {
+        /**
+         * Debounce function to limit the rate at which a function gets called.
+         * @param {Function} func The function to debounce.
+         * @param {number} wait The delay in milliseconds.
+         * @returns {Function} The debounced function.
+         */
+        const debounce = (func, wait) => {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+
+        /**
+         * Sets the top padding of the main content to match the header's height.
+         * This prevents content from being hidden behind the sticky header.
+         */
+        const handleHeaderPadding = () => {
+            const header = document.getElementById('sticky-header');
+            const main = document.getElementById('main-content');
+            if (header && main) {
+                const setPadding = () => {
+                    main.style.paddingTop = `${header.offsetHeight}px`;
+                };
+                setPadding();
+                window.addEventListener('resize', debounce(setPadding, 100));
+            }
+        };
+
+        /**
+         * Adds a shadow to the sticky header when the user scrolls down.
+         */
+        const handleHeaderShadow = () => {
+            const stickyHeader = document.getElementById('sticky-header');
+            if (stickyHeader) {
                 if (window.scrollY > 20) {
                     stickyHeader.classList.add('shadow-lg');
                     stickyHeader.classList.remove('shadow-sm');
@@ -320,103 +381,50 @@
                     stickyHeader.classList.remove('shadow-lg');
                     stickyHeader.classList.add('shadow-sm');
                 }
-            });
-        }
-
-        // Rate-Lock Simulator
-        const ageSlider = document.getElementById('ageSlider');
-        const ageDisplay = document.getElementById('ageDisplay');
-        const rateDisplay = document.getElementById('rateDisplay');
-        const tooltipContainer = document.getElementById('tooltipContainer');
-        const savingsMessage = document.getElementById('savingsMessage');
-
-        function calculateRate(age) {
-            // Using an exponential formula for more realistic rate increases
-            const baseRate = 30; 
-            const growthFactor = 1.07; // Represents a 7% increase per year of age
-            return baseRate * Math.pow(growthFactor, age - 50);
-        }
-
-        function updateSimulator() {
-            if (!ageSlider) return; 
-            const currentAge = parseInt(ageSlider.value);
-            
-            // Update displays
-            ageDisplay.textContent = currentAge;
-            const currentRate = calculateRate(currentAge);
-            rateDisplay.textContent = `$${Math.round(currentRate)}`;
-
-            const root = document.documentElement;
-            
-            // Handle savings message
-            if (currentAge <= 80) { // Only show savings comparison up to age 80
-                const annualCostOfWaiting = (calculateRate(currentAge + 1) - currentRate) * 12;
-
-                savingsMessage.innerHTML = `Waiting just one year could cost <strong>$${Math.round(annualCostOfWaiting)} more annually.</strong> Lock in your rate at age <strong>${currentAge}</strong> to protect your family and your wallet.`;
-                
-                if (currentAge <= 65) {
-                    root.style.setProperty('--thumb-color', '#10B981'); 
-                    root.style.setProperty('--track-bg-color', '#D1FAE5');
-                    tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-green-100 text-green-800';
-                } else {
-                    root.style.setProperty('--thumb-color', '#F59E0B'); 
-                    root.style.setProperty('--track-bg-color', '#FEF3C7');
-                    tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-yellow-100 text-yellow-800';
-                }
-            } else { // Message for ages over 80
-                root.style.setProperty('--thumb-color', '#EF4444'); 
-                root.style.setProperty('--track-bg-color', '#FEE2E2');
-                tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-red-100 text-red-800';
-                savingsMessage.innerHTML = `At age <strong>${currentAge}</strong>, coverage options become more limited and costs are significantly higher. Act now to ensure you're protected.`;
             }
-        }
+        };
+
+        /**
+         * Handles hero background image loading, with a fallback color.
+         */
+        const handleHeroImage = () => {
+            const heroSection = document.getElementById('hero-section');
+            if (!heroSection) return;
+            const bgImage = new Image();
+            bgImage.src = 'https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg';
+            bgImage.onerror = () => {
+                console.warn('Hero background image failed to load. Using fallback color.');
+                heroSection.style.backgroundImage = 'none';
+            };
+        };
         
-        if (ageSlider) {
-            ageSlider.addEventListener('input', updateSimulator);
-            // Initial call to set the values on page load
-            updateSimulator();
-        }
+        /**
+         * Animates sections into view when they are scrolled to.
+         */
+        const handleScrollAnimations = () => {
+            const sections = document.querySelectorAll('.fade-in-section');
+            if (sections.length === 0) return;
 
-        // Exit-Intent Modal Logic
-        const modal = document.getElementById('exit-intent-modal');
-        const modalContent = modal.querySelector('.modal-content');
-        const closeModalBtn = document.getElementById('close-modal-btn');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-        const showModal = () => {
-            if (sessionStorage.getItem('modalShown')) return;
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalContent.classList.remove('scale-95', 'opacity-0');
-                modalContent.classList.add('scale-100');
-            }, 10);
-            sessionStorage.setItem('modalShown', 'true');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         };
 
-        const hideModal = () => {
-            modalContent.classList.add('scale-95', 'opacity-0');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        };
-
-        // For desktop: trigger on mouseleave
-        document.addEventListener('mouseleave', (e) => {
-             // Check if it's likely a desktop user before showing modal
-            if (window.innerWidth >= 768 && e.clientY <= 0) {
-                showModal();
-            }
-        });
-
-        // Close modal events
-        closeModalBtn.addEventListener('click', hideModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                hideModal();
-            }
-        });
-
+        // --- INITIALIZATION ---
+        handleHeaderPadding();
+        handleHeroImage();
+        handleScrollAnimations();
+        window.addEventListener('scroll', debounce(handleHeaderShadow, 50));
+    });
     </script>
 </body>
 </html>

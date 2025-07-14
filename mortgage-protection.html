@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Protect your family's home with a mortgage protection plan from Noble Life Co. Ensure your largest asset becomes a lasting legacy, not a burden.">
+    <meta name="keywords" content="mortgage protection insurance, mortgage life insurance, Noble Life Co., protect your home">
+    <title>Mortgage Protection Plan | Noble Life Co.</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Mortgage Protection Plan | Noble Life Co.">
+    <meta property="og:description" content="Ensure your family's home is safe. A mortgage protection plan pays off your mortgage if you pass away, securing your legacy.">
+    <meta property="og:image" content="https://i.imgur.com/sIzPnyV.png">
+    <meta property="og:url" content="https://noblelifeco.com/mortgage-protection.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://noblelifeco.com/mortgage-protection.html">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7086032_siogtw.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fonts, Scripts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"></noscript>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Styles -->
+    <style>
+        :root {
+            --teal-50: #f0fdfa; --teal-600: #0d9488; --teal-700: #0f766e;
+            --bg-color: #fdfdfd; --text-color: #1f2937;
+            --header-bg: rgba(255, 255, 255, 0.8);
+            --section-bg: #f9fafb; --card-bg: #ffffff;
+            --heading-color: #111827; --subtle-text: #6b7280;
+            --border-color: #e5e7eb; --chart-grid-color: #e5e7eb;
+            --chart-text-color: #6b7280;
+        }
+        [data-theme="dark"] {
+            --bg-color: #111827; --text-color: #d1d5db;
+            --header-bg: rgba(17, 24, 39, 0.8);
+            --section-bg: #1f2937; --card-bg: #374151;
+            --heading-color: #f9fafb; --subtle-text: #9ca3af;
+            --border-color: #4b5563; --chart-grid-color: #4b5563;
+            --chart-text-color: #9ca3af;
+        }
+        body {
+            background-color: var(--bg-color); color: var(--text-color);
+            font-family: 'Inter', sans-serif; margin: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .font-serif { font-family: 'Lora', serif; }
+        .cta-button {
+            background-color: var(--teal-600); color: white;
+            font-weight: 700; padding: 1rem 2.5rem; border-radius: 0.5rem;
+            transition: all 0.3s ease; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .cta-button:hover {
+            background-color: var(--teal-700); transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+        }
+        .cta-button:focus-visible { outline: 3px solid var(--teal-600); outline-offset: 2px; }
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1rem; } }
+        #sticky-header { background-color: var(--header-bg); }
+        .logo-teal { transition: filter 0.3s ease; }
+        [data-theme="dark"] .logo-teal { filter: brightness(0) invert(1); }
+        .hero-gradient { background-color: var(--card-bg); background-image: radial-gradient(circle at 20% 20%, hsla(175, 84%, 88%, 0.1) 0, transparent 40%); }
+        #how-it-works, #final-cta { background-color: var(--section-bg); }
+        .inner-shadow-bottom { box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.05); }
+        .calculator-input {
+            background-color: var(--section-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+        .calculator-input:focus {
+            border-color: var(--teal-600);
+            box-shadow: 0 0 0 1px var(--teal-600);
+            outline: 2px solid transparent;
+        }
+        #chart-container { position: relative; }
+        .chart-tooltip {
+            position: absolute; background-color: var(--card-bg);
+            color: var(--text-color); border: 1px solid var(--border-color);
+            border-radius: 0.5rem; padding: 0.5rem 0.75rem; font-size: 0.875rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            pointer-events: none; opacity: 0; transition: opacity 0.2s ease;
+            transform: translate(-50%, -100%); /* Center tooltip above point */
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceService",
+      "name": "Mortgage Protection Insurance",
+      "serviceType": "Mortgage Protection Insurance",
+      "provider": {
+        "@type": "Organization",
+        "name": "Noble Life Co."
+      },
+      "description": "A mortgage protection insurance plan that pays off your remaining mortgage balance if you pass away, ensuring your family can keep their home.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "US"
+      }
+    }
+    </script>
+    <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '315290065977990'); // Your Pixel ID
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
+/></noscript>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="sticky-header" class="backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm" role="banner">
+        <nav class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
+            <a href="index.html" aria-label="Noble Life Co. Home">
+                <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 w-auto logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="form.html?goal=MortgageProtection" class="cta-button !py-3 !px-8 text-base hidden sm:inline-flex">Get My Free Plan</a>
+                <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-400" aria-label="Toggle dark mode">
+                    <svg id="theme-icon-light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg id="theme-icon-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="section-padding hero-gradient" role="region" aria-labelledby="hero-heading">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight">Your Home is a Legacy. Don't Let it Become a Burden.</h1>
+                        <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0">You've worked hard to provide a home for your family. Mortgage protection ensures that if you pass away, the mortgage is paid off, and your home remains a source of comfort and security, not a cause for financial distress.</p>
+                        <a href="#final-cta" class="cta-button mt-8 text-lg">
+                            <span>Protect My Home</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                        <div class="mt-8 flex flex-col sm:flex-row sm:flex-nowrap justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-gray-600">
+                            <div class="flex items-center"><svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Pays Off The Mortgage</span></div>
+                            <div class="flex items-center"><svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span>Your Family Stays Home</span></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center p-4">
+                        <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7086032_siogtw.jpg" class="rounded-lg shadow-2xl w-full max-w-md" width="448" height="448" alt="A happy family in front of their home, symbolizing security and legacy." loading="eager" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Credibility Section -->
+        <section class="py-12 bg-gray-50 inner-shadow-bottom fade-in-section" role="region" aria-labelledby="trust-heading">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 id="trust-heading" class="text-sm font-bold text-gray-500 tracking-widest uppercase">We Partner With America's Most Trusted Carriers</h2>
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center px-4">
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/HeR4byL.png" alt="Mutual of Omaha logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/Iq5ZyJK.png" alt="Prudential logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/VwSpm9h.png" alt="Gerber Life logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/rgUZFXC.png" alt="Transamerica logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="how-it-works" class="section-padding fade-in-section" role="region" aria-labelledby="problem-heading">
+            <div class="container mx-auto max-w-5xl">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="flex justify-center mb-12"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455583/pexels-cottonbro-7117618_wet4kn.jpg" alt="A happy family, representing the peace of mind that comes with planning." class="w-56 h-56 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy" decoding="async"></div>
+                    <h2 id="problem-heading" class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Your Income Stops. Your Mortgage Doesn't.</h2>
+                    <p class="mt-4 text-lg text-gray-600">Without your income, your family could face foreclosure in a matter of months. Relying on savings or the sale of the home creates immense stress during an already impossible time. A mortgage protection plan is a shield that prevents this from ever happening.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="final-cta" class="section-padding fade-in-section" role="region" aria-labelledby="cta-heading">
+            <div class="container mx-auto max-w-3xl text-center">
+                <h2 id="cta-heading" class="text-3xl md:text-4xl font-serif font-bold text-gray-900">Build Your Legacy Shield</h2>
+                <p class="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">See how a simple plan can protect your home and secure your family's future. Enter your mortgage details below to visualize your legacy.</p>
+                <div id="legacy-calculator" class="mt-12 bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-200 max-w-2xl mx-auto">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="mortgageBalance" class="block text-sm font-medium text-gray-700 text-left mb-1">Remaining Mortgage Balance</label>
+                            <div class="relative"><div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"><span class="text-gray-500 sm:text-sm">$</span></div><input type="text" id="mortgageBalance" class="calculator-input block w-full rounded-md pl-7 pr-4 py-2" placeholder="250,000" value="250,000" inputmode="numeric"></div>
+                        </div>
+                        <div>
+                            <label for="loanTerm" class="block text-sm font-medium text-gray-700 text-left mb-1">Years Left on Loan</label>
+                            <input type="number" id="loanTerm" class="calculator-input block w-full rounded-md px-4 py-2" placeholder="30" value="30" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div id="chart-container" class="mt-8 w-full h-64 sm:h-80 rounded-lg"><div class="chart-tooltip"></div></div>
+                    <div id="legacy-summary" class="mt-6 rounded-lg p-4 text-center bg-teal-50 text-teal-800" aria-live="polite"></div>
+                    <a id="quote-button" href="form.html" class="cta-button mt-8 text-lg w-full sm:w-auto"><span>Get My Personalized Quote</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300" role="contentinfo">
+        <div class="container mx-auto max-w-6xl py-12 px-4">
+            <div class="text-center mb-8"><a href="index.html" aria-label="Noble Life Co. Home"><img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. logo with a white shield icon" class="h-14 w-auto mb-2 mx-auto logo-white" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';"></a><p class="text-sm text-gray-400">A promise for their future.</p></div>
+            <div class="flex justify-center space-x-6 mb-8"><a href="terms.html" class="text-sm text-gray-400 hover:text-white">Terms of Service</a><a href="privacy.html" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a></div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-400">
+                 <div class="max-w-4xl mx-auto space-y-2">
+                    <p>© 2025 Noble Life Co. All rights reserved. <br>Not available in all states.</p>
+                    <p>By providing your information, you agree to be contacted by a licensed insurance professional about final expense coverage options, even if your number is on any state or federal "Do Not Call" list. This is an invitation to receive information about insurance coverage options, not an offer of insurance.</p>
+                    <p class="pt-6 text-gray-500 italic">"A good man leaves an inheritance to his children's children." - Proverbs 13:22</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition-all duration-300 opacity-0 transform translate-y-2 pointer-events-none" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DECLARED IN WIDER SCOPE TO BE ACCESSIBLE BY MULTIPLE HANDLERS ---
+            let updateLegacyShield = () => {};
+
+            // --- UTILITIES ---
+            const debounce = (func, wait) => {
+                let timeout;
+                return (...args) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                };
+            };
+
+            // --- UI HANDLERS ---
+            const handleHeader = () => {
+                const header = document.getElementById('sticky-header');
+                const main = document.getElementById('main-content');
+                if (!header || !main) return;
+
+                const setPadding = () => main.style.paddingTop = `${header.offsetHeight}px`;
+                const setShadow = () => header.classList.toggle('shadow-lg', window.scrollY > 20);
+                
+                setPadding();
+                setShadow();
+                window.addEventListener('resize', debounce(setPadding, 100));
+                window.addEventListener('scroll', debounce(setShadow, 50));
+            };
+
+            const handleBackToTop = () => {
+                const btn = document.getElementById('back-to-top');
+                if (!btn) return;
+
+                const toggleVisibility = () => {
+                    const isVisible = window.scrollY > 200;
+                    btn.classList.toggle('opacity-0', !isVisible);
+                    btn.classList.toggle('pointer-events-none', !isVisible);
+                };
+
+                btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+                window.addEventListener('scroll', debounce(toggleVisibility, 50));
+                toggleVisibility();
+            };
+
+            const handleThemeToggle = () => {
+                const btn = document.getElementById('theme-toggle');
+                if (!btn) return;
+
+                const lightIcon = document.getElementById('theme-icon-light');
+                const darkIcon = document.getElementById('theme-icon-dark');
+                
+                const applyTheme = (theme) => {
+                    document.documentElement.dataset.theme = theme;
+                    localStorage.setItem('theme', theme);
+                    if (lightIcon) lightIcon.classList.toggle('hidden', theme === 'dark');
+                    if (darkIcon) darkIcon.classList.toggle('hidden', theme === 'light');
+                    updateLegacyShield();
+                };
+
+                btn.addEventListener('click', () => {
+                    const newTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+                    applyTheme(newTheme);
+                });
+
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                applyTheme(savedTheme);
+            };
+
+            const handleScrollAnimations = () => {
+                const sections = document.querySelectorAll('.fade-in-section');
+                if (sections.length === 0) return;
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                sections.forEach(section => observer.observe(section));
+            };
+
+            // --- CALCULATOR LOGIC ---
+            const handleLegacyCalculator = () => {
+                if (!document.getElementById('legacy-calculator')) return;
+
+                const balanceInput = document.getElementById('mortgageBalance');
+                const termInput = document.getElementById('loanTerm');
+                const summaryEl = document.getElementById('legacy-summary');
+                const chartContainer = document.getElementById('chart-container');
+                const tooltip = d3.select(".chart-tooltip");
+                const quoteButton = document.getElementById('quote-button');
+
+                const formatCurrencyInput = (e) => {
+                    const input = e.target;
+                    let value = input.value.replace(/\D/g, '');
+                    if (value) {
+                        input.value = parseInt(value, 10).toLocaleString('en-US');
+                    } else {
+                        input.value = '';
+                    }
+                };
+                balanceInput.addEventListener('input', (e) => {
+                    const cursorPosition = e.target.selectionStart;
+                    const originalLength = e.target.value.length;
+                    formatCurrencyInput(e);
+                    const newLength = e.target.value.length;
+                    e.target.setSelectionRange(cursorPosition + (newLength - originalLength), cursorPosition + (newLength - originalLength));
+                    debounce(updateLegacyShield, 300)();
+                });
+                termInput.addEventListener('input', debounce(updateLegacyShield, 300));
+
+                const calculateAmortization = (principal, years, rate = 0.05) => {
+                    if (principal <= 0 || years <= 0) return [];
+                    const monthlyRate = rate / 12;
+                    const n = years * 12;
+                    const monthlyPayment = principal * (monthlyRate * Math.pow(1 + monthlyRate, n)) / (Math.pow(1 + monthlyRate, n) - 1);
+                    
+                    let balance = principal;
+                    const data = [{ year: 0, balance, equity: 0 }];
+                    for (let year = 1; year <= years; year++) {
+                        for (let month = 1; month <= 12; month++) {
+                            balance -= (monthlyPayment - (balance * monthlyRate));
+                        }
+                        balance = Math.max(0, balance);
+                        data.push({ year, balance, equity: principal - balance });
+                    }
+                    return data;
+                };
+
+                const drawChart = (data) => {
+                    d3.select("#chart-container svg").remove();
+                    if (!data.length) return;
+
+                    const margin = { top: 20, right: 20, bottom: 40, left: 60 };
+                    const width = chartContainer.clientWidth - margin.left - margin.right;
+                    const height = chartContainer.clientHeight - margin.top - margin.bottom;
+
+                    const svg = d3.select("#chart-container").append("svg")
+                        .attr("width", "100%").attr("height", "100%")
+                        .attr("viewBox", `0 0 ${chartContainer.clientWidth} ${chartContainer.clientHeight}`)
+                        .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+                    
+                    const gridColor = getComputedStyle(document.documentElement).getPropertyValue('--chart-grid-color').trim();
+                    const textColor = getComputedStyle(document.documentElement).getPropertyValue('--chart-text-color').trim();
+                    const tealColor = getComputedStyle(document.documentElement).getPropertyValue('--teal-600').trim();
+
+                    const x = d3.scaleLinear().domain([0, data.length - 1]).range([0, width]);
+                    const y = d3.scaleLinear().domain([0, d3.max(data, d => d.balance)]).range([height, 0]);
+
+                    const gradient = svg.append("defs").append("linearGradient")
+                        .attr("id", "area-gradient")
+                        .attr("gradientUnits", "userSpaceOnUse")
+                        .attr("x1", 0).attr("y1", y(0))
+                        .attr("x2", 0).attr("y2", y(d3.max(data, d => d.balance)));
+                    gradient.append("stop").attr("offset", "0%").attr("stop-color", tealColor).attr("stop-opacity", 0.4);
+                    gradient.append("stop").attr("offset", "100%").attr("stop-color", tealColor).attr("stop-opacity", 0);
+
+                    svg.append("g").attr("class", "grid").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).ticks(Math.min(10, data.length-1)).tickSize(-height).tickFormat("")).selectAll("line").attr("stroke", gridColor).attr("stroke-dasharray", "2,2");
+                    svg.append("g").attr("class", "grid").call(d3.axisLeft(y).ticks(5).tickSize(-width).tickFormat("")).selectAll("line").attr("stroke", gridColor).attr("stroke-dasharray", "2,2");
+                    svg.selectAll('.grid path').attr('stroke-width', 0);
+
+                    svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).ticks(Math.min(10, data.length-1)).tickFormat(d => `Yr ${d}`)).selectAll("text").style("fill", textColor);
+                    svg.append("g").call(d3.axisLeft(y).ticks(5).tickFormat(d => `$${d/1000}k`)).selectAll("text").style("fill", textColor);
+                    svg.selectAll('.domain').attr('stroke', gridColor);
+
+                    svg.append("path").datum(data).attr("fill", "url(#area-gradient)").attr("d", d3.area().x(d => x(d.year)).y0(height).y1(d => y(d.balance)));
+                    svg.append("path").datum(data).attr("fill", "none").attr("stroke", tealColor).attr("stroke-width", 2.5).attr("d", d3.line().x(d => x(d.year)).y(d => y(d.balance)));
+
+                    const focus = svg.append("g").style("display", "none");
+                    focus.append("circle").attr("r", 5).attr("fill", tealColor);
+                    
+                    svg.append("rect").attr("width", width).attr("height", height).style("fill", "none").style("pointer-events", "all")
+                        .on("mouseover", () => { focus.style("display", null); tooltip.style("opacity", 1); })
+                        .on("mouseout", () => { focus.style("display", "none"); tooltip.style("opacity", 0); })
+                        .on("mousemove", (event) => {
+                            const [mx] = d3.pointer(event);
+                            const i = Math.round(x.invert(mx));
+                            const d = data[i];
+                            if (d) {
+                                focus.attr("transform", `translate(${x(d.year)},${y(d.balance)})`);
+                                tooltip.html(`<strong>Year ${d.year}</strong><br>Balance: $${Math.round(d.balance).toLocaleString()}`)
+                                    .style("left", `${x(d.year) + margin.left}px`)
+                                    .style("top", `${y(d.balance) + margin.top - 10}px`);
+                            }
+                        });
+                };
+
+                updateLegacyShield = () => {
+                    const balance = parseFloat(balanceInput.value.replace(/,/g, '')) || 0;
+                    const term = parseInt(termInput.value, 10) || 0;
+
+                    if (quoteButton) quoteButton.href = `form.html?goal=MortgageProtection&balance=${balance}&term=${term}`;
+
+                    const amortizationData = calculateAmortization(balance, term);
+                    drawChart(amortizationData);
+                    
+                    if (amortizationData.length > 0) {
+                        const fiveYearPoint = amortizationData.find(d => d.year === Math.min(5, term)) || amortizationData[amortizationData.length - 1];
+                        summaryEl.innerHTML = `In 5 years, you will have built <strong>$${Math.round(fiveYearPoint.equity).toLocaleString()}</strong> in home equity. A Mortgage Protection Plan acts as a <strong>legacy shield</strong> around that equity, ensuring that if the unthinkable happens, your family's home is 100% theirs—forever.`;
+                    } else {
+                        summaryEl.innerHTML = "Please enter your mortgage balance and loan term to see your legacy shield.";
+                    }
+                };
+                
+                window.addEventListener('resize', debounce(updateLegacyShield, 500));
+                updateLegacyShield();
+            };
+
+            // --- INITIALIZATION ---
+            handleHeader();
+            handleBackToTop();
+            handleThemeToggle();
+            handleLegacyCalculator();
+            handleScrollAnimations();
+        });
+    </script>
+</body>
+</html>
