@@ -31,7 +31,7 @@
    
    <style>
         :root {
-            --teal-50: #f0fdfa; --teal-600: #0d9488; --teal-700: #0f766e;
+            --teal-50: #f0fdfa; --teal-600: #0d9488; --teal-700: #0f766e; --teal-500: #14b8a6;
             --bg-color: #fdfdfd; --text-color: #1f2937;
             --header-bg: rgba(255, 255, 255, 0.8);
             --section-bg: #f9fafb; --card-bg: #ffffff;
@@ -40,15 +40,14 @@
             --track-bg-color: #d1fae5;
             --thumb-color: #0d9488;
         }
-        /* CHANGE: Improved dark mode contrast */
         [data-theme="dark"] {
             --bg-color: #111827; --text-color: #d1d5db;
-            --header-bg: rgba(17, 24, 39, 0.8);
+            --header-bg: rgba(17, 24, 39, 0.85);
             --section-bg: #1f2937; --card-bg: #1f2937;
             --heading-color: #f9fafb; --subtle-text: #9ca3af;
-            --border-color: #4b5563;
-            --track-bg-color: #374151;
-            --thumb-color: #14b8a6;
+            --border-color: #374151;
+            --track-bg-color: #4b5563;
+            --thumb-color: var(--teal-500);
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -74,29 +73,29 @@
         #sticky-header { background-color: var(--header-bg); }
         .logo-teal { transition: filter 0.3s ease; }
         [data-theme="dark"] .logo-teal { filter: brightness(0) invert(1); }
-        .hero-gradient { background-color: var(--card-bg); background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 88%, 0.1) 0, transparent 40%); }
+        .hero-gradient { background-color: var(--bg-color); background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 88%, 0.1) 0, transparent 40%); }
         #how-it-works, #final-cta { background-color: var(--section-bg); }
         .inner-shadow-bottom { box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.05); }
         input[type="range"] {
             -webkit-appearance: none; appearance: none;
             width: 100%; height: 8px;
-            background: var(--track-bg-color, #d1fae5);
+            background: var(--track-bg-color);
             border-radius: 5px; outline: none;
             transition: background 0.3s ease;
         }
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none; appearance: none;
             width: 24px; height: 24px;
-            background: var(--thumb-color, #0d9488);
+            background: var(--thumb-color);
             cursor: pointer; border-radius: 50%;
-            border: 3px solid white;
+            border: 3px solid var(--card-bg);
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
         input[type="range"]::-moz-range-thumb {
             width: 24px; height: 24px;
-            background: var(--thumb-color, #0d9488);
+            background: var(--thumb-color);
             cursor: pointer; border-radius: 50%;
-            border: 3px solid white;
+            border: 3px solid var(--card-bg);
             box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
         .fade-in-section {
@@ -108,14 +107,14 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* CHANGE: Custom classes for dark mode text colors to ensure contrast */
-        .dark-mode-text { color: var(--text-color); }
-        .dark-mode-heading { color: var(--heading-color); }
-        .dark-mode-subtle-text { color: var(--subtle-text); }
-        .dark-mode-card { background-color: var(--card-bg); border-color: var(--border-color); }
-        .dark-mode-card-divide { border-color: var(--border-color); }
-        .dark-mode-teal-text { color: var(--teal-500); }
-        [data-theme="dark"] .dark-mode-teal-text { color: #38b2ac; } /* A lighter teal for dark mode */
+        .text-main { color: var(--text-color); }
+        .text-heading { color: var(--heading-color); }
+        .text-subtle { color: var(--subtle-text); }
+        .bg-card { background-color: var(--card-bg); }
+        .border-card { border-color: var(--border-color); }
+        .divide-card { border-color: var(--border-color); }
+        .text-teal-strong { color: var(--teal-600); }
+        [data-theme="dark"] .text-teal-strong { color: var(--teal-500); }
     </style>
      <!-- SEO: JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -151,13 +150,13 @@
   src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
 /></noscript>
 </head>
-<body class="antialiased">
+<body class="antialiased text-main">
 
     <!-- Header -->
     <header id="sticky-header" class="backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm" role="banner">
         <nav class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
             <a href="index.html" aria-label="Noble Life Co. Home">
-                <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 w-auto logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+                <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 w-auto logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
             </a>
             <div class="flex items-center space-x-4">
                 <a href="form.html?goal=FinalExpense" class="cta-button !py-3 !px-8 text-base hidden sm:inline-flex">Get My Free Plan</a>
@@ -175,13 +174,13 @@
             <div class="container mx-auto max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-left">
-                         <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold dark-mode-heading leading-tight">Your Final Act of Love: A Legacy of Peace, Not Bills.</h1>
-                        <p class="mt-4 text-lg md:text-xl dark-mode-text max-w-xl mx-auto md:mx-0">When you're gone, ensure your family receives a check to celebrate your life, not a bill to pay for it. A final expense plan is a simple, loving way to cover funeral costs and leave behind a legacy of care. No medical exam required.</p>
+                         <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold text-heading leading-tight">Your Final Act of Love: A Legacy of Peace, Not Bills.</h1>
+                        <p class="mt-4 text-lg md:text-xl text-main max-w-xl mx-auto md:mx-0">When you're gone, ensure your family receives a check to celebrate your life, not a bill to pay for it. A final expense plan is a simple, loving way to cover funeral costs and leave behind a legacy of care. No medical exam required.</p>
                         <a href="form.html?goal=FinalExpense" class="cta-button inline-flex items-center justify-center mt-8 text-lg">
                             <span>Secure Your Legacy</span>
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                         </a>
-                         <div class="mt-8 flex flex-col sm:flex-row sm:flex-nowrap justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm dark-mode-text">
+                         <div class="mt-8 flex flex-col sm:flex-row sm:flex-nowrap justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-6 text-sm text-main">
                             <div class="flex items-center"><svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Your Rate is Locked-In for Life</span></div>
                             <div class="flex items-center"><svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>No Medical Exam to Qualify</span></div>
                         </div>
@@ -194,15 +193,14 @@
         </section>
 
         <!-- Trust & Credibility Section -->
-        <section class="py-12 bg-gray-50 dark-mode-card inner-shadow-bottom fade-in-section" role="region" aria-label="Trusted Carriers">
+        <section class="py-12 bg-gray-50 bg-card inner-shadow-bottom fade-in-section" role="region" aria-label="Trusted Carriers">
             <div class="container mx-auto max-w-5xl text-center">
-                <h2 class="text-sm font-bold dark-mode-subtle-text tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
-                <!-- CHANGE: Increased logo sizes by ~30% using Tailwind's arbitrary values -->
+                <h2 class="text-sm font-bold text-subtle tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
                 <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center px-4">
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/HeR4byL.png" alt="Mutual of Omaha Logo" class="max-h-[3.9rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/Iq5ZyJK.png" alt="Prudential Logo" class="max-h-[3.9rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/VwSpm9h.png" alt="Gerber Life Logo" class="max-h-[5.2rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/rgUZFXC.png" alt="Transamerica Logo" class="max-h-[3.9rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/mutual-removebg-preview_jyfzme.png" alt="Mutual of Omaha Logo" class="max-h-[3.9rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/Prudential-Financial-logo_sahr64.png" alt="Prudential Logo" class="max-h-[3.9rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/gerber-4-logo-png-transparent_cqjrnd.png" alt="Gerber Life Logo" class="max-h-[5.2rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/transamerica-logo_ehlnvs.png" alt="Transamerica Logo" class="max-h-[3.9rem] w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
                 </div>
             </div>
         </section>
@@ -212,13 +210,13 @@
             <div class="container mx-auto max-w-5xl">
                 <div class="text-center max-w-3xl mx-auto">
                     <div class="flex justify-center mb-12"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455582/pexels-cottonbro-7086039_1_bgcjfw.jpg" alt="A serene, happy family, representing the peace of mind that comes with planning." class="w-56 h-56 rounded-full object-cover border-4 border-white shadow-lg" loading="lazy" decoding="async"></div>
-                    <h2 id="problem-heading" class="text-3xl md:text-4xl font-serif font-bold dark-mode-heading">Ensure Your Final Wishes Are a Gift, Not a Burden.</h2>
-                    <p class="mt-4 text-lg dark-mode-text">During a time of grief, the last thing your family should face is a financial crisis. Unfortunately, many common safety nets fall short, leaving loved ones to cover thousands in funeral costs.</p>
-                    <div class="mt-10 text-left bg-white dark-mode-card p-6 sm:p-8 rounded-2xl shadow-lg border divide-y dark-mode-card-divide">
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-orange-600">$255</span></div><div><h3 class="font-bold dark-mode-heading text-lg">Social Security</h3><p class="dark-mode-text mt-1">Provides a one-time payment of just <strong class="text-orange-600 font-bold">$255</strong>—an amount that hasn't changed since 1954.</p></div></div>
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-blue-600">$796</span></div><div><h3 class="font-bold dark-mode-heading text-lg">Veterans Benefits (VA)</h3><p class="dark-mode-text mt-1">For most non-service-related deaths, the VA provides only <strong class="text-blue-600 font-bold">$796</strong>.</p></div></div>
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-yellow-600">$1.2k</span></div><div><h3 class="font-bold dark-mode-heading text-lg">GoFundMe</h3><p class="dark-mode-text mt-1">The average campaign raises only <strong class="text-yellow-600 font-bold">$1,200</strong>, leaving a huge shortfall.</p></div></div>
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-red-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-red-600">$0</span></div><div><h3 class="font-bold dark-mode-heading text-lg">Medicare</h3><p class="dark-mode-text mt-1">Provides <strong class="text-red-600 font-bold">$0</strong> for funeral expenses. Health insurance does not cover funeral costs.</p></div></div>
+                    <h2 id="problem-heading" class="text-3xl md:text-4xl font-serif font-bold text-heading">Ensure Your Final Wishes Are a Gift, Not a Burden.</h2>
+                    <p class="mt-4 text-lg text-main">During a time of grief, the last thing your family should face is a financial crisis. Unfortunately, many common safety nets fall short, leaving loved ones to cover thousands in funeral costs.</p>
+                    <div class="mt-10 text-left bg-white bg-card p-6 sm:p-8 rounded-2xl shadow-lg border-card border divide-y divide-card">
+                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-orange-600">$255</span></div><div><h3 class="font-bold text-heading text-lg">Social Security</h3><p class="text-main mt-1">Provides a one-time payment of just <strong class="text-orange-600 font-bold">$255</strong>—an amount that hasn't changed since 1954.</p></div></div>
+                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-blue-600">$796</span></div><div><h3 class="font-bold text-heading text-lg">Veterans Benefits (VA)</h3><p class="text-main mt-1">For most non-service-related deaths, the VA provides only <strong class="text-blue-600 font-bold">$796</strong>.</p></div></div>
+                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-yellow-600">$1.2k</span></div><div><h3 class="font-bold text-heading text-lg">GoFundMe</h3><p class="text-main mt-1">The average campaign raises only <strong class="text-yellow-600 font-bold">$1,200</strong>, leaving a huge shortfall.</p></div></div>
+                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-red-100 rounded-full flex items-center justify-center border-4 border-white shadow-sm"><span class="text-2xl font-bold text-red-600">$0</span></div><div><h3 class="font-bold text-heading text-lg">Medicare</h3><p class="text-main mt-1">Provides <strong class="text-red-600 font-bold">$0</strong> for funeral expenses. Health insurance does not cover funeral costs.</p></div></div>
                     </div>
                 </div>
             </div>
@@ -227,18 +225,18 @@
         <!-- Final CTA Section -->
         <section id="final-cta" class="section-padding fade-in-section" role="region" aria-labelledby="cta-heading">
             <div class="container mx-auto max-w-3xl text-center">
-                <h2 id="cta-heading" class="text-3xl md:text-4xl font-serif font-bold dark-mode-heading">Lock In Your Rate Before Your Next Birthday</h2>
-                <p class="mt-4 text-lg dark-mode-text max-w-2xl mx-auto">Your age is the primary factor in your premium. The rate you lock in today is guaranteed for life, but waiting means it will only cost more. See your personalized rate in seconds.</p>
+                <h2 id="cta-heading" class="text-3xl md:text-4xl font-serif font-bold text-heading">Lock In Your Rate Before Your Next Birthday</h2>
+                <p class="mt-4 text-lg text-main max-w-2xl mx-auto">Your age is the primary factor in your premium. The rate you lock in today is guaranteed for life, but waiting means it will only cost more. See your personalized rate in seconds.</p>
                 
-                <div class="mt-12 bg-white dark-mode-card p-8 rounded-2xl shadow-xl border max-w-2xl mx-auto">
+                <div class="mt-12 bg-white bg-card p-8 rounded-2xl shadow-xl border-card border max-w-2xl mx-auto">
                     <div class="grid grid-cols-2 gap-4 items-end">
                         <div class="text-left">
-                            <label for="ageSlider" class="text-sm dark-mode-subtle-text">Your Current Age</label>
-                            <p id="ageDisplay" class="text-3xl sm:text-4xl font-bold dark-mode-heading">55</p>
+                            <label for="ageSlider" class="text-sm text-subtle">Your Current Age</label>
+                            <p id="ageDisplay" class="text-3xl sm:text-4xl font-bold text-heading">55</p>
                         </div>
                         <div class="text-right">
-                            <p class="text-sm dark-mode-subtle-text">Illustrative Monthly Payment</p>
-                            <p id="rateDisplay" class="text-3xl sm:text-4xl font-bold dark-mode-teal-text">$42</p>
+                            <p class="text-sm text-subtle">Illustrative Monthly Payment</p>
+                            <p id="rateDisplay" class="text-3xl sm:text-4xl font-bold text-teal-strong">$42</p>
                         </div>
                     </div>
                     <div class="mt-6">
@@ -251,7 +249,7 @@
                         <span>Calculate My Final Rate</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                      </a>
-                     <p class="text-xs dark-mode-subtle-text mt-4">30-Day Money-Back Guarantee. No questions asked.</p>
+                     <p class="text-xs text-subtle mt-4">30-Day Money-Back Guarantee. No questions asked.</p>
                 </div>
             </div>
         </section>
@@ -259,7 +257,7 @@
 
     <footer class="bg-gray-800 text-gray-300" role="contentinfo">
         <div class="container mx-auto max-w-6xl py-12 px-4">
-            <div class="text-center mb-8"><a href="index.html" aria-label="Noble Life Co. Home"><img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 w-auto mb-2 mx-auto logo-white" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';"></a><p class="text-sm text-gray-400">A promise for their future.</p></div>
+            <div class="text-center mb-8"><a href="index.html" aria-label="Noble Life Co. Home"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 w-auto mb-2 mx-auto logo-white" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';"></a><p class="text-sm text-gray-400">A promise for their future.</p></div>
             <div class="flex justify-center space-x-6 mb-8"><a href="terms.html" class="text-sm text-gray-400 hover:text-white">Terms of Service</a><a href="privacy.html" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a></div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-400">
                  <div class="max-w-4xl mx-auto space-y-2">
@@ -322,27 +320,25 @@
                     rateDisplay.textContent = `$${Math.round(currentRate)}`;
                     
                     if (tooltipContainer && savingsMessage) {
+                        const isDark = document.documentElement.dataset.theme === 'dark';
                         if (age <= 80) {
                             const costOfWaiting = (calculateRate(age + 1) - currentRate) * 12;
                             savingsMessage.innerHTML = `Waiting one year could cost <strong>$${Math.round(costOfWaiting)} more annually.</strong> Lock in your rate at age <strong>${age}</strong>.`;
                             const color = age <= 65 ? 'green' : 'yellow';
                             tooltipContainer.className = `mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-${color}-100 text-${color}-800`;
-                             // Dark mode adjustments
-                            if (document.documentElement.dataset.theme === 'dark') {
+                             if (isDark) {
                                 tooltipContainer.classList.add('dark:bg-opacity-20', `dark:text-${color}-300`);
                             }
                         } else {
                             savingsMessage.innerHTML = `At age <strong>${age}</strong>, options are limited and costs are higher. Act now to ensure you're protected.`;
                             tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-red-100 text-red-800';
-                            // Dark mode adjustments
-                            if (document.documentElement.dataset.theme === 'dark') {
+                            if (isDark) {
                                 tooltipContainer.classList.add('dark:bg-opacity-20', 'dark:text-red-300');
                             }
                         }
                     }
                 };
                 ageSlider.addEventListener('input', updateSimulator);
-                // Also update when theme changes
                 document.getElementById('theme-toggle').addEventListener('click', () => setTimeout(updateSimulator, 50));
                 updateSimulator();
             };

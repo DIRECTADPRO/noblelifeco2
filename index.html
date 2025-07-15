@@ -133,7 +133,6 @@
             white-space: nowrap;
             border-width: 0;
         }
-        /* Animation for sections */
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
@@ -149,6 +148,15 @@
             background-color: var(--teal-600);
             margin: 1rem 0;
         }
+        #hero-section {
+            background-color: #ffffff;
+        }
+        @media (min-width: 768px) {
+            #hero-section {
+                background-image: var(--bg-image-url);
+                background-color: transparent;
+            }
+        }
     </style>
     <!-- SEO: JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -157,7 +165,7 @@
       "@type": "Organization",
       "name": "Noble Life Co.",
       "url": "https://noblelifeco.com",
-      "logo": "https://i.imgur.com/AJ0ugyo.png",
+      "logo": "https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png",
       "description": "Noble Life Co. provides life insurance, final expense, and mortgage protection plans to secure your family's future.",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -173,7 +181,7 @@
     <header id="sticky-header" class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm" role="banner">
         <nav class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
             <a href="/" aria-label="Noble Life Co. Home">
-                 <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. logo" class="h-14 md:h-16 w-auto" style="filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(130deg) saturate(5);" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+                 <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. logo" class="h-14 md:h-16 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
             </a>
         </nav>
     </header>
@@ -183,61 +191,56 @@
         <!-- Hero Section -->
         <section 
             id="hero-section"
-            class="w-full md:flex md:items-stretch md:min-h-screen"
+            class="relative md:min-h-screen w-full flex items-center justify-center md:justify-start bg-cover bg-right-top p-6 md:py-12 md:pr-12 md:pl-0" 
+            style="--bg-image-url: url('https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg');"
             role="region" 
             aria-labelledby="hero-heading">
             
-            <!-- Text Content Area: Full width on mobile, specific width on desktop -->
-            <div class="bg-white w-full md:max-w-2xl md:flex md:items-center md:justify-center z-10">
-                <div class="p-8 md:p-12">
-                    <h1 id="hero-heading" class="text-4xl md:text-5xl font-serif font-bold text-gray-800">
-                        A Promise Kept, <br>A Future Secured.
-                    </h1>
-                    <p class="mt-4 font-serif text-xl text-gray-600">Your Love is Forever. Life Insurance Makes It Certain.</p>
-                    <div class="slogan-divider"></div>
-                    <p class="mt-4 text-lg text-gray-600">
-                        Ensure their dreams are always protected. Create a lasting legacy of love and support in just a few clicks.
-                    </p>
-                    <div id="product-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <a href="final-expense.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
-                            <div class="flex flex-col items-center text-center">
-                                <svg class="h-14 w-14 text-teal-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
-                                </svg>
-                                <span class="font-bold text-gray-800 text-lg leading-tight">A Gift of Peace</span>
-                                <div class="w-8 my-2 border-t border-gray-300"></div>
-                                <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Final Expense</span>
-                            </div>
-                        </a>
-                        <a href="mortgage-protection.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
-                            <div class="flex flex-col items-center text-center">
-                                <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
-                                <span class="font-bold text-gray-800 text-lg leading-tight">Keep Their Home Safe</span>
-                                <div class="w-8 my-2 border-t border-gray-300"></div>
-                                <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Mortgage Protection</span>
-                            </div>
-                        </a>
-                        <a href="life-insurance.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
-                            <div class="flex flex-col items-center text-center">
-                                <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
-                                <span class="font-bold text-gray-800 text-lg leading-tight">Provide for Their Future</span>
-                                <div class="w-8 my-2 border-t border-gray-300"></div>
-                                <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Life Insurance</span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- CHANGE: Image added for mobile view -->
-                    <div class="mt-8 md:hidden">
-                        <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg" alt="A family together, representing love and security." class="w-full h-auto rounded-lg shadow-md">
-                    </div>
+            <div class="hidden md:block absolute inset-0 bg-black opacity-10"></div>
+
+            <div class="relative w-full max-w-2xl md:bg-white rounded-lg md:rounded-l-none md:shadow-xl p-8 md:p-12">
+                <h1 id="hero-heading" class="text-4xl md:text-5xl font-serif font-bold text-gray-800">
+                    A Promise Kept, <br>A Future Secured.
+                </h1>
+                <p class="mt-4 font-serif text-xl text-gray-600">Your Love is Forever. Life Insurance Makes It Certain.</p>
+                <div class="slogan-divider"></div>
+                <p class="mt-4 text-lg text-gray-600">
+                    Ensure their dreams are always protected. Create a lasting legacy of love and support in just a few clicks.
+                </p>
+                <div id="product-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="final-expense.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                        <div class="flex flex-col items-center text-center">
+                            <svg class="h-14 w-14 text-teal-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                            </svg>
+                            <span class="font-bold text-gray-800 text-lg leading-tight">A Gift of Peace</span>
+                            <div class="w-8 my-2 border-t border-gray-300"></div>
+                            <!-- CHANGE: Made text smaller -->
+                            <span class="text-[11px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">Final Expense</span>
+                        </div>
+                    </a>
+                    <a href="mortgage-protection.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                        <div class="flex flex-col items-center text-center">
+                            <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
+                            <span class="font-bold text-gray-800 text-lg leading-tight">Keep Their Home Safe</span>
+                            <div class="w-8 my-2 border-t border-gray-300"></div>
+                            <!-- CHANGE: Made text smaller -->
+                            <span class="text-[11px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">Mortgage Protection</span>
+                        </div>
+                    </a>
+                    <a href="life-insurance.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                        <div class="flex flex-col items-center text-center">
+                            <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                            <span class="font-bold text-gray-800 text-lg leading-tight">Provide for Their Future</span>
+                            <div class="w-8 my-2 border-t border-gray-300"></div>
+                            <!-- CHANGE: Made text smaller -->
+                            <span class="text-[11px] font-semibold uppercase tracking-widest text-gray-500 whitespace-nowrap">Life Insurance</span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-            
-            <!-- Image Area: Hidden on mobile, full height and takes up space on desktop -->
-            <div 
-                class="hidden md:block w-full bg-cover bg-right-top relative"
-                style="background-image: url('https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg');">
-                <div class="absolute inset-0 bg-black opacity-10"></div>
+                <div class="mt-8 md:hidden">
+                    <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg" alt="A family together, representing love and security." class="w-full h-auto rounded-lg shadow-md">
+                </div>
             </div>
         </section>
 
@@ -246,10 +249,10 @@
             <div class="container mx-auto max-w-5xl text-center px-4">
                 <h2 id="trust-heading" class="text-sm font-bold text-gray-500 tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
                 <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/HeR4byL.png" alt="Mutual of Omaha logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/Iq5ZyJK.png" alt="Prudential logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/VwSpm9h.png" alt="Gerber Life logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
-                    <figure class="flex justify-center items-center h-20"><img src="https://i.imgur.com/rgUZFXC.png" alt="Transamerica logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/mutual-removebg-preview_jyfzme.png" alt="Mutual of Omaha logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/Prudential-Financial-logo_sahr64.png" alt="Prudential logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/gerber-4-logo-png-transparent_cqjrnd.png" alt="Gerber Life logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/transamerica-logo_ehlnvs.png" alt="Transamerica logo" class="max-h-12 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
                 </div>
             </div>
         </section>
@@ -336,7 +339,7 @@
         <div class="container mx-auto max-w-6xl py-12 px-4">
             <div class="text-center mb-8">
                 <a href="/" aria-label="Noble Life Co. Home">
-                    <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 w-auto mb-2 mx-auto" style="filter: brightness(0) invert(1);" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';">
+                    <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 w-auto mb-2 mx-auto" style="filter: brightness(0) invert(1);" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';">
                 </a>
                 <p class="text-sm text-gray-400">A promise for their future.</p>
             </div>
@@ -362,12 +365,6 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        /**
-         * Debounce function to limit the rate at which a function gets called.
-         * @param {Function} func The function to debounce.
-         * @param {number} wait The delay in milliseconds.
-         * @returns {Function} The debounced function.
-         */
         const debounce = (func, wait) => {
             let timeout;
             return function executedFunction(...args) {
@@ -380,10 +377,6 @@
             };
         };
 
-        /**
-         * Sets the top padding of the main content to match the header's height.
-         * This prevents content from being hidden behind the sticky header.
-         */
         const handleHeaderPadding = () => {
             const header = document.getElementById('sticky-header');
             const main = document.getElementById('main-content');
@@ -396,9 +389,6 @@
             }
         };
 
-        /**
-         * Adds a shadow to the sticky header when the user scrolls down.
-         */
         const handleHeaderShadow = () => {
             const stickyHeader = document.getElementById('sticky-header');
             if (stickyHeader) {
@@ -412,9 +402,6 @@
             }
         };
         
-        /**
-         * Animates sections into view when they are scrolled to.
-         */
         const handleScrollAnimations = () => {
             const sections = document.querySelectorAll('.fade-in-section');
             if (sections.length === 0) return;
@@ -433,7 +420,6 @@
             });
         };
 
-        // --- INITIALIZATION ---
         handleHeaderPadding();
         handleScrollAnimations();
         window.addEventListener('scroll', debounce(handleHeaderShadow, 50));
