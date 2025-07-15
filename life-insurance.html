@@ -149,7 +149,8 @@
                 <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 w-auto logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
             </a>
             <div class="flex items-center space-x-4">
-                <a href="#final-cta" class="cta-button !py-3 !px-8 text-base hidden sm:inline-flex">Get My Free Plan</a>
+                <!-- CHANGE: Button now links to form.html -->
+                <a href="form.html?goal=Legacy" class="cta-button !py-3 !px-8 text-base hidden sm:inline-flex">Get My Free Plan</a>
                 <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-400" aria-label="Toggle dark mode">
                     <svg id="theme-icon-light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     <svg id="theme-icon-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
@@ -166,7 +167,8 @@
                     <div class="text-center md:text-left">
                         <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold text-gray-900 leading-tight">Life Insurance Isn't Just a Policy. It's a Promise for Their Future.</h1>
                         <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0">A smart life insurance plan does more than just protect your family if you're gone—it helps you build a tax-free legacy for their biggest dreams. We'll show you how to get affordable protection today while building wealth for tomorrow.</p>
-                        <a href="#final-cta" class="cta-button mt-8 text-lg">
+                        <!-- CHANGE: Button now links to form.html -->
+                        <a href="form.html?goal=Legacy" class="cta-button mt-8 text-lg">
                             <span>Build My Legacy Plan</span>
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                         </a>
@@ -186,15 +188,16 @@
                 
                 <div id="legacy-paths" class="mt-12 max-w-4xl mx-auto">
                     <!-- Tab Buttons -->
+                    <!-- CHANGE: Added flex-wrap and gap to prevent overflow on mobile -->
                     <div class="border-b border-gray-200">
-                        <div role="tablist" aria-label="Legacy Paths" class="-mb-px flex space-x-8 justify-center">
-                            <button id="tab-path1" role="tab" aria-selected="true" aria-controls="panel-path1" class="tab-button active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg" data-tab="path1">
+                        <div role="tablist" aria-label="Legacy Paths" class="-mb-px flex flex-wrap justify-center gap-x-4 sm:gap-x-8 gap-y-2">
+                            <button id="tab-path1" role="tab" aria-selected="true" aria-controls="panel-path1" class="tab-button active whitespace-nowrap py-3 px-1 border-b-2 font-medium text-lg" data-tab="path1">
                                 Protect My Income
                             </button>
-                            <button id="tab-path2" role="tab" aria-selected="false" aria-controls="panel-path2" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg" data-tab="path2">
+                            <button id="tab-path2" role="tab" aria-selected="false" aria-controls="panel-path2" class="tab-button whitespace-nowrap py-3 px-1 border-b-2 font-medium text-lg" data-tab="path2">
                                 Protect & Grow
                             </button>
-                            <button id="tab-path3" role="tab" aria-selected="false" aria-controls="panel-path3" class="tab-button whitespace-nowrap py-4 px-1 border-b-2 font-medium text-lg" data-tab="path3">
+                            <button id="tab-path3" role="tab" aria-selected="false" aria-controls="panel-path3" class="tab-button whitespace-nowrap py-3 px-1 border-b-2 font-medium text-lg" data-tab="path3">
                                 Guaranteed Legacy
                             </button>
                         </div>
@@ -225,7 +228,8 @@
             <div class="relative container mx-auto max-w-6xl px-4 py-24 sm:py-32 text-center text-white">
                  <h2 class="text-4xl lg:text-5xl font-serif font-bold leading-tight">A Promise for Generations.</h2>
                  <p class="mt-4 text-lg text-teal-200 max-w-2xl mx-auto">Build a foundation of security that supports your family's dreams, today and for all their tomorrows.</p>
-                 <a href="#final-cta" class="cta-button inline-block mt-8 !py-3 !px-8">Build My Legacy Plan</a>
+                 <!-- CHANGE: Button now links to form.html -->
+                 <a href="form.html?goal=Legacy" class="cta-button inline-block mt-8 !py-3 !px-8">Build My Legacy Plan</a>
             </div>
         </section>
 
@@ -256,7 +260,8 @@
                      <div id="paycheck-summary" class="mt-4 text-center text-gray-600" aria-live="polite">
                         <p>This provides your family with a tax-free "paycheck" of approximately <strong class="text-gray-900">$6,667</strong> per month for <strong class="text-gray-900">20</strong> years, ensuring their life can continue with the support you always planned to provide.</p>
                     </div>
-                    <a id="quote-button" href="form.html" class="cta-button mt-8 text-lg w-full sm:w-auto"><span>Design My Legacy Plan</span></a>
+                    <!-- CHANGE: Button now links to form.html and is updated by JS -->
+                    <a id="quote-button" href="form.html?goal=Legacy" class="cta-button mt-8 text-lg w-full sm:w-auto"><span>Design My Legacy Plan</span></a>
                 </div>
             </div>
         </section>
@@ -360,10 +365,10 @@
 
                 tabs.forEach(tab => {
                     tab.addEventListener('click', () => {
-                        tabs.forEach(t => t.classList.remove('active', 'border-teal-600', 'text-teal-600'));
+                        tabs.forEach(t => t.classList.remove('active'));
                         panels.forEach(p => p.classList.remove('active'));
 
-                        tab.classList.add('active', 'border-teal-600', 'text-teal-600');
+                        tab.classList.add('active');
                         const targetPanel = document.getElementById(tab.getAttribute('aria-controls'));
                         if (targetPanel) targetPanel.classList.add('active');
                         
@@ -399,6 +404,7 @@
 
                     paycheckSummary.innerHTML = `<p>This provides your family with a tax-free "paycheck" of approximately <strong class="text-gray-900">$${formatCurrency(Math.round(monthlyPaycheck))}</strong> per month for <strong class="text-gray-900">${years}</strong> years, ensuring their life can continue with the support you always planned to provide.</p>`;
                     
+                    // CHANGE: Update the quote button link with parameters
                     if (quoteButton) {
                         quoteButton.href = `form.html?goal=Legacy&income=${income}&years=${years}&coverage=${coverage}`;
                     }

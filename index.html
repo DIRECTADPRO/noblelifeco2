@@ -133,9 +133,6 @@
             white-space: nowrap;
             border-width: 0;
         }
-        #hero-section {
-            background-color: #f3f4f6;
-        }
         /* Animation for sections */
         .fade-in-section {
             opacity: 0;
@@ -184,55 +181,60 @@
     <main id="main-content">
 
         <!-- Hero Section -->
+        <!-- CHANGE: Restructured section to have separate text and image blocks for responsive control. -->
         <section 
             id="hero-section"
-            class="relative min-h-screen w-full flex items-center justify-center md:justify-start p-6 md:py-12 md:pr-12 md:pl-0 bg-cover bg-right-top" 
-            style="background-image: url('https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg');"
+            class="w-full md:flex md:items-stretch md:min-h-screen"
             role="region" 
             aria-labelledby="hero-heading">
             
-            <div class="absolute inset-0 bg-black opacity-10"></div>
-
-            <div class="relative w-full max-w-2xl bg-white rounded-lg md:rounded-l-none shadow-xl p-8 md:p-12">
-                <h1 id="hero-heading" class="text-4xl md:text-5xl font-serif font-bold text-gray-800">
-                    A Promise Kept, <br>A Future Secured.
-                </h1>
-                <p class="mt-4 font-serif text-xl text-gray-600">Your Love is Forever. Life Insurance Makes It Certain.</p>
-                <div class="slogan-divider"></div>
-                <p class="mt-4 text-lg text-gray-600">
-                    Ensure their dreams are always protected. Create a lasting legacy of love and support in just a few clicks.
-                </p>
-                <div id="product-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    
-                    <a href="final-expense.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
-                        <div class="flex flex-col items-center text-center">
-                            <svg class="h-14 w-14 text-teal-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                <polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
-                            </svg>
-                            <span class="font-bold text-gray-800 text-lg leading-tight">A Gift of Peace</span>
-                            <div class="w-8 my-2 border-t border-gray-300"></div>
-                            <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Final Expense</span>
-                        </div>
-                    </a>
-
-                    <a href="mortgage-protection.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
-                         <div class="flex flex-col items-center text-center">
-                            <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
-                            <span class="font-bold text-gray-800 text-lg leading-tight">Keep Their Home Safe</span>
-                            <div class="w-8 my-2 border-t border-gray-300"></div>
-                            <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Mortgage Protection</span>
-                        </div>
-                    </a>
-
-                    <a href="life-insurance.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
-                        <div class="flex flex-col items-center text-center">
-                            <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
-                             <span class="font-bold text-gray-800 text-lg leading-tight">Provide for Their Future</span>
-                             <div class="w-8 my-2 border-t border-gray-300"></div>
-                             <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Life Insurance</span>
-                        </div>
-                    </a>
+            <!-- Text Content Area: Full width on mobile, specific width on desktop -->
+            <div class="bg-white w-full md:max-w-2xl md:flex md:items-center md:justify-center z-10">
+                <div class="p-8 md:p-12">
+                    <h1 id="hero-heading" class="text-4xl md:text-5xl font-serif font-bold text-gray-800">
+                        A Promise Kept, <br>A Future Secured.
+                    </h1>
+                    <p class="mt-4 font-serif text-xl text-gray-600">Your Love is Forever. Life Insurance Makes It Certain.</p>
+                    <div class="slogan-divider"></div>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Ensure their dreams are always protected. Create a lasting legacy of love and support in just a few clicks.
+                    </p>
+                    <div id="product-grid" class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <a href="final-expense.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                            <div class="flex flex-col items-center text-center">
+                                <svg class="h-14 w-14 text-teal-600 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                                </svg>
+                                <span class="font-bold text-gray-800 text-lg leading-tight">A Gift of Peace</span>
+                                <div class="w-8 my-2 border-t border-gray-300"></div>
+                                <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Final Expense</span>
+                            </div>
+                        </a>
+                        <a href="mortgage-protection.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                            <div class="flex flex-col items-center text-center">
+                                <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h7.5" /></svg>
+                                <span class="font-bold text-gray-800 text-lg leading-tight">Keep Their Home Safe</span>
+                                <div class="w-8 my-2 border-t border-gray-300"></div>
+                                <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Mortgage Protection</span>
+                            </div>
+                        </a>
+                        <a href="life-insurance.html" class="product-link flex flex-col items-center justify-center p-6 border-2 rounded-lg h-full">
+                            <div class="flex flex-col items-center text-center">
+                                <svg class="h-14 w-14 text-teal-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                                <span class="font-bold text-gray-800 text-lg leading-tight">Provide for Their Future</span>
+                                <div class="w-8 my-2 border-t border-gray-300"></div>
+                                <span class="text-xs font-semibold uppercase tracking-widest text-gray-500">Life Insurance</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+            </div>
+            
+            <!-- Image Area: Hidden on mobile, full height and takes up space on desktop -->
+            <div 
+                class="hidden md:block w-full bg-cover bg-right-top relative"
+                style="background-image: url('https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg');">
+                <div class="absolute inset-0 bg-black opacity-10"></div>
             </div>
         </section>
 
@@ -320,7 +322,7 @@
                     </div>
                 </div>
                 <div class="mt-16">
-                    <a href="#hero-section" class="cta-button inline-block">Choose Your Legacy</a>
+                    <a href="form.html" class="cta-button inline-block">Choose Your Legacy</a>
                 </div>
             </div>
         </section>
@@ -406,20 +408,6 @@
                 }
             }
         };
-
-        /**
-         * Handles hero background image loading, with a fallback color.
-         */
-        const handleHeroImage = () => {
-            const heroSection = document.getElementById('hero-section');
-            if (!heroSection) return;
-            const bgImage = new Image();
-            bgImage.src = 'https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7047435_amezqe.jpg';
-            bgImage.onerror = () => {
-                console.warn('Hero background image failed to load. Using fallback color.');
-                heroSection.style.backgroundImage = 'none';
-            };
-        };
         
         /**
          * Animates sections into view when they are scrolled to.
@@ -444,7 +432,6 @@
 
         // --- INITIALIZATION ---
         handleHeaderPadding();
-        handleHeroImage();
         handleScrollAnimations();
         window.addEventListener('scroll', debounce(handleHeaderShadow, 50));
     });
