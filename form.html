@@ -4,108 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noble Life Co. | Free Plan Review</title>
+
+    <!-- Favicon for browser tabs -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
+
+    <!-- Open Graph / Social Media Meta Tags for Link Previews -->
+    <meta property="og:title" content="Noble Life Co. | Free Plan Review">
+    <meta property="og:description" content="Protect your family's future with a personalized life insurance plan. Get a free, no-obligation quote in minutes.">
+    <meta property="og:image" content="https://i.imgur.com/AJ0ugyo.png">
+    <meta property="og:url" content="https://noblelifeco.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Noble Life Co. | Free Plan Review">
+    <meta name="twitter:description" content="Protect your family's future with a personalized life insurance plan. Get a free, no-obligation quote in minutes.">
+    <meta name="twitter:image" content="https://i.imgur.com/AJ0ugyo.png">
+
+    <!-- Tailwind CSS & Google Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F9FAFB;
-        }
-        .font-serif {
-            font-family: 'Lora', serif;
-        }
-        .form-step {
-            display: none;
-            animation: fadeIn 0.5s;
-        }
-        .form-step.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .card {
-            background-color: #F0F5F5;
-            border: 2px solid transparent;
-            transition: all 0.2s ease-in-out;
-            border-radius: 0.75rem;
-            padding: 1rem;
-        }
-        .card.selected {
-            border-color: #0d9488;
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        .radio-custom {
-            width: 24px;
-            height: 24px;
-            border: 2px solid #CBD5E0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease-in-out;
-            flex-shrink: 0;
-        }
-        .card.selected .radio-custom {
-            background-color: #0d9488;
-            border-color: #0d9488;
-        }
-        .radio-custom .checkmark {
-            display: none;
-            color: white;
-            stroke-width: 3;
-        }
-        .card.selected .checkmark {
-            display: block;
-        }
-        .form-input {
-             display: block;
-             width: 100%;
-             padding: 1rem;
-             background-color: white;
-             border: 1px solid #D1D5DB;
-             border-radius: 0.5rem;
-             box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-             font-size: 1rem;
-        }
-        .form-input:focus {
-             outline: 2px solid transparent;
-             outline-offset: 2px;
-             border-color: #0d9488;
-             box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.3);
-        }
-        .form-input.error {
-            border-color: #EF4444;
-        }
-        .form-input.error:focus {
-            box-shadow: 0 0 0 2px #FCA5A5;
-        }
-        .error-message {
-            color: #EF4444;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
-        }
-        .logo-teal {
-            filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(130deg) saturate(5);
-        }
-        @media print {
-            body { background-color: white; }
-            .no-print { display: none; }
-            main, .plan-page {
-                box-shadow: none;
-                margin: 0;
-                padding: 0;
-                max-width: 100%;
-            }
-        }
-    </style>
+    <!-- Facebook Pixel Code (Base) -->
     <script>
   !function(f,b,e,v,n,t,s)
   {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -122,21 +44,105 @@
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
 /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FFFFFF; }
+        .font-serif { font-family: 'Lora', serif; }
+        .form-step { display: none; animation: fadeIn 0.5s; }
+        .form-step.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background-color: #F0F5F5; border: 2px solid transparent;
+            transition: all 0.2s ease-in-out; border-radius: 0.75rem; padding: 1rem;
+        }
+        .card.selected, .card:focus {
+            border-color: #0d9488; background-color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            outline: none;
+        }
+        .radio-custom {
+            width: 24px; height: 24px; border: 2px solid #CBD5E0; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s ease-in-out; flex-shrink: 0;
+        }
+        .card.selected .radio-custom { background-color: #0d9488; border-color: #0d9488; }
+        .radio-custom .checkmark { display: none; color: white; stroke-width: 3; }
+        .card.selected .checkmark { display: block; }
+        .form-input {
+            display: block; width: 100%; padding: 1rem; background-color: white;
+            border: 1px solid #D1D5DB; border-radius: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); font-size: 1rem;
+        }
+        .form-input:focus {
+            outline: 2px solid transparent; outline-offset: 2px;
+            border-color: #0d9488; box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.3);
+        }
+        .form-input.error { border-color: #EF4444; }
+        .form-input.error:focus { box-shadow: 0 0 0 2px #FCA5A5; }
+        .error-message { color: #EF4444; font-size: 0.875rem; margin-top: 0.25rem; display: none; }
+        .tooltip { position: relative; display: inline-flex; align-items: center; }
+        .tooltip .tooltip-icon { cursor: pointer; margin-left: 0.5rem; color: #9ca3af; }
+        .tooltip .tooltiptext {
+            visibility: hidden; width: 220px; background-color: #555; color: #fff;
+            text-align: center; border-radius: 6px; padding: 8px; position: absolute;
+            z-index: 10; bottom: 150%; left: 50%; margin-left: -110px; opacity: 0;
+            transition: opacity 0.3s; font-size: 0.875rem; line-height: 1.4;
+        }
+        .tooltip .tooltiptext::after {
+            content: ""; position: absolute; top: 100%; left: 50%; margin-left: -5px;
+            border-width: 5px; border-style: solid; border-color: #555 transparent transparent transparent;
+        }
+        .tooltip:hover .tooltiptext { visibility: visible; opacity: 1; }
+        .logo-teal { filter: grayscale(1) brightness(0.5) sepia(1) hue-rotate(130deg) saturate(5); }
+        .plan-page {
+            width: 100%; max-width: 800px; margin: 2rem auto; background-color: white;
+            padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.07); border-radius: 4px;
+        }
+        .page-break { page-break-before: always; }
+        .faq-item summary { cursor: pointer; outline: none; }
+        .faq-item[open] summary svg { transform: rotate(180deg); }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        
+        /* FIX: Hide spinner arrows on number inputs */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+
+        @media print {
+            body { background-color: white; }
+            .no-print { display: none; }
+            main, .plan-page {
+                box-shadow: none; margin: 0; padding: 0; max-width: 100%;
+                border-radius: 0; border-top: none;
+            }
+        }
+    </style>
 </head>
 <body class="text-[#1f2937]">
 
-    <main class="container mx-auto max-w-6xl px-4 pt-12 pb-8">
+    <main id="main-content" class="container mx-auto max-w-6xl px-4 pt-12 pb-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <!-- Left Sidebar: Step Indicator -->
             <aside class="hidden md:block md:col-span-1">
                 <div class="sticky top-8">
                     <div class="bg-teal-50 border border-teal-200 rounded-lg p-6 text-center">
-                        <a href="/" aria-label="Noble Life Co. Home" class="block mb-6">
+                        <a href="#" aria-label="Noble Life Co. Home" class="block mb-6">
                             <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-12 md:h-14 logo-teal inline-block" onerror="this.onerror=null;this.src='https://placehold.co/240x60/0d9488/ffffff?text=Noble+Life+Co.';">
                         </a>
                         <div class="pt-6 border-t border-teal-200">
                             <h3 class="font-semibold text-lg text-teal-800 mb-4 text-left">Your Progress</h3>
-                            <ol id="step-indicator" class="text-left"></ol>
+                            <ol id="step-indicator" class="text-left">
+                                <!-- Step indicator items will be injected here -->
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -146,20 +152,21 @@
             <div class="md:col-span-2 flex justify-center">
                 <div id="form-container" class="w-full max-w-xl">
                     <div id="progress-container" class="mb-4 no-print">
-                         <div id="progress-text" class="text-center text-sm font-semibold text-gray-600 mb-2"></div>
-                         <div class="w-full bg-gray-200 rounded-full h-1.5">
-                             <div id="progress-bar" class="bg-teal-600 h-1.5 rounded-full transition-all duration-500" style="width: 0%"></div>
-                         </div>
+                        <div id="progress-text" class="text-center text-sm font-semibold text-gray-600 mb-2" aria-live="polite"></div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            <div id="progress-bar" class="bg-teal-600 h-1.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
                     </div>
                     
-                    <form id="smart-form" novalidate>
+                    <form id="multi-step-form" novalidate>
                         <div class="h-8">
-                             <button type="button" id="back-btn" class="text-gray-600 font-semibold flex items-center gap-2" style="display: none;">
-                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
-                                 Back
-                             </button>
+                            <button type="button" id="back-btn" class="text-gray-600 font-semibold flex items-center gap-2" style="display: none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" /></svg>
+                                Back
+                            </button>
                         </div>
                         
+                        <!-- This will now be a single container for all dynamic steps -->
                         <div id="dynamic-steps-container">
                             <!-- Steps will be injected here by JavaScript -->
                         </div>
@@ -172,116 +179,291 @@
                 </div>
             </div>
         </div>
-
-        <!-- This container is where the personalized plan will be injected -->
-        <div id="plan-output-container"></div>
     </main>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- CONFIGURATION & STATE ---
-            const formData = {
-                goal: null,
-                age: null,
-                birthDate: null,
-                coverage: null,
-                finalExpense: {},
-                mortgageProtection: {},
-                legacy: {},
-                health: {},
-                beneficiaries: [{ name: '', relationship: '', percentage: 100 }],
-                contact: {},
-            };
+    <!-- This container is where the personalized plan will be injected -->
+    <div id="plan-output-container" class="container mx-auto" style="display: none;"></div>
 
-            let currentStepIndex = 0;
-            let formSteps = [];
-            let fullPath = [];
-            let phases = [];
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- CONSTANTS ---
+            const MOCK_CURRENT_DATE = new Date('2025-07-14T19:52:00-04:00'); // For consistent plan generation
 
             // --- ELEMENT REFERENCES ---
-            const formContainer = document.getElementById('form-container');
+            const mainContent = document.getElementById('main-content');
             const planOutputContainer = document.getElementById('plan-output-container');
+            const form = document.getElementById('multi-step-form');
             const dynamicStepsContainer = document.getElementById('dynamic-steps-container');
             const nextBtn = document.getElementById('next-btn');
             const backBtn = document.getElementById('back-btn');
             const submitBtn = document.getElementById('submit-btn');
             const progressBar = document.getElementById('progress-bar');
+            const progressContainer = document.getElementById('progress-container');
             const progressText = document.getElementById('progress-text');
             const stepIndicator = document.getElementById('step-indicator');
+            
+            // --- STATE MANAGEMENT ---
+            let currentStepIndex = 0;
+            let formSteps = [];
+            let currentPath = [];
+
+            // FIX: Pre-define all possible keys to ensure `hasOwnProperty` checks work correctly.
+            const formData = {
+                goal: null,
+                age: null,
+                birthDate: null,
+                coverage: null,
+                intent: null,
+                finalExpense: { burialType: null },
+                mortgageProtection: { mortgageBalance: null, mortgageTerm: null },
+                lifeInsurance: { legacyType: null },
+                health: { gender: null, smoking: null, majorConditions: [], helpfulInfo: null },
+                beneficiaries: [{ name: '', relationship: '', percentage: 100 }],
+                contact: { 
+                    firstName: null, 
+                    lastName: null, 
+                    phone: null, 
+                    email: null, 
+                    state: null, 
+                    mailPlan: false, 
+                    streetAddress: null, 
+                    city: null, 
+                    zipCode: null 
+                },
+                scheduling: { meetingType: null, date: null, dateDisplay: null, time: null },
+                leadTimestamp: null
+            };
+
+            // --- DYNAMIC PATHS CONFIGURATION ---
+            const PATHS = {
+                'FinalExpense': ['dob', 'finalExpense', 'coverage', 'health', 'beneficiary', 'intent', 'contact', 'scheduling'],
+                'LifeInsurance': ['dob', 'lifeInsurance', 'coverage', 'health', 'beneficiary', 'intent', 'contact', 'scheduling'],
+                'MortgageProtection': ['dob', 'mortgageProtection', 'coverage', 'health', 'beneficiary', 'intent', 'contact', 'scheduling']
+            };
 
             // --- TEMPLATES FOR DYNAMIC STEPS ---
             const stepTemplates = {
-                finalExpense: `<div class="form-step" data-step-name="finalExpense" data-step-title="Final Wishes" data-phase="1"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Final Expense Planning</h2><p class="text-gray-500">Your preferences help us calculate the right coverage. Average burial costs are $9k-$12k, while cremation averages $3k-$6k.</p></div><div class="space-y-6"><div><label class="font-semibold text-sm">Have you decided between cremation or traditional burial?</label><div class="flex flex-col gap-3 mt-2"><label class="card cursor-pointer flex items-center"><input type="radio" name="burialType" value="Burial" required class="sr-only"><span class="font-bold flex-grow">Planning on burial</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center"><input type="radio" name="burialType" value="Cremation" required class="sr-only"><span class="font-bold flex-grow">Planning on cremation</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center"><input type="radio" name="burialType" value="Undecided" required class="sr-only"><span class="font-bold flex-grow">Haven't decided yet</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label></div><p class="error-message">Please select an option.</p></div></div></div>`,
-                mortgageProtection: `<div class="form-step" data-step-name="mortgageProtection" data-step-title="Debt Protection" data-phase="1"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Mortgage & Debt Protection</h2><p class="text-gray-500">Let's get the details to protect your home and finances. This will help us suggest a coverage amount in the next step.</p></div><div class="space-y-4"><div><label for="mortgage-balance" class="font-semibold text-sm">How much is owed on the home?</label><input type="text" inputmode="numeric" id="mortgage-balance" name="mortgageBalance" class="form-input mt-1" placeholder="$0" required><p class="error-message">This field is required.</p></div></div></div>`,
-                legacy: `<div class="form-step" data-step-name="legacy" data-step-title="Legacy Details" data-phase="1"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Legacy & Income Replacement</h2><p class="text-gray-500">Let's plan for your loved ones' future.</p></div><div class="space-y-4"><div><label for="income" class="font-semibold text-sm">What is your approximate annual income?</label><input type="text" inputmode="numeric" id="income" name="income" class="form-input mt-1" placeholder="$0" required><p class="error-message">This field is required.</p></div><div><label for="years" class="font-semibold text-sm">How many years do you want to protect?</label><input type="number" id="years" name="years" class="form-input mt-1" placeholder="e.g., 20" required><p class="error-message">This field is required.</p></div></div></div>`,
-                dob: `<div class="form-step" data-step-name="dob" data-step-title="Date of Birth" data-phase="2"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">What is your date of birth?</h2><p class="text-gray-500">This helps us determine the best available products for you.</p></div><label for="birth-date" class="font-semibold text-sm">Date of Birth</label><input type="date" id="birth-date" name="birthDate" required class="form-input mt-1"><p class="error-message">This field is required.</p></div>`,
-                health: `<div class="form-step" data-step-name="health" data-step-title="Health Questions" data-phase="2"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Just a Few Health Questions</h2><p class="text-gray-500">These simple questions help us find you the best rate. Remember, we specialize in approving most health conditions.</p></div><div class="space-y-6"><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div><label for="gender" class="font-semibold text-sm">Gender</label><select id="gender" name="gender" required class="form-input mt-1"><option value="">Select...</option><option value="Male">Male</option><option value="Female">Female</option></select><p class="error-message">Please select a gender.</p></div><div><label class="font-semibold text-sm">Do you currently use tobacco?</label><div class="flex gap-4 mt-2"><label class="card flex-1 cursor-pointer p-3 flex justify-center"><input type="radio" name="smoking" value="Yes" required class="sr-only"><span class="font-bold">✓ Yes</span></label><label class="card flex-1 cursor-pointer p-3 flex justify-center"><input type="radio" name="smoking" value="No" required class="sr-only"><span class="font-bold">✗ No</span></label></div><p class="error-message">Please select an option.</p></div></div></div></div>`,
-                beneficiary: `<div class="form-step" data-step-name="beneficiary" data-step-title="Beneficiaries" data-phase="3"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">To whom should the check be written?</h2><p class="text-gray-500 text-lg" id="beneficiary-intro-text"></p></div><div id="beneficiary-list" class="space-y-4"></div><div class="mt-4 flex justify-between items-center"><button type="button" id="add-beneficiary" class="text-teal-600 font-semibold flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>Add Another</button></div></div>`,
-                contact: `<div class="form-step" data-step-name="contact" data-step-title="Contact Information" data-phase="4"><div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Almost done!</h2><p class="text-gray-500">Where should we send your personalized quote?</p></div><div class="space-y-4"><div><label for="first-name" class="sr-only">First Name</label><input type="text" id="first-name" name="firstName" required class="form-input" placeholder="First Name"><p class="error-message">This field is required.</p></div><div><label for="last-name" class="sr-only">Last Name</label><input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Last Name"><p class="error-message">This field is required.</p></div><div><label for="email" class="sr-only">Email Address</label><input type="email" id="email" name="email" required class="form-input" placeholder="Email Address"><p class="error-message" id="email-error">Please enter a valid email address.</p></div></div></div>`,
-            };
-            
-            const phaseDefinitions = {
-                FinalExpense: [
-                    { id: 1, title: 'Final Wishes' },
-                    { id: 2, title: 'About You' },
-                    { id: 3, title: 'Beneficiaries' },
-                    { id: 4, title: 'Finalize' }
-                ],
-                MortgageProtection: [
-                    { id: 1, title: 'Debt Protection' },
-                    { id: 2, title: 'About You' },
-                    { id: 3, title: 'Beneficiaries' },
-                    { id: 4, title: 'Finalize' }
-                ],
-                Legacy: [
-                    { id: 1, title: 'Legacy Details' },
-                    { id: 2, title: 'About You' },
-                    { id: 3, title: 'Beneficiaries' },
-                    { id: 4, title: 'Finalize' }
-                ]
+                goal: `
+                    <div class="form-step" data-step-name="goal" data-step-title="Primary Goal" data-phase="1">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="goal-label">What is your primary goal today?</h2><p class="text-gray-500">Please select one to get started.</p></div>
+                        <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="goal-label">
+                            <div class="card cursor-pointer flex items-center" data-value="FinalExpense" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg><span class="font-bold text-base flex-grow">Protect my family from final expenses</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                            <div class="card cursor-pointer flex items-center" data-value="MortgageProtection" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span class="font-bold text-base flex-grow">Keep my family in our home, mortgage-free</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                            <div class="card cursor-pointer flex items-center" data-value="LifeInsurance" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg><span class="font-bold text-base flex-grow">Leave a financial legacy for my loved ones</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                        </div>
+                    </div>
+                `,
+                dob: `
+                    <div class="form-step" data-step-name="dob" data-step-title="Date of Birth" data-phase="1">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">What is your date of birth?</h2><p class="text-gray-500">This helps us determine the best available products for you.</p></div>
+                        <label for="birth-date" class="font-semibold text-sm">Date of Birth</label>
+                        <input type="date" id="birth-date" name="birthDate" required class="form-input mt-1">
+                        <p class="error-message" id="dob-error-message">This field is required.</p>
+                    </div>
+                `,
+                finalExpense: `
+                    <div class="form-step" data-step-name="finalExpense" data-step-title="Final Wishes" data-phase="2">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="final-expense-label">Final Expense Planning</h2><p class="text-gray-500">Your preferences help us calculate the right coverage. Average burial costs are $9k-$12k, while cremation averages $3k-$6k.</p></div>
+                        <div class="space-y-6">
+                            <div role="radiogroup" aria-labelledby="final-expense-label"><label class="font-semibold text-sm">Have you decided between cremation or traditional burial?</label><div class="flex flex-col gap-3 mt-2"><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Burial" required class="sr-only"><span class="font-bold flex-grow">Planning on burial</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Cremation" required class="sr-only"><span class="font-bold flex-grow">Planning on cremation</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Undecided" required class="sr-only"><span class="font-bold flex-grow">Haven't decided yet</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label></div><p class="error-message">Please select an option.</p></div>
+                </div>
+            </div>
+        `,
+        lifeInsurance: `
+            <div class="form-step" data-step-name="lifeInsurance" data-step-title="Legacy Plan" data-phase="2">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="legacy-label">How would you like to build your legacy?</h2><p class="text-gray-500">Choose the approach that best fits your financial goals.</p></div>
+                <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="legacy-label">
+                    <div class="card cursor-pointer" data-value="Protect My Income" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Protect My Income</h3><p class="text-sm text-gray-600 mt-1">The most affordable way to get the largest possible death benefit. It's a pure protection tool designed to replace your income and ensure your family's lifestyle is secure.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
+                    <div class="card cursor-pointer" data-value="Protect & Grow" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Protect & Grow</h3><p class="text-sm text-gray-600 mt-1">Combines a death benefit with a cash value component linked to a market index, letting you participate in the upside while a 0% floor protects you from market losses. A powerful, tax-free asset.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
+                    <div class="card cursor-pointer" data-value="Guaranteed Legacy" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M12 22s-4-3-4-9 4-9 4-9 4 3 4 9-4 9-4 9"/><path d="M10 16.5a2.5 2.5 0 0 1 5 0"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Guaranteed Legacy</h3><p class="text-sm text-gray-600 mt-1">For situations where an iron-clad guarantee is top priority—like funding a trust or business agreement. Provides a guaranteed death benefit and cash value growth.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
+                </div>
+            </div>
+        `,
+        mortgageProtection: `
+            <div class="form-step" data-step-name="mortgageProtection" data-step-title="Mortgage Protection" data-phase="2">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Protect Your Home</h2><p class="text-gray-500">Let's get the details to protect your home and finances. This will help us suggest a coverage amount in the next step.</p></div>
+                <div class="space-y-4">
+                    <div><label for="mortgage-balance" class="font-semibold text-sm">What is your remaining mortgage balance?</label><input type="text" inputmode="numeric" id="mortgage-balance" name="mortgageBalance" required class="form-input mt-1" placeholder="$250,000"><p class="error-message">This field is required.</p></div>
+                    <div><label for="mortgage-term" class="font-semibold text-sm">How many years are left on your mortgage?</label><input type="number" id="mortgage-term" name="mortgageTerm" required class="form-input mt-1" placeholder="25"><p class="error-message">Please enter a valid number of years.</p></div>
+                </div>
+            </div>
+        `,
+        coverage: `
+            <div class="form-step" data-step-name="coverage" data-step-title="Coverage Amount" data-phase="2">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">How much coverage are you looking for?</h2><p class="text-gray-500">This will help us estimate your monthly premium.</p></div>
+                <div id="coverage-options-container">
+                    <!-- Options will be injected here by JavaScript -->
+                </div>
+            </div>
+        `,
+        health: `
+            <div class="form-step" data-step-name="health" data-step-title="Health Questions" data-phase="3">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Just a Few Health Questions</h2><p class="text-gray-500">These simple questions help us find you the best rate. Remember, we specialize in approving most health conditions.</p></div>
+                <div class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div><label for="gender" class="font-semibold text-sm">Gender</label><select id="gender" name="gender" required class="form-input mt-1"><option value="">Select...</option><option value="Male">Male</option><option value="Female">Female</option></select><p class="error-message">Please select a gender.</p></div>
+                        <div>
+                            <label class="font-semibold text-sm tooltip">Do you use tobacco?
+                                <svg class="tooltip-icon h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+                                <span class="tooltiptext">Including cigarettes, cigars, chewing tobacco, or vaping with nicotine.</span>
+                            </label>
+                            <div class="flex gap-4 mt-2" id="smoking-group" role="radiogroup"><label class="card flex-1 cursor-pointer p-3 flex justify-center" tabindex="0"><input type="radio" name="smoking" value="Yes" required class="sr-only"><span class="font-bold">✓ Yes</span></label><label class="card flex-1 cursor-pointer p-3 flex justify-center" tabindex="0"><input type="radio" name="smoking" value="No" required class="sr-only"><span class="font-bold">✗ No</span></label></div><p class="error-message">Please select an option.</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t">
+                        <h3 class="font-semibold text-gray-900">Major Health Conditions</h3>
+                        <p class="text-sm text-gray-500 mb-2">Please select if you have been diagnosed, treated, or taken medication for any of the following.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-2" id="major-conditions-list">
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Cancer" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Cancer</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Heart Disease / Heart Attack" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Heart Disease / Heart Attack</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Stroke / TIA" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Stroke / TIA</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Diabetes" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Diabetes</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="COPD / Emphysema" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">COPD / Emphysema</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Kidney / Liver Disease" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Kidney / Liver Disease</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Alzheimer's / Dementia" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Alzheimer's / Dementia</label>
+                            <label class="flex items-center"><input type="checkbox" name="condition" value="Organ Transplant" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Organ Transplant</label>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-3">Having any of these conditions doesn't disqualify you. We work with 30+ carriers to find coverage for almost everyone.</p>
+                    </div>
+                    <div class="pt-4 border-t">
+                       <label for="helpful-info" class="font-semibold text-gray-900">Is there anything else about your health history we should know?</label>
+                       <p class="text-sm text-gray-500 mb-2">(e.g., recent surgeries, other major conditions)</p>
+                       <textarea id="helpful-info" name="helpfulInfo" rows="3" class="form-input mt-1"></textarea>
+                    </div>
+                </div>
+            </div>
+        `,
+        beneficiary: `
+            <div class="form-step" data-step-name="beneficiary" data-step-title="Beneficiaries" data-phase="3">
+                <div class="text-left mb-8 mt-4">
+                    <h2 class="text-4xl font-serif font-bold mb-2">Who will receive the benefit?</h2>
+                    <p class="text-gray-500 text-lg" id="beneficiary-intro-text"></p>
+                    <div class="mt-2 text-xs text-gray-500 p-3 bg-gray-50 rounded-md">
+                        <strong>Common splits:</strong> 1 person: 100% | 2 people: 50% each | 3 people: 34%, 33%, 33%
+                    </div>
+                </div>
+                <div id="beneficiary-list" class="space-y-4"></div>
+                <div class="mt-4 flex justify-between items-center">
+                    <div>
+                        <button type="button" id="add-beneficiary" class="text-teal-600 font-semibold flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>Add Beneficiary</button>
+                        <p id="beneficiary-limit-message" class="text-sm text-gray-500 hidden mt-2">Maximum of 5 beneficiaries reached.</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div id="percentage-total" class="font-bold text-lg">Total: <span id="percentage-value">100</span>%</div>
+                    </div>
+                </div>
+            </div>
+        `,
+        intent: `
+            <div class="form-step" data-step-name="intent" data-step-title="Your Goal" data-phase="4">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="intent-label">What's most important to you right now?</h2><p class="text-gray-500">Your answer helps us tailor the next steps to your needs.</p></div>
+                <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="intent-label">
+                    <div class="card cursor-pointer flex items-center" data-value="Exploring Options" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg><span class="font-bold text-base flex-grow">Exploring Options</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                    <div class="card cursor-pointer flex items-center" data-value="Comparing Prices" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg><span class="font-bold text-base flex-grow">Comparing Prices</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                    <div class="card cursor-pointer flex items-center" data-value="Ready to Get Started" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-teal-600 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg><span class="font-bold text-base flex-grow">Ready to Get Started</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                </div>
+            </div>
+        `,
+        contact: `
+            <div class="form-step" data-step-name="contact" data-step-title="Contact Information" data-phase="4">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Where can we send your plan?</h2><p class="text-gray-500">A licensed agent will reach out with your personalized quote.</p></div>
+                <div class="space-y-4">
+                     <div><label for="first-name" class="font-semibold text-sm sr-only">First Name</label><input type="text" id="first-name" name="firstName" required class="form-input" placeholder="First Name"><p class="error-message">This field is required.</p></div>
+                     <div><label for="last-name" class="font-semibold text-sm sr-only">Last Name</label><input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Last Name"><p class="error-message">This field is required.</p></div>
+                     <div><label for="phone" class="font-semibold text-sm sr-only">Phone Number</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="Phone Number"><p class="error-message">Please enter a valid phone number.</p></div>
+                     <div><label for="email" class="font-semibold text-sm sr-only">Email Address</label><input type="email" id="email" name="email" required class="form-input" placeholder="Email Address"><p class="error-message" id="email-error">Please enter a valid email address.</p></div>
+                     <div><label for="state" class="font-semibold text-sm sr-only">State</label><select id="state" name="state" required class="form-input"><option value="">Select a state...</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><p class="error-message">Please select a state.</p></div>
+                     <div class="relative flex items-start pt-4 border-t">
+                         <div class="flex h-6 items-center">
+                             <input id="mail-plan-checkbox" name="mailPlan" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500">
+                         </div>
+                         <div class="ml-3 text-sm leading-6">
+                             <label for="mail-plan-checkbox" class="font-medium text-gray-900 cursor-pointer">Yes, please mail me a printed copy of my plan options.</label>
+                         </div>
+                     </div>
+                     <div id="address-fields" class="hidden space-y-4 ml-9">
+                         <p id="mail-plan-confirmation" class="text-xs text-gray-500 hidden">Great! We'll mail your personalized plan booklet within 3-5 business days.</p>
+                         <div><label for="street-address" class="sr-only">Street address</label><input type="text" name="streetAddress" id="street-address" class="form-input" placeholder="Street address"><p class="error-message">This field is required.</p></div>
+                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                             <div><label for="city" class="sr-only">City</label><input type="text" name="city" id="city" class="form-input" placeholder="City"><p class="error-message">This field is required.</p></div>
+                             <div><label for="zip-code" class="sr-only">ZIP / Postal code</label><input type="text" name="zipCode" id="zip-code" class="form-input" placeholder="ZIP / Postal code"><p class="error-message">This field is required.</p></div>
+                         </div>
+                     </div>
+                     <div class="mt-6 p-4 bg-gray-50 rounded-lg flex items-center gap-4 border border-gray-200">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 002.166 5c0 1.606.346 3.138.956 4.533 1.141 2.586 3.06 4.739 5.884 6.354a1.001 1.001 0 001.19 0c2.824-1.615 4.743-3.768 5.884-6.354.61-1.395.956-2.927.956-4.533A11.954 11.954 0 0010 1.944zM9 13a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM10 4a1 1 0 011 1v3a1 1 0 11-2 0V5a1 1 0 011-1z" clip-rule="evenodd" /></svg>
+                         <p class="text-xs text-gray-500">Your information is secure. We use 256-bit SSL encryption and will never sell your data.</p>
+                     </div>
+                </div>
+            </div>
+        `,
+        scheduling: `
+            <div class="form-step" data-step-name="scheduling" data-step-title="Schedule Meeting" data-phase="4">
+                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Great news! Your plan is ready.</h2><p class="text-gray-500">Choose when you'd like to review your options with a specialist (takes about 15 minutes).</p></div>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-2" id="meeting-type-label">1. How would you like to meet?</h3>
+                        <div class="flex flex-col sm:flex-row gap-3" id="meeting-type-cards" role="radiogroup" aria-labelledby="meeting-type-label">
+                            <div class="card cursor-pointer flex-1 flex items-center" data-value="Phone" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="font-bold text-base flex-grow">Phone Call</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                            <div class="card cursor-pointer flex-1 flex items-center" data-value="Zoom" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span class="font-bold text-base flex-grow">Zoom Meeting</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                        </div>
+                    </div>
+                    <div id="time-selection-container" class="hidden space-y-4">
+                         <div><h3 class="font-bold text-gray-800 mb-2" id="date-label">2. What day works best?</h3><div class="flex flex-col sm:flex-row gap-3" id="date-cards" role="radiogroup" aria-labelledby="date-label"></div></div>
+                        <div id="time-window-container" class="hidden">
+                            <h3 class="font-bold text-gray-800 mb-2" id="time-label">3. What time?</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="time-cards" role="radiogroup" aria-labelledby="time-label">
+                                <div class="card cursor-pointer text-center" data-value="Morning" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Morning</span><p class="text-sm text-gray-600">9am - 12pm</p></div>
+                                <div class="card cursor-pointer text-center" data-value="Afternoon" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Afternoon</span><p class="text-sm text-gray-600">1pm - 4pm</p></div>
+                                <div class="card cursor-pointer text-center" data-value="Evening" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Evening</span><p class="text-sm text-gray-600">6pm - 8pm</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `
             };
 
+            // --- CORE FORM LOGIC ---
 
-            // --- CORE LOGIC ---
-            
+            /**
+             * Initializes the form by parsing URL parameters and building the initial view.
+             */
             const initializeForm = () => {
-                const params = new URLSearchParams(window.location.search);
-                formData.goal = params.get('goal') || 'FinalExpense';
-                
-                if (formData.goal === 'MortgageProtection') {
-                    formData.mortgageProtection.mortgageBalance = params.get('balance');
-                } else if (formData.goal === 'Legacy') {
-                    formData.legacy.income = params.get('income');
-                    formData.legacy.years = params.get('years');
-                    formData.coverage = params.get('coverage');
-                }
-                
-                buildAndShowForm();
-            };
-            
-            const buildAndShowForm = () => {
-                const baseSteps = ['dob', 'health', 'beneficiary', 'contact'];
-                let goalSpecificStep = '';
+                const urlParams = new URLSearchParams(window.location.search);
+                const goalParam = urlParams.get('goal');
 
-                switch (formData.goal) {
-                    case 'FinalExpense':
-                        goalSpecificStep = 'finalExpense';
-                        phases = phaseDefinitions.FinalExpense;
-                        break;
-                    case 'MortgageProtection':
-                        goalSpecificStep = 'mortgageProtection';
-                        phases = phaseDefinitions.MortgageProtection;
-                        break;
-                    case 'Legacy':
-                        goalSpecificStep = 'legacy';
-                        phases = phaseDefinitions.Legacy;
-                        break;
+                // Pre-fill data from URL
+                for (const [key, value] of urlParams.entries()) {
+                    if (key !== 'goal') {
+                        if (formData.hasOwnProperty(key)) {
+                            formData[key] = value;
+                        } else if (formData.contact.hasOwnProperty(key)) {
+                            formData.contact[key] = value;
+                        } else if (formData.lifeInsurance.hasOwnProperty(key)) {
+                           formData.lifeInsurance[key] = value;
+                        }
+                    }
+                }
+
+                if (goalParam && PATHS[goalParam]) {
+                    formData.goal = goalParam;
+                    currentPath = ['goal', ...PATHS[goalParam]];
+                    currentStepIndex = 1; 
+                } else {
+                    formData.goal = null;
+                    currentPath = ['goal'];
+                    currentStepIndex = 0;
                 }
                 
-                fullPath = [goalSpecificStep, ...baseSteps];
-                
+                buildFormSteps();
+            };
+
+            /**
+             * Builds the form steps based on the currentPath.
+             */
+            const buildFormSteps = () => {
                 dynamicStepsContainer.innerHTML = '';
-                fullPath.forEach(stepName => {
+                currentPath.forEach(stepName => {
                     if(stepTemplates[stepName]) {
                         const stepDiv = document.createElement('div');
                         stepDiv.innerHTML = stepTemplates[stepName];
@@ -290,50 +472,560 @@
                 });
 
                 formSteps = Array.from(dynamicStepsContainer.querySelectorAll('.form-step'));
-                prefillStepData();
+                
                 addEventListenersToSteps();
                 buildStepIndicator();
-                showStep(0);
+                prefillStepData();
+                showStep(currentStepIndex);
             };
-            
-            const prefillStepData = () => {
-                formSteps.forEach(step => {
+
+            /**
+             * Adds all necessary event listeners to the inputs and cards within the current form steps.
+             */
+            const addEventListenersToSteps = () => {
+                formSteps.forEach((step) => {
                     const stepName = step.dataset.stepName;
-                    if (stepName === 'mortgageProtection') {
-                        const balanceInput = step.querySelector('#mortgage-balance');
-                        if (balanceInput && formData.mortgageProtection.mortgageBalance) {
-                            balanceInput.value = formData.mortgageProtection.mortgageBalance;
-                            formatCurrency(balanceInput);
+
+                    // Accessibility for card selections
+                    step.querySelectorAll('.card[data-value], .card[tabindex="0"]').forEach(card => {
+                        card.addEventListener('click', (e) => handleCardSelection(e.currentTarget, stepName));
+                        card.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                handleCardSelection(e.currentTarget, stepName);
+                            }
+                        });
+                    });
+
+                    step.querySelectorAll('input, select, textarea').forEach(input => {
+                        input.addEventListener('input', () => checkButtonsState());
+                        
+                        if(input.type === 'radio' && input.classList.contains('sr-only')) {
+                            const card = input.closest('.card');
+                            input.addEventListener('change', () => {
+                                if (card) {
+                                   card.parentElement.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+                                   card.classList.add('selected');
+                                }
+                                checkButtonsState();
+                            });
+                             if (card) {
+                                card.addEventListener('keydown', (e) => {
+                                    if (e.key === 'Enter' || e.key === ' ') {
+                                        e.preventDefault();
+                                        input.checked = true;
+                                        input.dispatchEvent(new Event('change', { bubbles: true }));
+                                    }
+                                });
+                            }
                         }
-                    } else if (stepName === 'legacy') {
-                        const incomeInput = step.querySelector('#income');
-                        const yearsInput = step.querySelector('#years');
-                        if (incomeInput && formData.legacy.income) {
-                             incomeInput.value = formData.legacy.income;
-                             formatCurrency(incomeInput);
+                    });
+                    
+                    // Step-specific listeners
+                    if (stepName === 'beneficiary') {
+                        step.querySelector('#add-beneficiary')?.addEventListener('click', addBeneficiary);
+                        updateBeneficiaryList();
+                    }
+                    if (stepName === 'dob'){
+                        const birthDateInput = step.querySelector('#birth-date');
+                        const today = new Date();
+                        const hundredYearsAgo = new Date(today.getFullYear() - 120, today.getMonth(), today.getDate());
+                        if (birthDateInput) {
+                            birthDateInput.max = today.toISOString().split("T")[0]; 
+                            birthDateInput.min = hundredYearsAgo.toISOString().split("T")[0];
                         }
-                         if (yearsInput && formData.legacy.years) {
-                            yearsInput.value = formData.legacy.years;
+                    }
+                    if (stepName === 'scheduling') {
+                        generateDateCards();
+                    }
+                    if (stepName === 'coverage') {
+                        generateCoverageOptions();
+                    }
+                    if (stepName === 'contact') {
+                        const mailCheckbox = document.getElementById('mail-plan-checkbox');
+                        const addressFields = document.getElementById('address-fields');
+                        const mailConfirmation = document.getElementById('mail-plan-confirmation');
+                        if (mailCheckbox && addressFields && mailConfirmation) {
+                            mailCheckbox.addEventListener('change', (e) => {
+                                const isChecked = e.target.checked;
+                                addressFields.classList.toggle('hidden', !isChecked);
+                                mailConfirmation.classList.toggle('hidden', !isChecked);
+                                addressFields.querySelectorAll('input').forEach(input => {
+                                    input.required = isChecked;
+                                });
+                                checkButtonsState();
+                            });
                         }
+                    }
+                    if (stepName === 'mortgageProtection' || stepName === 'lifeInsurance') {
+                        step.querySelectorAll('input[inputmode="numeric"]').forEach(input => {
+                            input.addEventListener('input', (e) => formatCurrency(e.target));
+                        });
                     }
                 });
             };
 
-            const addEventListenersToSteps = () => {
+            /**
+             * Pre-fills data for the current step from the formData object.
+             */
+            const prefillStepData = () => {
                 formSteps.forEach(step => {
-                    step.querySelectorAll('.card[data-value], input[type="radio"].sr-only').forEach(el => {
-                        const target = el.tagName === 'INPUT' ? el.closest('.card') : el;
-                        target.addEventListener('click', () => {
-                            const parent = target.parentElement.closest('.flex-col, .flex');
-                            parent.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
-                            target.classList.add('selected');
-                            if(el.tagName === 'INPUT') el.checked = true;
-                            checkNextButtonState();
-                        });
+                    step.querySelectorAll('input, select, textarea').forEach(input => {
+                        const name = input.name;
+                        if (!name) return;
+
+                        let value = null;
+                        if (formData[name]) value = formData[name];
+                        else if (formData.contact[name]) value = formData.contact[name];
+                        else if (formData.lifeInsurance[name]) value = formData.lifeInsurance[name];
+                        else if (formData.mortgageProtection[name]) value = formData.mortgageProtection[name];
+                        
+                        if (value) {
+                            if (input.type === 'radio') {
+                                if (input.value === value) {
+                                    input.checked = true;
+                                    const card = input.closest('.card');
+                                    if (card) {
+                                        card.classList.add('selected');
+                                        card.setAttribute('aria-checked', 'true');
+                                    }
+                                }
+                            } else if (input.type === 'checkbox') {
+                                if (Array.isArray(value) && value.includes(input.value)) {
+                                    input.checked = true;
+                                }
+                            } else {
+                                input.value = value;
+                                if(input.inputmode === 'numeric') formatCurrency(input);
+                            }
+                        }
                     });
-                     step.querySelectorAll('input, select, textarea').forEach(input => {
-                        input.addEventListener('input', () => checkNextButtonState());
+                });
+            };
+            
+            /**
+             * Handles the selection of a custom card-based input.
+             */
+            const handleCardSelection = (card, stepName) => {
+                const group = card.parentElement;
+                group.querySelectorAll('.card').forEach(c => {
+                    c.classList.remove('selected');
+                    c.setAttribute('aria-checked', 'false');
+                });
+
+                card.classList.add('selected');
+                card.setAttribute('aria-checked', 'true');
+
+                const value = card.dataset.value;
+
+                if (stepName === 'goal') {
+                    formData.goal = value;
+                } else if (stepName === 'intent') {
+                    formData.intent = value;
+                } else if (stepName === 'lifeInsurance') {
+                    formData.lifeInsurance.legacyType = value;
+                } else if (stepName === 'scheduling') {
+                    const container = card.closest('[role="radiogroup"]');
+                    if (container.id === 'meeting-type-cards') {
+                        formData.scheduling.meetingType = value;
+                        document.getElementById('time-selection-container').classList.remove('hidden');
+                    } else if (container.id === 'date-cards') {
+                        formData.scheduling.date = value;
+                        formData.scheduling.dateDisplay = card.dataset.display;
+                        document.getElementById('time-window-container').classList.remove('hidden');
+                    } else if (container.id === 'time-cards') {
+                        formData.scheduling.time = value;
+                    }
+                }
+                checkButtonsState();
+            };
+
+            /**
+             * Calculates age based on a date string.
+             */
+            const getAge = (dateString) => {
+                if (!dateString) return null;
+                const today = new Date();
+                const birthDate = new Date(dateString);
+                let age = today.getFullYear() - birthDate.getFullYear();
+                const m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                return age;
+            };
+            
+            const phases = [
+                { id: 1, title: 'About You' },
+                { id: 2, title: 'Plan Details' },
+                { id: 3, title: 'Health & Beneficiaries' },
+                { id: 4, title: 'Finalize & Schedule' }
+            ];
+
+            const buildStepIndicator = () => {
+                if (!stepIndicator) return;
+                stepIndicator.innerHTML = '';
+                phases.forEach((phase, index) => {
+                    const li = document.createElement('li');
+                    li.id = `phase-${phase.id}`;
+                    li.className = 'relative';
+                    if (index < phases.length - 1) {
+                        li.classList.add('pb-12');
+                    }
+
+                    li.innerHTML = `
+                        ${index < phases.length - 1 ? '<div class="line absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-300 transition-colors duration-300"></div>' : ''}
+                        <div class="relative flex items-center space-x-4">
+                            <div class="circle-container z-10 w-8 h-8 rounded-full flex items-center justify-center bg-gray-300 text-gray-500 font-bold transition-colors duration-300 flex-shrink-0">
+                                <span class="check-icon hidden text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                                <span class="number-icon">${phase.id}</span>
+                            </div>
+                            <p class="text-container font-bold text-gray-500 transition-colors duration-300">${phase.title}</p>
+                        </div>
+                    `;
+                    stepIndicator.appendChild(li);
+                });
+            };
+
+            const updateProgressAndIndicator = () => {
+                const totalSteps = currentPath.length;
+                const currentStepElement = formSteps[currentStepIndex];
+                if (!currentStepElement) return;
+
+                const stepTitle = currentStepElement.dataset.stepTitle || '';
+                const currentPhase = parseInt(currentStepElement.dataset.phase);
+
+                const progressPercentage = totalSteps > 1 ? (currentStepIndex / (totalSteps - 1)) * 100 : 0;
+                if (progressBar) progressBar.style.width = `${progressPercentage}%`;
+                if (progressContainer) progressContainer.setAttribute('aria-valuenow', Math.round(progressPercentage));
+                if(progressText) {
+                    progressText.textContent = `Step ${currentStepIndex + 1} of ${totalSteps}: ${stepTitle}`;
+                }
+
+                if (stepIndicator) {
+                    phases.forEach(phase => {
+                        const phaseEl = document.getElementById(`phase-${phase.id}`);
+                        if (!phaseEl) return;
+                        const line = phaseEl.querySelector('.line');
+                        const circle = phaseEl.querySelector('.circle-container');
+                        const check = phaseEl.querySelector('.check-icon');
+                        const number = phaseEl.querySelector('.number-icon');
+                        const text = phaseEl.querySelector('.text-container');
+
+                        if (phase.id < currentPhase) { // Completed phase
+                            if (line) line.classList.replace('bg-gray-300', 'bg-teal-600');
+                            circle.classList.replace('bg-gray-300', 'bg-teal-600');
+                            circle.classList.replace('text-gray-500', 'text-white');
+                            check.classList.remove('hidden');
+                            number.classList.add('hidden');
+                            text.classList.replace('text-gray-500', 'text-teal-800');
+                        } else if (phase.id === currentPhase) { // Current phase
+                            if (line) line.classList.replace('bg-teal-600', 'bg-gray-300');
+                            circle.classList.replace('bg-gray-300', 'bg-teal-600');
+                            circle.classList.replace('text-gray-500', 'text-white');
+                            check.classList.add('hidden');
+                            number.classList.remove('hidden');
+                            text.classList.replace('text-gray-500', 'text-teal-800');
+                        } else { // Future phase
+                            if (line) line.classList.replace('bg-teal-600', 'bg-gray-300');
+                            circle.classList.replace('bg-teal-600', 'bg-gray-300');
+                            circle.classList.replace('text-white', 'text-gray-500');
+                            check.classList.add('hidden');
+                            number.classList.remove('hidden');
+                            text.classList.replace('text-teal-800', 'text-gray-500');
+                        }
                     });
+                }
+            };
+
+            /**
+             * Displays the specified step and hides others.
+             */
+            const showStep = (index) => {
+                formSteps.forEach((step, i) => {
+                    step.classList.toggle('active', i === index);
+                });
+                currentStepIndex = index;
+                if (backBtn) backBtn.style.display = index > 0 ? 'flex' : 'none';
+                
+                const currentStepElement = formSteps[index];
+                const stepName = currentStepElement?.dataset.stepName;
+                const isFinalStep = stepName === 'scheduling';
+                
+                if (nextBtn) nextBtn.style.display = isFinalStep ? 'none' : 'block';
+                if (submitBtn) {
+                    submitBtn.style.display = isFinalStep ? 'block' : 'none';
+                    submitBtn.textContent = (formData.intent === 'Ready to Get Started') ? 'Schedule My Meeting' : 'See My Plan';
+                }
+
+                if (stepName === 'beneficiary') {
+                    const introTextEl = document.getElementById('beneficiary-intro-text');
+                    if (introTextEl && formData.coverage) {
+                        const formattedCoverage = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(formData.coverage);
+                        introTextEl.innerHTML = `You've selected a <strong class="text-teal-600">${formattedCoverage}</strong> benefit. Please list who will receive it.`;
+                    }
+                }
+
+                updateProgressAndIndicator();
+                checkButtonsState();
+                window.scrollTo(0, 0);
+            };
+            
+            /**
+             * Checks if the current step is valid and enables/disables the Next/Submit button.
+             */
+            const checkButtonsState = () => {
+                const currentStepElement = formSteps[currentStepIndex];
+                if (!currentStepElement) return;
+
+                const stepName = currentStepElement.dataset.stepName;
+                let isStepValid = validateStep(currentStepElement);
+
+                const targetBtn = (stepName === 'scheduling') ? submitBtn : nextBtn;
+                if (targetBtn) targetBtn.disabled = !isStepValid;
+            };
+
+            /**
+             * Validates a single step.
+             */
+            const validateStep = (step) => {
+                const stepName = step.dataset.stepName;
+                let isValid = true;
+                
+                // Clear previous errors
+                step.querySelectorAll('.error-message').forEach(el => el.style.display = 'none');
+                step.querySelectorAll('.form-input.error').forEach(el => el.classList.remove('error'));
+
+                if (['goal', 'intent', 'lifeInsurance', 'finalExpense'].includes(stepName)) {
+                    return !!step.querySelector('.card.selected');
+                }
+                
+                if (stepName === 'beneficiary') {
+                    const total = formData.beneficiaries.reduce((sum, b) => sum + (parseInt(b.percentage, 10) || 0), 0);
+                    const allFieldsFilled = formData.beneficiaries.every(b => b.name && b.relationship && b.percentage > 0);
+                    return total === 100 && allFieldsFilled;
+                }
+
+                if (stepName === 'scheduling') {
+                    const { meetingType, date, time } = formData.scheduling;
+                    return !!(meetingType && date && time);
+                }
+
+                const inputs = Array.from(step.querySelectorAll('input[required], select[required], textarea[required]'));
+                inputs.forEach(input => {
+                    let fieldIsValid = true;
+                    const errorEl = input.nextElementSibling;
+
+                    if (input.type === 'radio') {
+                         // Validated as a group below
+                    } else if (input.type === 'email') {
+                        fieldIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+                        if (!fieldIsValid && errorEl) errorEl.textContent = 'Please enter a valid email address.';
+                    } else if (input.type === 'tel') {
+                        fieldIsValid = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(input.value);
+                        if (!fieldIsValid && errorEl) errorEl.textContent = 'Please enter a valid 10-digit phone number.';
+                    } else if (input.type === 'date') {
+                        fieldIsValid = input.value !== '';
+                        if(fieldIsValid) {
+                            const birthDate = new Date(input.value);
+                            const today = new Date();
+                            const minDate = new Date(today.getFullYear() - 120, today.getMonth(), today.getDate());
+                            if (birthDate > today || birthDate < minDate) {
+                                fieldIsValid = false;
+                                if(errorEl) errorEl.textContent = 'Please enter a realistic date of birth.';
+                            }
+                        }
+                    } else {
+                        fieldIsValid = input.value.trim() !== '';
+                        if (!fieldIsValid && errorEl) errorEl.textContent = 'This field is required.';
+                    }
+                    
+                    if (!fieldIsValid) {
+                        isValid = false;
+                        input.classList.add('error');
+                        if (errorEl && errorEl.classList.contains('error-message')) {
+                            errorEl.style.display = 'block';
+                        }
+                    }
+                });
+
+                const radioGroups = [...new Set(Array.from(step.querySelectorAll('input[type="radio"][required]')).map(r => r.name))];
+                radioGroups.forEach(name => {
+                    const group = form.querySelector(`input[name="${name}"]:checked`);
+                    if (!group) {
+                        isValid = false;
+                        const firstRadio = form.querySelector(`input[name="${name}"]`);
+                        const errorContainer = firstRadio.closest('[role="radiogroup"]');
+                        if(errorContainer) {
+                            const errorEl = errorContainer.querySelector('.error-message');
+                            if(errorEl) errorEl.style.display = 'block';
+                        }
+                    }
+                });
+
+                return isValid;
+            };
+            
+            /**
+             * Handles beneficiary logic.
+             */
+            const distributePercentages = () => {
+                const numBeneficiaries = formData.beneficiaries.length;
+                if (numBeneficiaries === 0) return;
+
+                const basePercentage = Math.floor(100 / numBeneficiaries);
+                let remainder = 100 % numBeneficiaries;
+
+                formData.beneficiaries.forEach((beneficiary, index) => {
+                    beneficiary.percentage = basePercentage + (remainder-- > 0 ? 1 : 0);
+                });
+                updateBeneficiaryList();
+            };
+
+            const updateBeneficiaryList = () => {
+                const listContainer = document.getElementById('beneficiary-list');
+                if(!listContainer) return;
+                listContainer.innerHTML = '';
+                formData.beneficiaries.forEach((beneficiary, index) => {
+                    const div = document.createElement('div');
+                    // FIX: Changed grid layout for better responsiveness
+                    div.className = 'grid grid-cols-1 md:grid-cols-12 gap-3 p-3 border rounded-lg items-center';
+                    div.innerHTML = `
+                        <div class="md:col-span-5"><label for="beneficiary-name-${index}" class="sr-only">Beneficiary Name</label><input type="text" id="beneficiary-name-${index}" placeholder="Beneficiary Name" class="form-input" value="${beneficiary.name}" data-index="${index}" data-field="name" required></div>
+                        <div class="md:col-span-4"><label for="beneficiary-relationship-${index}" class="sr-only">Relationship</label><input type="text" id="beneficiary-relationship-${index}" placeholder="Relationship" class="form-input" value="${beneficiary.relationship}" data-index="${index}" data-field="relationship" required></div>
+                        <div class="flex items-center gap-2 md:col-span-3">
+                            <label for="beneficiary-percentage-${index}" class="sr-only">Percentage</label><input type="number" id="beneficiary-percentage-${index}" placeholder="%" class="form-input w-24" value="${beneficiary.percentage}" data-index="${index}" data-field="percentage" min="1" max="100" required>
+                            <span class="text-gray-500">%</span>
+                            ${index > 0 ? `<button type="button" class="remove-beneficiary text-red-500 hover:text-red-700 font-bold text-2xl ml-auto" data-index="${index}" aria-label="Remove beneficiary">&times;</button>` : '<div class="w-8 h-8"></div>'}
+                        </div>
+                    `;
+                    listContainer.appendChild(div);
+                });
+                
+                document.querySelectorAll('#beneficiary-list input').forEach(input => {
+                    input.addEventListener('input', e => {
+                        const { index, field } = e.target.dataset;
+                        let value = e.target.value;
+                        if (field === 'percentage') {
+                            value = Math.max(0, Math.min(100, parseInt(value, 10) || 0));
+                            e.target.value = value;
+                        }
+                        formData.beneficiaries[index][field] = value;
+                        updatePercentageTotal();
+                        checkButtonsState();
+                    });
+                });
+
+                document.querySelectorAll('.remove-beneficiary').forEach(button => {
+                    button.addEventListener('click', e => {
+                        const index = parseInt(e.target.dataset.index, 10);
+                        formData.beneficiaries.splice(index, 1);
+                        distributePercentages();
+                    });
+                });
+                
+                const addBtn = document.getElementById('add-beneficiary');
+                const limitMsg = document.getElementById('beneficiary-limit-message');
+                if (addBtn && limitMsg) {
+                    const atLimit = formData.beneficiaries.length >= 5;
+                    addBtn.style.display = atLimit ? 'none' : 'flex';
+                    limitMsg.classList.toggle('hidden', !atLimit);
+                }
+                updatePercentageTotal();
+                checkButtonsState();
+            };
+
+            const addBeneficiary = () => {
+                if (formData.beneficiaries.length >= 5) return;
+                formData.beneficiaries.push({ name: '', relationship: '', percentage: 0 });
+                distributePercentages();
+            };
+            
+            const updatePercentageTotal = () => {
+                const percentageTotalEl = document.getElementById('percentage-total');
+                if (!percentageTotalEl) return;
+                const total = formData.beneficiaries.reduce((sum, b) => sum + (parseInt(b.percentage, 10) || 0), 0);
+                const percentageValueEl = document.getElementById('percentage-value');
+                percentageValueEl.textContent = total;
+                percentageTotalEl.classList.toggle('text-red-500', total !== 100);
+                percentageTotalEl.classList.toggle('text-teal-600', total === 100);
+            };
+
+            /**
+             * Generates dynamic options for various steps.
+             */
+            const generateCoverageOptions = () => {
+                const container = document.getElementById('coverage-options-container');
+                if (!container) return;
+
+                const optionsConfig = {
+                    'FinalExpense': [
+                        { value: '10000', text: '$10,000' }, { value: '15000', text: '$15,000' },
+                        { value: '25000', text: '$25,000' }, { value: '35000', text: '$35,000' },
+                        { value: '50000', text: '$50,000' }
+                    ],
+                    'default': [
+                        { value: '100000', text: '$100,000' }, { value: '250000', text: '$250,000' },
+                        { value: '500000', text: '$500,000' }, { value: '750000', text: '$750,000' },
+                        { value: '1000000', text: '$1,000,000' }
+                    ]
+                };
+                const options = optionsConfig[formData.goal] || optionsConfig['default'];
+                
+                let suggestedValue = '';
+                if (formData.goal === 'MortgageProtection' && formData.mortgageProtection.mortgageBalance) {
+                    const balance = parseInt(String(formData.mortgageProtection.mortgageBalance).replace(/\D/g, '')) || 0;
+                    const bestMatch = options.find(opt => parseInt(opt.value) >= balance) || options[options.length - 1];
+                    suggestedValue = bestMatch.value;
+                }
+
+                let selectHTML = `<label for="coverage-amount" class="sr-only">Select Coverage Amount</label>
+                                <select id="coverage-amount" name="coverage" required class="form-input">
+                                <option value="">Select an amount...</option>`;
+                options.forEach(opt => {
+                    const isSelected = opt.value === suggestedValue || opt.value === formData.coverage;
+                    selectHTML += `<option value="${opt.value}" ${isSelected ? 'selected' : ''}>${opt.text}</option>`;
+                });
+                selectHTML += `</select><p class="error-message">Please select an amount.</p>`;
+                container.innerHTML = selectHTML;
+                container.querySelector('#coverage-amount').addEventListener('input', checkButtonsState);
+            };
+
+            const generateDateCards = () => {
+                const dateCardsContainer = document.getElementById('date-cards');
+                if (!dateCardsContainer) return;
+                dateCardsContainer.innerHTML = '';
+                const availableDates = [];
+                let currentDate = new Date(MOCK_CURRENT_DATE);
+
+                while (availableDates.length < 3) {
+                    currentDate.setDate(currentDate.getDate() + 1);
+                    const dayOfWeek = currentDate.getDay();
+                    if (dayOfWeek !== 0 && dayOfWeek !== 6) { // Skip weekends
+                        availableDates.push(new Date(currentDate));
+                    }
+                }
+
+                availableDates.forEach(date => {
+                    const dayOfWeekStr = date.toLocaleDateString('en-US', { weekday: 'long' });
+                    const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                    const value = date.toISOString().split('T')[0];
+                    const card = document.createElement('div');
+                    card.className = 'card cursor-pointer flex-1 text-center';
+                    card.dataset.value = value;
+                    card.dataset.display = `${dayOfWeekStr}, ${dateStr}`;
+                    card.setAttribute('tabindex', '0');
+                    card.setAttribute('role', 'radio');
+                    card.setAttribute('aria-checked', 'false');
+                    card.innerHTML = `<span class="font-bold text-base">${dayOfWeekStr}</span><p class="text-sm text-gray-600">${dateStr}</p>`;
+                    card.addEventListener('click', () => handleCardSelection(card, 'scheduling'));
+                    card.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            handleCardSelection(card, 'scheduling');
+                        }
+                    });
+                    dateCardsContainer.appendChild(card);
                 });
             };
 
@@ -346,122 +1038,296 @@
                 }
             };
 
-            const getAge = (dateString) => {
-                if (!dateString) return null;
-                const today = new Date();
-                const birthDate = new Date(dateString);
-                let age = today.getFullYear() - birthDate.getFullYear();
-                const m = today.getMonth() - birthDate.getMonth();
-                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-                    age--;
-                }
-                return age;
-            };
-
-            const buildStepIndicator = () => {
-                if (!stepIndicator) return;
-                stepIndicator.innerHTML = '';
-                phases.forEach((phase, index) => {
-                    const li = document.createElement('li');
-                    li.id = `phase-${phase.id}`;
-                    li.className = 'relative';
-                    if (index < phases.length - 1) li.classList.add('pb-12');
-                    li.innerHTML = `
-                        ${index < phases.length - 1 ? '<div class="line absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-300 transition-colors duration-300"></div>' : ''}
-                        <div class="relative flex items-center space-x-4">
-                            <div class="circle-container z-10 w-8 h-8 rounded-full flex items-center justify-center bg-gray-300 text-gray-500 font-bold transition-colors duration-300 flex-shrink-0">
-                                <span class="check-icon hidden text-white"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
-                                <span class="number-icon">${phase.id}</span>
-                            </div>
-                            <p class="text-container font-bold text-gray-500 transition-colors duration-300">${phase.title}</p>
-                        </div>`;
-                    stepIndicator.appendChild(li);
-                });
-            };
-
-            const updateProgressAndIndicator = () => {
-                 const totalSteps = fullPath.length;
-                 const progressPercentage = totalSteps > 1 ? (currentStepIndex / (totalSteps - 1)) * 100 : 0;
-                 progressBar.style.width = `${progressPercentage}%`;
-                 const currentStepElement = formSteps[currentStepIndex];
-                 if(progressText && currentStepElement) {
-                     progressText.textContent = `Step ${currentStepIndex + 1} of ${totalSteps}: ${currentStepElement.dataset.stepTitle}`;
-                 }
-
-                 if (stepIndicator && currentStepElement) {
-                    const currentPhase = parseInt(currentStepElement.dataset.phase);
-                    phases.forEach(phase => {
-                        const phaseEl = document.getElementById(`phase-${phase.id}`);
-                        const line = phaseEl.querySelector('.line');
-                        const circle = phaseEl.querySelector('.circle-container');
-                        const check = phaseEl.querySelector('.check-icon');
-                        const number = phaseEl.querySelector('.number-icon');
-                        const text = phaseEl.querySelector('.text-container');
-                        
-                        const isCompleted = phase.id < currentPhase;
-                        const isActive = phase.id === currentPhase;
-
-                        if (line) line.classList.toggle('bg-teal-600', isCompleted);
-                        circle.classList.toggle('bg-teal-600', isActive || isCompleted);
-                        circle.classList.toggle('text-white', isActive || isCompleted);
-                        check.classList.toggle('hidden', !isCompleted);
-                        number.classList.toggle('hidden', isCompleted);
-                        text.classList.toggle('text-teal-800', isActive);
-                        text.classList.toggle('text-gray-500', !isActive);
-                    });
-                 }
-            };
-
-            const showStep = (index) => {
-                formSteps.forEach((step, i) => step.classList.toggle('active', i === index));
-                currentStepIndex = index;
-                backBtn.style.display = index > 0 ? 'flex' : 'none';
-                
-                const isLastStep = index === formSteps.length - 1;
-                nextBtn.style.display = isLastStep ? 'none' : 'block';
-                submitBtn.style.display = isLastStep ? 'block' : 'none';
-
-                updateProgressAndIndicator();
-                checkNextButtonState();
-            };
-
-            const checkNextButtonState = () => {
-                const currentStepElement = formSteps[currentStepIndex];
-                if (!currentStepElement) return;
-
-                const inputs = Array.from(currentStepElement.querySelectorAll('input[required], select[required]'));
-                const allFieldsFilled = inputs.every(input => {
-                    if (input.type === 'radio') {
-                        return currentStepElement.querySelector(`input[name="${input.name}"]:checked`);
-                    }
-                    return input.value.trim() !== '';
-                });
-                
-                const isLastStep = currentStepIndex === formSteps.length - 1;
-                if(isLastStep) {
-                    submitBtn.disabled = !allFieldsFilled;
-                } else {
-                    nextBtn.disabled = !allFieldsFilled;
-                }
-            };
-            
+            // --- NAVIGATION & SUBMISSION ---
             nextBtn.addEventListener('click', () => {
-                if (currentStepIndex < formSteps.length - 1) {
-                    showStep(currentStepIndex + 1);
+                const currentStepElement = formSteps[currentStepIndex];
+                if (!validateStep(currentStepElement)) return;
+
+                collectStepData(currentStepElement);
+                
+                const stepName = currentStepElement.dataset.stepName;
+                if (stepName === 'goal') {
+                    if (formData.goal && PATHS[formData.goal]) {
+                        currentPath = ['goal', ...PATHS[formData.goal]]; 
+                        currentStepIndex++; 
+                        buildFormSteps(); 
+                    }
+                } else {
+                    currentStepIndex++;
+                    if (currentStepIndex < formSteps.length) {
+                        showStep(currentStepIndex);
+                    }
                 }
             });
 
             backBtn.addEventListener('click', () => {
                 if (currentStepIndex > 0) {
-                    showStep(currentStepIndex - 1);
+                    currentStepIndex--;
+                    showStep(currentStepIndex);
                 }
             });
             
-            document.getElementById('smart-form').addEventListener('submit', (e) => {
+            const collectStepData = (step) => {
+                if (!step) return;
+                const inputs = step.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    const name = input.name;
+                    if (!name) return;
+                    
+                    let value;
+                    if (input.type === 'radio') {
+                        if(input.checked) {
+                           value = input.value;
+                        } else {
+                           return; // Don't process unchecked radios
+                        }
+                    } else if (input.type === 'checkbox') {
+                        if (name === 'condition') {
+                           if (!formData.health.majorConditions) formData.health.majorConditions = [];
+                           if (input.checked) {
+                               if (!formData.health.majorConditions.includes(input.value)) {
+                                   formData.health.majorConditions.push(input.value);
+                               }
+                           } else {
+                               formData.health.majorConditions = formData.health.majorConditions.filter(v => v !== input.value);
+                           }
+                        } else if (name === 'mailPlan') {
+                            formData.contact.mailPlan = input.checked;
+                        }
+                        return; 
+                    } else {
+                        value = input.value;
+                    }
+
+                    if (formData.contact.hasOwnProperty(name)) formData.contact[name] = value;
+                    else if (formData.finalExpense.hasOwnProperty(name)) formData.finalExpense[name] = value;
+                    else if (formData.lifeInsurance.hasOwnProperty(name)) formData.lifeInsurance[name] = value;
+                    else if (formData.mortgageProtection.hasOwnProperty(name)) formData.mortgageProtection[name] = value;
+                    else if (formData.health.hasOwnProperty(name)) formData.health[name] = value;
+                    else if (formData.hasOwnProperty(name)) formData[name] = value;
+                });
+
+                if (step.dataset.stepName === 'dob') {
+                    formData.age = getAge(formData.birthDate);
+                }
+            };
+
+            form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                // Handle final submission
-                console.log("Form Submitted", formData);
+                if (!validateStep(formSteps[currentStepIndex])) return;
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Finalizing...';
+                
+                collectStepData(formSteps[currentStepIndex]);
+                await submitForm();
             });
+
+            const submitForm = async () => {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead');
+                    console.log("Facebook 'Lead' event fired.");
+                }
+
+                formData.leadTimestamp = new Date().toISOString();
+                
+                const webhookUrl = 'https://hooks.zapier.com/hooks/catch/19410211/ubzcrab/';
+                console.log("Sending data to Zapier:", JSON.stringify(formData, null, 2));
+                
+                try {
+                    // FIX: Re-added 'no-cors' mode to prevent CORS errors in the preview environment.
+                    // This allows the data to be sent, but we cannot read the response.
+                    await fetch(webhookUrl, {
+                        method: 'POST',
+                        mode: 'no-cors', 
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData),
+                    });
+                    
+                    // Since we can't read the response with 'no-cors', we assume success if no network error was thrown.
+                    console.log('Data sent to Zapier webhook.');
+                    generatePlan(formData);
+
+                } catch (error) {
+                    // This will now only catch network-level errors (e.g., user is offline).
+                    console.error('Error sending data to Zapier webhook:', error);
+                    const submissionErrorDiv = document.createElement('div');
+                    submissionErrorDiv.className = 'mt-4 p-4 bg-red-100 text-red-700 rounded-lg';
+                    submissionErrorDiv.textContent = 'There was a network issue submitting your information. Please check your connection and try again.';
+                    form.appendChild(submissionErrorDiv);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = (formData.intent === 'Ready to Get Started') ? 'Schedule My Meeting' : 'See My Plan';
+                }
+            };
+
+            const generatePlan = (data) => {
+                mainContent.style.display = 'none';
+                planOutputContainer.style.display = 'block';
+                window.scrollTo(0, 0);
+                
+                const calculateIllustrativeQuote = (age, gender, isSmoker, coverageAmount, goal) => {
+                    const finalExpenseRates = {
+                        non_smoker: {
+                            male:   { 40: 0.36, 45: 0.44, 50: 0.64, 55: 1.08, 60: 2.24, 65: 4.10, 70: 7.78 },
+                            female: { 40: 0.30, 45: 0.36, 50: 0.54, 55: 0.88, 60: 2.02, 65: 3.30, 70: 6.08 }
+                        },
+                        smoker: {
+                            male:   { 40: 0.40, 45: 0.54, 50: 0.98, 55: 1.88, 60: 4.44, 65: 7.94, 70: 15.90 },
+                            female: { 40: 0.32, 45: 0.44, 50: 0.78, 55: 1.56, 60: 3.52, 65: 6.72, 70: 12.70 }
+                        }
+                    };
+                    
+                    const termLifeRates = {
+                        non_smoker: {
+                            male:   { 30: 0.110, 40: 0.152, 50: 0.259, 55: 0.443, 60: 0.675, 65: 1.082 },
+                            female: { 30: 0.090, 40: 0.130, 50: 0.220, 55: 0.380, 60: 0.590, 65: 0.950 }
+                        },
+                        smoker: {
+                            male:   { 30: 0.275, 40: 0.380, 50: 0.650, 55: 1.100, 60: 1.700, 65: 2.700 },
+                            female: { 30: 0.225, 40: 0.325, 50: 0.550, 55: 0.950, 60: 1.475, 65: 2.375 }
+                        }
+                    };
+
+                    let rateTable, ratePerUnit;
+                    if (goal === 'FinalExpense') {
+                        rateTable = finalExpenseRates;
+                        ratePerUnit = 10000;
+                    } else {
+                        rateTable = termLifeRates;
+                        ratePerUnit = 1000;
+                    }
+
+                    const smokerStatus = isSmoker === 'Yes' ? 'smoker' : 'non_smoker';
+                    const genderKey = gender === 'Male' ? 'male' : 'female';
+                    const userRates = rateTable[smokerStatus][genderKey];
+                    const ageBands = Object.keys(userRates).map(Number);
+                    
+                    let lowerAgeBand = ageBands.filter(band => band <= age).pop() || ageBands[0];
+                    let upperAgeBand = ageBands.find(band => band >= age) || ageBands[ageBands.length - 1];
+                    
+                    let monthlyRatePerUnit;
+                    if (lowerAgeBand === upperAgeBand || age < ageBands[0]) {
+                        monthlyRatePerUnit = userRates[lowerAgeBand];
+                    } else {
+                        const lowerRate = userRates[lowerAgeBand];
+                        const upperRate = userRates[upperAgeBand];
+                        const ageRange = upperAgeBand - lowerAgeBand;
+                        const agePosition = (age - lowerAgeBand) / ageRange;
+                        monthlyRatePerUnit = lowerRate + (upperRate - lowerRate) * agePosition;
+                    }
+                    
+                    const finalPremium = (coverageAmount / ratePerUnit) * monthlyRatePerUnit;
+                    return finalPremium.toFixed(2);
+                };
+                
+                const coverage = data.coverage || '100000';
+                const illustrativeQuote = calculateIllustrativeQuote(data.age, data.health.gender, data.health.smoking, parseInt(coverage), data.goal);
+                
+                planOutputContainer.innerHTML = `
+                    <div class="no-print mb-6 flex justify-between items-center">
+                        <h1 class="text-2xl font-bold text-gray-800">Your Personalized Plan</h1>
+                        <button onclick="window.print()" class="bg-gray-800 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors">Print / Save as PDF</button>
+                    </div>
+                    <div class="plan-page border-t-8 border-teal-600">
+                        <section class="text-center" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center;">
+                            <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-14 mx-auto mb-12 logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x60/0d9488/ffffff?text=Noble+Life+Co.';">
+                            <h1 class="font-serif text-5xl font-bold text-gray-900 leading-tight">Your Noble Life Plan</h1>
+                            <p class="mt-4 text-xl text-gray-600">Specially prepared for:</p>
+                            <p class="font-serif text-4xl text-teal-600 mt-2">${data.contact.firstName} ${data.contact.lastName}</p>
+                            <div class="mt-12 border-t-2 border-b-2 border-gray-100 py-6 max-w-lg mx-auto">
+                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest">Preferred Rate Estimate</h3>
+                                <p class="text-6xl font-bold text-gray-900 mt-2">$${illustrativeQuote.split('.')[0]}<span class="text-2xl font-medium text-gray-500">.${illustrativeQuote.split('.')[1]}/mo</span></p>
+                                <p class="text-sm text-gray-600 mt-4">Based on the information you provided for a <span class="font-bold">$${parseInt(coverage).toLocaleString()}</span> ${data.goal.replace(/([A-Z])/g, ' $1').trim()} plan.</p>
+                                <div class="mt-4 text-xs text-gray-500 bg-gray-50 p-3 rounded-lg border">
+                                    <strong>This is an illustrative quote and not a final offer of insurance.</strong> It assumes a non-smoker in good health. Your licensed specialist will confirm your final, locked-in rate based on your complete profile and underwriting approval.
+                                </div>
+                            </div>
+                            <p class="mt-12 text-sm text-gray-500">Date Prepared: ${MOCK_CURRENT_DATE.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                        </section>
+                        
+                        <section class="page-break">
+                             <div class="text-center">
+                                 <h2 class="font-serif text-3xl font-bold text-gray-900 mb-2">Your Meeting is Reserved</h2>
+                                 <p class="text-gray-600">The first step to securing your plan is complete.</p>
+                             </div>
+                             <div class="bg-teal-50 rounded-lg p-6 mt-8 border border-teal-200">
+                                 <div class="text-center">
+                                     <h3 class="font-bold text-xl text-gray-900 mb-2">Your time is reserved.</h3>
+                                     <p class="text-gray-700 mb-1">Your requested <strong>${data.scheduling.meetingType}</strong> is scheduled for:</p>
+                                     <p class="font-bold text-3xl text-teal-600 mt-2">${data.scheduling.dateDisplay}, in the ${data.scheduling.time}</p>
+                                     <div class="mt-4 pt-4 border-t text-sm text-gray-600 text-center">
+                                         <p><strong>Please Note:</strong> You will receive email & text reminders before your appointment. This time is reserved exclusively for you.</p>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="mt-16 pt-12 border-t-2 border-gray-100">
+                                 <div class="bg-white p-8 rounded-lg">
+                                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start">
+                                         <div class="md:col-span-1 text-center">
+                                             <img src="https://i.imgur.com/kt25vEy.png" alt="Michael Henry, Specialist" class="w-40 h-40 rounded-full shadow-lg mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/160x160';">
+                                             <div class="mt-4">
+                                                 <h3 class="font-serif text-3xl font-semibold text-gray-900">Michael Henry</h3>
+                                                 <p class="text-teal-600 font-bold text-lg">Your Assigned Licensed Agent</p>
+                                             </div>
+                                             <div class="mt-6 text-left bg-gray-50 p-4 rounded-lg border">
+                                                 <p class="font-bold mb-3 text-gray-800 text-center text-sm">Credentials</p>
+                                                 <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-gray-700">
+                                                     <div><strong>MD:</strong> 3003571707</div><div><strong>TX:</strong> 3313943</div>
+                                                     <div><strong>PA:</strong> 1241356</div><div><strong>MO:</strong> 3003382318</div>
+                                                     <div><strong>NC:</strong> 21382137</div><div><strong>SC:</strong> 21382137</div>
+                                                     <div><strong>NJ:</strong> 3003571707</div><div><strong>IL:</strong> 21382137</div>
+                                                     <div><strong>VA:</strong> 1500974</div><div><strong>OH:</strong> 1648726</div>
+                                                     <div><strong>TN:</strong> 3003571821</div><div><strong>MI:</strong> 21382137</div>
+                                                 </div>
+                                                 <p class="mt-3 pt-2 border-t border-gray-200 font-semibold text-center">Certified Funeral Planning Consultant</p>
+                                             </div>
+                                         </div>
+                                         <div class="md:col-span-2">
+                                             <h4 class="font-serif text-2xl font-bold text-gray-900 mb-4">My Commitment To Your Family</h4>
+                                             <div class="space-y-4 text-gray-700 leading-relaxed">
+                                                 <p>This isn't just a job for me—it's a mission born from personal experience. In March 2020, my father passed away from a sudden heart attack. In the space of seven hours, my family went from a normal conversation with him to making choices we were completely unprepared for.</p>
+                                                 <p>The second shock came at the funeral home: a bill for thousands of dollars due immediately. I used money I had saved to move my own family to honor my father, a choice no son should have to make. That moment taught me that even with love, families can be crushed by the financial weight of a final farewell.</p>
+                                                 <p>I dedicated my life to ensuring no other family has to face that struggle. My goal is to make this process simple and clear, so your family can focus on what truly matters: honoring your memory without the burden of financial stress. I'm here to be your advocate.</p>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                        
+                             <div class="text-center mt-20">
+                                 <h2 class="font-serif text-3xl font-bold text-gray-900 mb-2">Frequently Asked Questions</h2>
+                                 <p class="text-gray-600 max-w-2xl mx-auto">Here are answers to some common questions. We will cover all of this and more during our meeting.</p>
+                             </div>
+                             <div id="faq-container" class="mt-8 max-w-3xl mx-auto space-y-4"></div>
+                        </section>
+
+                        <footer class="text-center mt-16 pt-8 border-t-2 border-gray-100 text-xs text-gray-400">
+                            <p>&copy; ${MOCK_CURRENT_DATE.getFullYear()} Noble Life Co. All rights reserved.</p>
+                        </footer>
+                    </div>
+                `;
+
+                const faqContainer = document.getElementById('faq-container');
+                if (faqContainer) {
+                    const faqs = [
+                        { q: "What if I have health problems? Can I still qualify?", a: "Yes, most people can qualify. Final expense policies are designed for this purpose, and many don't require a medical exam—just a health questionnaire. We work with over 30 carriers to find coverage for almost every health condition." },
+                        { q: "Is this policy permanent? Will my rate ever go up?", a: "Yes, the policies we specialize in are a type of whole life insurance. As long as you pay your premiums, your coverage will never decrease, your policy will never expire, and your monthly payment is locked in for life—it will never increase, regardless of changes to your age or health." },
+                        { q: "What happens if I move to another state?", a: "Your policy is yours to keep and is valid anywhere in the United States. Your coverage moves with you, ensuring your family is protected no matter where you live." },
+                        { q: "How is this different from pre-paying a funeral home?", a: "Pre-paying a funeral home locks you into one specific provider. If that home goes out of business or you move, your plan may not be transferable. A final expense policy pays a cash benefit to your family, giving them the freedom to choose any funeral home they wish and use any remaining funds for other expenses." }
+                    ];
+
+                    faqContainer.innerHTML = faqs.map(faq => `
+                        <details class="faq-item bg-gray-50 rounded-lg border p-4">
+                            <summary class="font-semibold text-gray-800 flex justify-between items-center">
+                                ${faq.q}
+                                <svg class="w-5 h-5 text-gray-500 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="mt-3 text-gray-600 text-sm leading-relaxed">${faq.a}</div>
+                        </details>
+                    `).join('');
+                }
+            };
 
             // --- INITIALIZATION ---
             initializeForm();
