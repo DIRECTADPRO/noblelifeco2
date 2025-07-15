@@ -32,6 +32,24 @@
     <!-- Alpine.js for Interactivity -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '315290065977990'); // Your Pixel ID
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
     <!-- Custom Tailwind Configuration -->
     <script>
         tailwind.config = {
@@ -128,6 +146,12 @@
             opacity: 1;
             transform: translateY(0);
         }
+        .slogan-divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--teal-600);
+            margin: 1rem 0;
+        }
     </style>
     <!-- SEO: JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -145,21 +169,6 @@
       }
     }
     </script>
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '315290065977990'); // Your Pixel ID
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
-/></noscript>
 </head>
 <body class="text-gray-800 antialiased">
 
@@ -188,6 +197,8 @@
                 <h1 id="hero-heading" class="text-4xl md:text-5xl font-serif font-bold text-gray-800">
                     A Promise Kept, <br>A Future Secured.
                 </h1>
+                <p class="mt-4 font-serif text-xl text-gray-600">Your Love is Forever. Our Life Insurance Makes It Certain.</p>
+                <div class="slogan-divider"></div>
                 <p class="mt-4 text-lg text-gray-600">
                     Ensure their dreams are always protected. Create a lasting legacy of love and support in just a few clicks.
                 </p>
