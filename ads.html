@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noble Life Co. | Get Your Free Insurance Quote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using the fonts from your site for consistency -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to precisely match your brand from your files */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfd;
+            color: #1f2937;
+        }
+        .font-serif {
+            font-family: 'Lora', serif;
+        }
+        .brand-teal {
+            background-color: #0d9488; /* Your primary teal color */
+        }
+        .brand-teal-text {
+            color: #0d9488;
+        }
+        .cta-button {
+            background-color: #0d9488;
+            color: white;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
+        }
+        .cta-button:hover {
+            background-color: #0f766e; /* Darker teal for hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+        }
+        /* NEW MODAL STYLES - Designed to complement form.html */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background: white;
+            border-radius: 0.5rem; /* Match form.html border-radius */
+            width: 90%;
+            max-width: 800px; /* Wider to accommodate new design */
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow: hidden; /* Important for the two-column layout */
+        }
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+        .form-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #0d9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+        }
+        .error-message {
+            color: #EF4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center">
+             <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. logo" class="h-14 md:h-16 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+            <a href="tel:1-800-555-1234" class="hidden sm:block text-lg font-semibold text-gray-700 hover:brand-teal-text transition">Call for a Free Quote!</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- SECTION 1: Final Expense Landing Page -->
+        <div id="final_expense" class="product-section hidden">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-800 leading-tight">Your Final Act of Love: A Legacy of Peace, Not Bills.</h1>
+                    <p class="mt-4 text-lg text-gray-600">When you're gone, ensure your family receives a check to celebrate your life, not a bill to pay for it. A final expense plan is a simple, loving way to cover funeral costs and leave behind a legacy of care. No medical exam required.</p>
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Your Rate is Locked-In for Life</span></li>
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">No Medical Exam to Qualify</span></li>
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Guaranteed Approval for Ages 50-85</span></li>
+                    </ul>
+                    <button onclick="openModal()" class="cta-button mt-8 w-full md:w-auto text-lg">Secure Your Legacy</button>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455584/pexels-cottonbro-7118198_ivtfag.jpg" alt="Close-up of an older couple's hands, showing their wedding rings and a lifetime of commitment." class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: Mortgage Protection Landing Page -->
+        <div id="mortgage_protection" class="product-section hidden">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-800 leading-tight">Your Home is a Legacy. Don't Let it Become a Burden.</h1>
+                    <p class="mt-4 text-lg text-gray-600">You've worked hard to provide a home for your family. Mortgage protection ensures that if you pass away, the mortgage is paid off, and your home remains a source of comfort and security, not a cause for financial distress.</p>
+                    <ul class="mt-6 space-y-3">
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Pays Off The Mortgage 100%</span></li>
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Ensures Your Family Stays in Their Home</span></li>
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Provides Ultimate Peace of Mind</span></li>
+                    </ul>
+                    <button onclick="openModal()" class="cta-button mt-8 w-full md:w-auto text-lg">Protect My Home</button>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455581/pexels-cottonbro-7086032_siogtw.jpg" alt="A happy family in front of their home, symbolizing security and legacy." class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: Life Insurance Landing Page -->
+        <div id="life_insurance" class="product-section hidden">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold text-gray-800 leading-tight">Life Insurance Isn't Just a Policy. It's a Promise for Their Future.</h1>
+                    <p class="mt-4 text-lg text-gray-600">A smart life insurance plan does more than just protect your family if you're gone—it helps you build a tax-free legacy for their biggest dreams. We'll show you how to get affordable protection today while building wealth for tomorrow.</p>
+                     <ul class="mt-6 space-y-3">
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Replace Your Income for Decades</span></li>
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Build a Tax-Free Financial Asset</span></li>
+                        <li class="flex items-center"><svg class="h-6 w-6 brand-teal-text mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span class="text-gray-700 font-medium">Fund College, Retirement, & More</span></li>
+                    </ul>
+                    <button onclick="openModal()" class="cta-button mt-8 w-full md:w-auto text-lg">Build My Legacy Plan</button>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455582/pexels-cottonbro-7086039_1_bgcjfw.jpg" alt="A parent helping their child with homework, symbolizing a protected future." class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Lead Capture Modal (The First Step of the Funnel) - REDESIGNED -->
+    <div id="lead-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                <!-- Left Sidebar: Progress Indicator -->
+                <aside class="hidden md:block md:col-span-1 bg-teal-50 border-r border-teal-200 p-6">
+                    <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 w-auto mx-auto mb-6" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+                    <div class="pt-6 border-t border-teal-200">
+                        <h3 class="font-semibold text-lg text-teal-800 mb-4 text-left">Your Progress</h3>
+                        <ol class="text-left">
+                            <li class="relative pb-12">
+                                <div class="line absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-300"></div>
+                                <div class="relative flex items-center space-x-4">
+                                    <div class="z-10 w-8 h-8 rounded-full flex items-center justify-center bg-teal-600 text-white font-bold flex-shrink-0">1</div>
+                                    <p class="font-bold text-teal-800">About You</p>
+                                </div>
+                            </li>
+                             <li class="relative">
+                                <div class="relative flex items-center space-x-4">
+                                    <div class="z-10 w-8 h-8 rounded-full flex items-center justify-center bg-gray-300 text-gray-500 font-bold flex-shrink-0">2</div>
+                                    <p class="font-bold text-gray-500">Plan Details</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </aside>
+                <!-- Right Column: Form -->
+                <div class="md:col-span-2 p-8 relative">
+                    <button onclick="closeModal()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-700" aria-label="Close modal">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    <h2 class="text-3xl font-serif font-bold text-gray-800">Let's Get Started</h2>
+                    <p class="mt-2 text-gray-500">First, tell us who you are.</p>
+                    <form id="lead-form" class="mt-6 space-y-4">
+                        <div>
+                            <label for="name" class="font-medium text-gray-700 sr-only">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Full Name" required>
+                            <p class="error-message">Please enter your name.</p>
+                        </div>
+                        <div>
+                            <label for="email" class="font-medium text-gray-700 sr-only">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Email Address" required>
+                            <p class="error-message">Please enter a valid email.</p>
+                        </div>
+                        <div>
+                            <label for="phone" class="font-medium text-gray-700 sr-only">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Phone Number" required>
+                            <p class="error-message">Please enter a valid phone number.</p>
+                        </div>
+                        <button type="submit" class="cta-button w-full text-lg !py-3.5">Start My Free Quote</button>
+                        <p class="text-xs text-gray-400 text-center mt-2">By clicking, you agree to be contacted by a licensed agent. Your info is 100% secure.</p>
+                        <!-- Fallback link will be injected here by JS -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- GLOBAL STATE ---
+        let currentProduct = 'final_expense'; // Default product
+
+        // --- DOM ELEMENTS ---
+        const leadModal = document.getElementById('lead-modal');
+        const leadForm = document.getElementById('lead-form');
+        const productSections = document.querySelectorAll('.product-section');
+
+        /**
+         * Initializes the page by reading URL parameters and showing the correct content.
+         */
+        function initializePage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productParam = urlParams.get('product');
+
+            if (productParam && document.getElementById(productParam)) {
+                currentProduct = productParam;
+            }
+
+            productSections.forEach(section => {
+                section.classList.toggle('hidden', section.id !== currentProduct);
+            });
+        }
+
+        /**
+         * Opens the lead capture modal.
+         */
+        function openModal() {
+            if (leadModal) {
+                leadModal.classList.add('active');
+            }
+        }
+
+        /**
+         * Closes the lead capture modal.
+         */
+        function closeModal() {
+            if (leadModal) {
+                leadModal.classList.remove('active');
+            }
+        }
+
+        /**
+         * Validates a single input field.
+         */
+        function validateField(input) {
+            let isValid = false;
+            const errorEl = input.nextElementSibling;
+            
+            if (input.type === 'email') {
+                isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value);
+            } else if (input.type === 'tel') {
+                isValid = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(input.value);
+            } else {
+                isValid = input.value.trim() !== '';
+            }
+
+            if (isValid) {
+                input.classList.remove('border-red-500');
+                if(errorEl) errorEl.style.display = 'none';
+            } else {
+                input.classList.add('border-red-500');
+                if(errorEl) errorEl.style.display = 'block';
+            }
+            return isValid;
+        }
+
+        /**
+         * Handles the submission of the initial lead form.
+         * This is the primary conversion event for Google Ads.
+         */
+        function handleLeadFormSubmit(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+
+            const isNameValid = validateField(nameInput);
+            const isEmailValid = validateField(emailInput);
+            const isPhoneValid = validateField(phoneInput);
+
+            if (!isNameValid || !isEmailValid || !isPhoneValid) {
+                return; // Stop if validation fails
+            }
+
+            // --- CRITICAL CONVERSION TRACKING ---
+            // This is where you would fire your Google Ads conversion tag.
+            // Example: gtag('event', 'conversion', {'send_to': 'AW-YOUR_CONVERSION_ID/YOUR_LABEL'});
+            console.log('--- GOOGLE ADS CONVERSION EVENT FIRED ---');
+            console.log('Lead Captured:', {
+                name: nameInput.value,
+                email: emailInput.value,
+                phone: phoneInput.value,
+                product: currentProduct
+            });
+
+            // --- ROBUST REDIRECT LOGIC (FIXED) ---
+            const params = new URLSearchParams();
+            const goalParam = currentProduct.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+            
+            params.append('goal', goalParam);
+            params.append('firstName', nameInput.value.split(' ')[0] || '');
+            params.append('lastName', nameInput.value.split(' ').slice(1).join(' ') || '');
+            params.append('email', emailInput.value);
+            params.append('phone', phoneInput.value);
+
+            // FIX: Manually construct the URL path to avoid constructor errors in blob environments.
+            const currentUrl = window.location.href;
+            const basePath = currentUrl.substring(0, currentUrl.lastIndexOf('/') + 1);
+            const absoluteUrl = basePath + 'form.html?' + params.toString();
+            
+            const submitButton = leadForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Processing...`;
+            
+            // Add a fallback link in case automatic redirect fails
+            const fallbackLink = document.createElement('a');
+            fallbackLink.href = absoluteUrl;
+            fallbackLink.className = 'text-sm text-center block mt-4 text-gray-500 underline';
+            fallbackLink.textContent = 'If you are not redirected automatically, please click here.';
+            fallbackLink.style.display = 'none'; // Hide it initially
+            submitButton.parentElement.appendChild(fallbackLink);
+
+            setTimeout(() => {
+                fallbackLink.style.display = 'block'; // Show the fallback link after 2 seconds
+            }, 2000);
+
+            // Redirect after a short delay
+            setTimeout(() => {
+                window.location.href = absoluteUrl;
+            }, 500);
+        }
+
+
+        // --- EVENT LISTENERS ---
+        document.addEventListener('DOMContentLoaded', initializePage);
+        if (leadForm) {
+            leadForm.addEventListener('submit', handleLeadFormSubmit);
+        }
+        if (leadModal) {
+            leadModal.addEventListener('click', function(event) {
+                if (event.target === leadModal) {
+                    closeModal();
+                }
+            });
+        }
+
+    </script>
+</body>
+</html>
