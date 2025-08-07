@@ -27,6 +27,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- Google tag (gtag.js) - ADDED -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17447405875"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17447405875');
+    </script>
+    <!-- End Google tag -->
+
     <!-- Facebook Pixel Code (Base) -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -37,11 +47,11 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_PIXEL_ID'); // Replace with your actual Pixel ID
+        fbq('init', '315290065977990'); // Your Pixel ID
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
 
@@ -127,16 +137,6 @@
             }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17447405875">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17447405875');
-</script>
 </head>
 <body class="text-[#1f2937]">
 
@@ -262,185 +262,185 @@
                         <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="final-expense-label">Final Expense Planning</h2><p class="text-gray-500">Your preferences help us calculate the right coverage. Average burial costs are $9k-$12k, while cremation averages $3k-$6k.</p></div>
                         <div class="space-y-6">
                             <div role="radiogroup" aria-labelledby="final-expense-label"><label class="font-semibold text-sm">Have you decided between cremation or traditional burial?</label><div class="flex flex-col gap-3 mt-2"><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Burial" required class="sr-only"><span class="font-bold flex-grow">Planning on burial</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Cremation" required class="sr-only"><span class="font-bold flex-grow">Planning on cremation</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Undecided" required class="sr-only"><span class="font-bold flex-grow">Haven't decided yet</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label></div><p class="error-message">Please select an option.</p></div>
+                    </div>
                 </div>
-            </div>
-        `,
-        lifeInsurance: `
-            <div class="form-step" data-step-name="lifeInsurance" data-step-title="Legacy Plan" data-phase="2">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="legacy-label">How would you like to build your legacy?</h2><p class="text-gray-500">Choose the approach that best fits your financial goals.</p></div>
-                <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="legacy-label">
-                    <div class="card cursor-pointer" data-value="Protect My Income" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Protect My Income</h3><p class="text-sm text-gray-600 mt-1">The most affordable way to get the largest possible death benefit. It's a pure protection tool designed to replace your income and ensure your family's lifestyle is secure.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
-                    <div class="card cursor-pointer" data-value="Protect & Grow" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Protect & Grow</h3><p class="text-sm text-gray-600 mt-1">Combines a death benefit with a cash value component linked to a market index, letting you participate in the upside while a 0% floor protects you from market losses. A powerful, tax-free asset.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
-                    <div class="card cursor-pointer" data-value="Guaranteed Legacy" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M12 22s-4-3-4-9 4-9 4-9 4 3 4 9-4 9-4 9"/><path d="M10 16.5a2.5 2.5 0 0 1 5 0"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Guaranteed Legacy</h3><p class="text-sm text-gray-600 mt-1">For situations where an iron-clad guarantee is top priority—like funding a trust or business agreement. Provides a guaranteed death benefit and cash value growth.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
-                </div>
-            </div>
-        `,
-        mortgageProtection: `
-            <div class="form-step" data-step-name="mortgageProtection" data-step-title="Mortgage Protection" data-phase="2">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Protect Your Home</h2><p class="text-gray-500">Let's get the details to protect your home and finances. This will help us suggest a coverage amount in the next step.</p></div>
-                <div class="space-y-4">
-                    <div><label for="mortgage-balance" class="font-semibold text-sm">What is your remaining mortgage balance?</label><input type="text" inputmode="numeric" id="mortgage-balance" name="mortgageBalance" required class="form-input mt-1" placeholder="$250,000"><p class="error-message">This field is required.</p></div>
-                    <div><label for="mortgage-term" class="font-semibold text-sm">How many years are left on your mortgage?</label><input type="number" id="mortgage-term" name="mortgageTerm" required class="form-input mt-1" placeholder="25"><p class="error-message">Please enter a valid number of years.</p></div>
-                </div>
-            </div>
-        `,
-        coverage: `
-            <div class="form-step" data-step-name="coverage" data-step-title="Coverage Amount" data-phase="2">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">How much coverage are you looking for?</h2><p class="text-gray-500">This will help us estimate your monthly premium.</p></div>
-                <div id="coverage-options-container">
-                    <!-- Options will be injected here by JavaScript -->
-                </div>
-            </div>
-        `,
-        health: `
-            <div class="form-step" data-step-name="health" data-step-title="Health Questions" data-phase="3">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Just a Few Health Questions</h2><p class="text-gray-500">These simple questions help us find you the best rate. Remember, we specialize in approving most health conditions.</p></div>
-                <div class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div><label for="gender" class="font-semibold text-sm">Gender</label><select id="gender" name="gender" required class="form-input mt-1"><option value="">Select...</option><option value="Male">Male</option><option value="Female">Female</option></select><p class="error-message">Please select a gender.</p></div>
-                        <div>
-                            <label class="font-semibold text-sm tooltip">Do you use tobacco?
-                                <svg class="tooltip-icon h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
-                                <span class="tooltiptext">Including cigarettes, cigars, chewing tobacco, or vaping with nicotine.</span>
-                            </label>
-                            <div class="flex gap-4 mt-2" id="smoking-group" role="radiogroup"><label class="card flex-1 cursor-pointer p-3 flex justify-center" tabindex="0"><input type="radio" name="smoking" value="Yes" required class="sr-only"><span class="font-bold">✓ Yes</span></label><label class="card flex-1 cursor-pointer p-3 flex justify-center" tabindex="0"><input type="radio" name="smoking" value="No" required class="sr-only"><span class="font-bold">✗ No</span></label></div><p class="error-message">Please select an option.</p>
+                `,
+                lifeInsurance: `
+                    <div class="form-step" data-step-name="lifeInsurance" data-step-title="Legacy Plan" data-phase="2">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="legacy-label">How would you like to build your legacy?</h2><p class="text-gray-500">Choose the approach that best fits your financial goals.</p></div>
+                        <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="legacy-label">
+                            <div class="card cursor-pointer" data-value="Protect My Income" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Protect My Income</h3><p class="text-sm text-gray-600 mt-1">The most affordable way to get the largest possible death benefit. It's a pure protection tool designed to replace your income and ensure your family's lifestyle is secure.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
+                            <div class="card cursor-pointer" data-value="Protect & Grow" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Protect & Grow</h3><p class="text-sm text-gray-600 mt-1">Combines a death benefit with a cash value component linked to a market index, letting you participate in the upside while a 0% floor protects you from market losses. A powerful, tax-free asset.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
+                            <div class="card cursor-pointer" data-value="Guaranteed Legacy" tabindex="0" role="radio" aria-checked="false"><div class="flex items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4 mt-1 flex-shrink-0"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><path d="M12 22s-4-3-4-9 4-9 4-9 4 3 4 9-4 9-4 9"/><path d="M10 16.5a2.5 2.5 0 0 1 5 0"/></svg><div class="flex-grow"><h3 class="font-bold text-base">Guaranteed Legacy</h3><p class="text-sm text-gray-600 mt-1">For situations where an iron-clad guarantee is top priority—like funding a trust or business agreement. Provides a guaranteed death benefit and cash value growth.</p></div><div class="radio-custom ml-4 mt-1"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div></div>
                         </div>
                     </div>
-                    <div class="pt-4 border-t">
-                        <h3 class="font-semibold text-gray-900">Major Health Conditions</h3>
-                        <p class="text-sm text-gray-500 mb-2">Please select if you have been diagnosed, treated, or taken medication for any of the following.</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-2" id="major-conditions-list">
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Cancer" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Cancer</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Heart Disease / Heart Attack" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Heart Disease / Heart Attack</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Stroke / TIA" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Stroke / TIA</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Diabetes" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Diabetes</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="COPD / Emphysema" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">COPD / Emphysema</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Kidney / Liver Disease" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Kidney / Liver Disease</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Alzheimer's / Dementia" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Alzheimer's / Dementia</label>
-                            <label class="flex items-center"><input type="checkbox" name="condition" value="Organ Transplant" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Organ Transplant</label>
-                        </div>
-                        <p class="text-xs text-gray-500 mt-3">Having any of these conditions doesn't disqualify you. We work with 30+ carriers to find coverage for almost everyone.</p>
-                    </div>
-                    <div class="pt-4 border-t">
-                       <label for="medications" class="font-semibold text-gray-900">Please list any prescription medications you currently take.</label>
-                       <p class="text-sm text-gray-500 mb-2">This is crucial for finding the most accurate rate.</p>
-                       <textarea id="medications" name="medications" rows="3" class="form-input mt-1" placeholder="e.g., Lisinopril, Metformin, Atorvastatin..."></textarea>
-                    </div>
-                    <div class="pt-4 border-t">
-                       <label for="helpful-info" class="font-semibold text-gray-900">Is there anything else about your health history we should know?</label>
-                       <p class="text-sm text-gray-500 mb-2">(e.g., recent surgeries, other major conditions)</p>
-                       <textarea id="helpful-info" name="helpfulInfo" rows="3" class="form-input mt-1"></textarea>
-                    </div>
-                </div>
-            </div>
-        `,
-        beneficiary: `
-            <div class="form-step" data-step-name="beneficiary" data-step-title="Beneficiaries" data-phase="3">
-                <div class="text-left mb-8 mt-4">
-                    <h2 class="text-4xl font-serif font-bold mb-2">Who will receive the benefit?</h2>
-                    <p class="text-gray-500 text-lg" id="beneficiary-intro-text"></p>
-                    <div class="mt-2 text-xs text-gray-500 p-3 bg-gray-50 rounded-md">
-                        <strong>Common splits:</strong> 1 person: 100% | 2 people: 50% each | 3 people: 34%, 33%, 33%
-                    </div>
-                </div>
-                <div id="beneficiary-list" class="space-y-4"></div>
-                <div class="mt-4 flex justify-between items-center">
-                    <div>
-                        <button type="button" id="add-beneficiary" class="text-teal-600 font-semibold flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>Add Beneficiary</button>
-                        <p id="beneficiary-limit-message" class="text-sm text-gray-500 hidden mt-2">Maximum of 5 beneficiaries reached.</p>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <div id="percentage-total" class="font-bold text-lg">Total: <span id="percentage-value">100</span>%</div>
-                    </div>
-                </div>
-            </div>
-        `,
-        timeline: `
-            <div class="form-step" data-step-name="timeline" data-step-title="Your Timeline" data-phase="4">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="timeline-label">How soon are you looking to have coverage in place?</h2><p class="text-gray-500">This helps us prioritize your request.</p></div>
-                <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="timeline-label">
-                    <div class="card cursor-pointer flex items-center" data-value="Immediately" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base flex-grow">Immediately / This Week</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
-                    <div class="card cursor-pointer flex items-center" data-value="Within 30 Days" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base flex-grow">Within the next 30 days</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
-                    <div class="card cursor-pointer flex items-center" data-value="Just Researching" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base flex-grow">Just researching my options</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
-                </div>
-            </div>
-        `,
-        motivation: `
-            <div class="form-step" data-step-name="motivation" data-step-title="Your Motivation" data-phase="4">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">What prompted you to look for this coverage today?</h2><p class="text-gray-500">Your answer helps us understand how to best serve you.</p></div>
-                <label for="motivation-text" class="sr-only">Your motivation for seeking coverage</label>
-                <textarea id="motivation-text" name="motivation" rows="4" class="form-input" placeholder="e.g., I just received a letter from my mortgage company, a friend recently passed away, I'm planning for retirement..."></textarea>
-            </div>
-        `,
-        decisionMakers: `
-            <div class="form-step" data-step-name="decisionMakers" data-step-title="Decision Makers" data-phase="4">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="spouse-label">Will a spouse or partner be involved in this decision?</h2><p class="text-gray-500">It's always best to have all decision-makers present to review the options.</p></div>
-                <div class="flex gap-4" role="radiogroup" aria-labelledby="spouse-label">
-                    <div class="card flex-1 cursor-pointer p-4 text-center" data-value="Yes" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-lg">✓ Yes</span></div>
-                    <div class="card flex-1 cursor-pointer p-4 text-center" data-value="No" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-lg">✗ No</span></div>
-                </div>
-            </div>
-        `,
-        contact: `
-            <div class="form-step" data-step-name="contact" data-step-title="Contact Information" data-phase="4">
-                <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Where can we send your plan?</h2><p class="text-gray-500">A licensed agent will reach out with your personalized quote.</p></div>
-                <div class="space-y-4">
-                     <div><label for="first-name" class="font-semibold text-sm sr-only">First Name</label><input type="text" id="first-name" name="firstName" required class="form-input" placeholder="First Name"><p class="error-message">This field is required.</p></div>
-                     <div><label for="last-name" class="font-semibold text-sm sr-only">Last Name</label><input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Last Name"><p class="error-message">This field is required.</p></div>
-                     <div><label for="phone" class="font-semibold text-sm sr-only">Phone Number</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="Phone Number"><p class="error-message">Please enter a valid phone number.</p></div>
-                     <div><label for="email" class="font-semibold text-sm sr-only">Email Address</label><input type="email" id="email" name="email" required class="form-input" placeholder="Email Address"><p class="error-message" id="email-error">Please enter a valid email address.</p></div>
-                     <div><label for="state" class="font-semibold text-sm sr-only">State</label><select id="state" name="state" required class="form-input"><option value="">Select a state...</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><p class="error-message">Please select a state.</p></div>
-                     <div class="relative flex items-start pt-4 border-t">
-                         <div class="flex h-6 items-center">
-                             <input id="mail-plan-checkbox" name="mailPlan" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500">
-                         </div>
-                         <div class="ml-3 text-sm leading-6">
-                             <label for="mail-plan-checkbox" class="font-medium text-gray-900 cursor-pointer">Yes, please mail me a printed copy of my plan options.</label>
-                         </div>
-                     </div>
-                     <div id="address-fields" class="hidden space-y-4 ml-9">
-                         <p id="mail-plan-confirmation" class="text-xs text-gray-500 hidden">Great! We'll mail your personalized plan booklet within 3-5 business days.</p>
-                         <div><label for="street-address" class="sr-only">Street address</label><input type="text" name="streetAddress" id="street-address" class="form-input" placeholder="Street address"><p class="error-message">This field is required.</p></div>
-                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                             <div><label for="city" class="sr-only">City</label><input type="text" name="city" id="city" class="form-input" placeholder="City"><p class="error-message">This field is required.</p></div>
-                             <div><label for="zip-code" class="sr-only">ZIP / Postal code</label><input type="text" name="zipCode" id="zip-code" class="form-input" placeholder="ZIP / Postal code"><p class="error-message">This field is required.</p></div>
-                         </div>
-                     </div>
-                     <div class="mt-6 p-4 bg-gray-50 rounded-lg flex items-center gap-4 border border-gray-200">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 002.166 5c0 1.606.346 3.138.956 4.533 1.141 2.586 3.06 4.739 5.884 6.354a1.001 1.001 0 001.19 0c2.824-1.615 4.743-3.768 5.884-6.354.61-1.395.956-2.927.956-4.533A11.954 11.954 0 0010 1.944zM9 13a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM10 4a1 1 0 011 1v3a1 1 0 11-2 0V5a1 1 0 011-1z" clip-rule="evenodd" /></svg>
-                         <p class="text-xs text-gray-500">Your information is secure. We use 256-bit SSL encryption and will never sell your data.</p>
-                     </div>
-                </div>
-            </div>
-        `,
-        scheduling: `
-            <div class="form-step" data-step-name="scheduling" data-step-title="Schedule Meeting" data-phase="4">
-                <div class="text-left mb-8 mt-4">
-                    <h2 class="text-4xl font-serif font-bold mb-2">Thank you. Based on your answers, I'd like to personally prepare a custom plan for you.</h2>
-                    <p class="text-gray-500">Please select a time below for me to call and present your options. I will use the time beforehand to do some research with our carriers based on your specific needs.</p>
-                </div>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="font-bold text-gray-800 mb-2" id="meeting-type-label">1. How would you like to meet?</h3>
-                        <div class="flex flex-col sm:flex-row gap-3" id="meeting-type-cards" role="radiogroup" aria-labelledby="meeting-type-label">
-                            <div class="card cursor-pointer flex-1 flex items-center" data-value="Phone" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="font-bold text-base flex-grow">Phone Call</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
-                            <div class="card cursor-pointer flex-1 flex items-center" data-value="Zoom" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span class="font-bold text-base flex-grow">Zoom Meeting</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                `,
+                mortgageProtection: `
+                    <div class="form-step" data-step-name="mortgageProtection" data-step-title="Mortgage Protection" data-phase="2">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Protect Your Home</h2><p class="text-gray-500">Let's get the details to protect your home and finances. This will help us suggest a coverage amount in the next step.</p></div>
+                        <div class="space-y-4">
+                            <div><label for="mortgage-balance" class="font-semibold text-sm">What is your remaining mortgage balance?</label><input type="text" inputmode="numeric" id="mortgage-balance" name="mortgageBalance" required class="form-input mt-1" placeholder="$250,000"><p class="error-message">This field is required.</p></div>
+                            <div><label for="mortgage-term" class="font-semibold text-sm">How many years are left on your mortgage?</label><input type="number" id="mortgage-term" name="mortgageTerm" required class="form-input mt-1" placeholder="25"><p class="error-message">Please enter a valid number of years.</p></div>
                         </div>
                     </div>
-                    <div id="time-selection-container" class="hidden space-y-4">
-                         <div><h3 class="font-bold text-gray-800 mb-2" id="date-label">2. What day works best?</h3><div class="flex flex-col sm:flex-row gap-3" id="date-cards" role="radiogroup" aria-labelledby="date-label"></div></div>
-                        <div id="time-window-container" class="hidden">
-                            <h3 class="font-bold text-gray-800 mb-2" id="time-label">3. What time?</h3>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="time-cards" role="radiogroup" aria-labelledby="time-label">
-                                <div class="card cursor-pointer text-center" data-value="Morning" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Morning</span><p class="text-sm text-gray-600">9am - 12pm</p></div>
-                                <div class="card cursor-pointer text-center" data-value="Afternoon" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Afternoon</span><p class="text-sm text-gray-600">1pm - 4pm</p></div>
-                                <div class="card cursor-pointer text-center" data-value="Evening" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Evening</span><p class="text-sm text-gray-600">6pm - 8pm</p></div>
+                `,
+                coverage: `
+                    <div class="form-step" data-step-name="coverage" data-step-title="Coverage Amount" data-phase="2">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">How much coverage are you looking for?</h2><p class="text-gray-500">This will help us estimate your monthly premium.</p></div>
+                        <div id="coverage-options-container">
+                            <!-- Options will be injected here by JavaScript -->
+                        </div>
+                    </div>
+                `,
+                health: `
+                    <div class="form-step" data-step-name="health" data-step-title="Health Questions" data-phase="3">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Just a Few Health Questions</h2><p class="text-gray-500">These simple questions help us find you the best rate. Remember, we specialize in approving most health conditions.</p></div>
+                        <div class="space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div><label for="gender" class="font-semibold text-sm">Gender</label><select id="gender" name="gender" required class="form-input mt-1"><option value="">Select...</option><option value="Male">Male</option><option value="Female">Female</option></select><p class="error-message">Please select a gender.</p></div>
+                                <div>
+                                    <label class="font-semibold text-sm tooltip">Do you use tobacco?
+                                        <svg class="tooltip-icon h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+                                        <span class="tooltiptext">Including cigarettes, cigars, chewing tobacco, or vaping with nicotine.</span>
+                                    </label>
+                                    <div class="flex gap-4 mt-2" id="smoking-group" role="radiogroup"><label class="card flex-1 cursor-pointer p-3 flex justify-center" tabindex="0"><input type="radio" name="smoking" value="Yes" required class="sr-only"><span class="font-bold">✓ Yes</span></label><label class="card flex-1 cursor-pointer p-3 flex justify-center" tabindex="0"><input type="radio" name="smoking" value="No" required class="sr-only"><span class="font-bold">✗ No</span></label></div><p class="error-message">Please select an option.</p>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t">
+                                <h3 class="font-semibold text-gray-900">Major Health Conditions</h3>
+                                <p class="text-sm text-gray-500 mb-2">Please select if you have been diagnosed, treated, or taken medication for any of the following.</p>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-2" id="major-conditions-list">
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Cancer" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Cancer</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Heart Disease / Heart Attack" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Heart Disease / Heart Attack</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Stroke / TIA" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Stroke / TIA</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Diabetes" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Diabetes</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="COPD / Emphysema" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">COPD / Emphysema</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Kidney / Liver Disease" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Kidney / Liver Disease</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Alzheimer's / Dementia" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Alzheimer's / Dementia</label>
+                                    <label class="flex items-center"><input type="checkbox" name="condition" value="Organ Transplant" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500 mr-2">Organ Transplant</label>
+                                </div>
+                                <p class="text-xs text-gray-500 mt-3">Having any of these conditions doesn't disqualify you. We work with 30+ carriers to find coverage for almost everyone.</p>
+                            </div>
+                            <div class="pt-4 border-t">
+                               <label for="medications" class="font-semibold text-gray-900">Please list any prescription medications you currently take.</label>
+                               <p class="text-sm text-gray-500 mb-2">This is crucial for finding the most accurate rate.</p>
+                               <textarea id="medications" name="medications" rows="3" class="form-input mt-1" placeholder="e.g., Lisinopril, Metformin, Atorvastatin..."></textarea>
+                            </div>
+                            <div class="pt-4 border-t">
+                               <label for="helpful-info" class="font-semibold text-gray-900">Is there anything else about your health history we should know?</label>
+                               <p class="text-sm text-gray-500 mb-2">(e.g., recent surgeries, other major conditions)</p>
+                               <textarea id="helpful-info" name="helpfulInfo" rows="3" class="form-input mt-1"></textarea>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        `
+                `,
+                beneficiary: `
+                    <div class="form-step" data-step-name="beneficiary" data-step-title="Beneficiaries" data-phase="3">
+                        <div class="text-left mb-8 mt-4">
+                            <h2 class="text-4xl font-serif font-bold mb-2">Who will receive the benefit?</h2>
+                            <p class="text-gray-500 text-lg" id="beneficiary-intro-text"></p>
+                            <div class="mt-2 text-xs text-gray-500 p-3 bg-gray-50 rounded-md">
+                                <strong>Common splits:</strong> 1 person: 100% | 2 people: 50% each | 3 people: 34%, 33%, 33%
+                            </div>
+                        </div>
+                        <div id="beneficiary-list" class="space-y-4"></div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <div>
+                                <button type="button" id="add-beneficiary" class="text-teal-600 font-semibold flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" /></svg>Add Beneficiary</button>
+                                <p id="beneficiary-limit-message" class="text-sm text-gray-500 hidden mt-2">Maximum of 5 beneficiaries reached.</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div id="percentage-total" class="font-bold text-lg">Total: <span id="percentage-value">100</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                `,
+                timeline: `
+                    <div class="form-step" data-step-name="timeline" data-step-title="Your Timeline" data-phase="4">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="timeline-label">How soon are you looking to have coverage in place?</h2><p class="text-gray-500">This helps us prioritize your request.</p></div>
+                        <div class="flex flex-col gap-3" role="radiogroup" aria-labelledby="timeline-label">
+                            <div class="card cursor-pointer flex items-center" data-value="Immediately" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base flex-grow">Immediately / This Week</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                            <div class="card cursor-pointer flex items-center" data-value="Within 30 Days" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base flex-grow">Within the next 30 days</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                            <div class="card cursor-pointer flex items-center" data-value="Just Researching" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base flex-grow">Just researching my options</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                        </div>
+                    </div>
+                `,
+                motivation: `
+                    <div class="form-step" data-step-name="motivation" data-step-title="Your Motivation" data-phase="4">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">What prompted you to look for this coverage today?</h2><p class="text-gray-500">Your answer helps us understand how to best serve you.</p></div>
+                        <label for="motivation-text" class="sr-only">Your motivation for seeking coverage</label>
+                        <textarea id="motivation-text" name="motivation" rows="4" class="form-input" placeholder="e.g., I just received a letter from my mortgage company, a friend recently passed away, I'm planning for retirement..."></textarea>
+                    </div>
+                `,
+                decisionMakers: `
+                    <div class="form-step" data-step-name="decisionMakers" data-step-title="Decision Makers" data-phase="4">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="spouse-label">Will a spouse or partner be involved in this decision?</h2><p class="text-gray-500">It's always best to have all decision-makers present to review the options.</p></div>
+                        <div class="flex gap-4" role="radiogroup" aria-labelledby="spouse-label">
+                            <div class="card flex-1 cursor-pointer p-4 text-center" data-value="Yes" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-lg">✓ Yes</span></div>
+                            <div class="card flex-1 cursor-pointer p-4 text-center" data-value="No" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-lg">✗ No</span></div>
+                        </div>
+                    </div>
+                `,
+                contact: `
+                    <div class="form-step" data-step-name="contact" data-step-title="Contact Information" data-phase="4">
+                        <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Where can we send your plan?</h2><p class="text-gray-500">A licensed agent will reach out with your personalized quote.</p></div>
+                        <div class="space-y-4">
+                              <div><label for="first-name" class="font-semibold text-sm sr-only">First Name</label><input type="text" id="first-name" name="firstName" required class="form-input" placeholder="First Name"><p class="error-message">This field is required.</p></div>
+                              <div><label for="last-name" class="font-semibold text-sm sr-only">Last Name</label><input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Last Name"><p class="error-message">This field is required.</p></div>
+                              <div><label for="phone" class="font-semibold text-sm sr-only">Phone Number</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="Phone Number"><p class="error-message">Please enter a valid phone number.</p></div>
+                              <div><label for="email" class="font-semibold text-sm sr-only">Email Address</label><input type="email" id="email" name="email" required class="form-input" placeholder="Email Address"><p class="error-message" id="email-error">Please enter a valid email address.</p></div>
+                              <div><label for="state" class="font-semibold text-sm sr-only">State</label><select id="state" name="state" required class="form-input"><option value="">Select a state...</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><p class="error-message">Please select a state.</p></div>
+                              <div class="relative flex items-start pt-4 border-t">
+                                  <div class="flex h-6 items-center">
+                                      <input id="mail-plan-checkbox" name="mailPlan" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500">
+                                  </div>
+                                  <div class="ml-3 text-sm leading-6">
+                                      <label for="mail-plan-checkbox" class="font-medium text-gray-900 cursor-pointer">Yes, please mail me a printed copy of my plan options.</label>
+                                  </div>
+                              </div>
+                              <div id="address-fields" class="hidden space-y-4 ml-9">
+                                  <p id="mail-plan-confirmation" class="text-xs text-gray-500 hidden">Great! We'll mail your personalized plan booklet within 3-5 business days.</p>
+                                  <div><label for="street-address" class="sr-only">Street address</label><input type="text" name="streetAddress" id="street-address" class="form-input" placeholder="Street address"><p class="error-message">This field is required.</p></div>
+                                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                      <div><label for="city" class="sr-only">City</label><input type="text" name="city" id="city" class="form-input" placeholder="City"><p class="error-message">This field is required.</p></div>
+                                      <div><label for="zip-code" class="sr-only">ZIP / Postal code</label><input type="text" name="zipCode" id="zip-code" class="form-input" placeholder="ZIP / Postal code"><p class="error-message">This field is required.</p></div>
+                                  </div>
+                              </div>
+                              <div class="mt-6 p-4 bg-gray-50 rounded-lg flex items-center gap-4 border border-gray-200">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 002.166 5c0 1.606.346 3.138.956 4.533 1.141 2.586 3.06 4.739 5.884 6.354a1.001 1.001 0 001.19 0c2.824-1.615 4.743-3.768 5.884-6.354.61-1.395.956-2.927.956-4.533A11.954 11.954 0 0010 1.944zM9 13a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM10 4a1 1 0 011 1v3a1 1 0 11-2 0V5a1 1 0 011-1z" clip-rule="evenodd" /></svg>
+                                  <p class="text-xs text-gray-500">Your information is secure. We use 256-bit SSL encryption and will never sell your data.</p>
+                              </div>
+                        </div>
+                    </div>
+                `,
+                scheduling: `
+                    <div class="form-step" data-step-name="scheduling" data-step-title="Schedule Meeting" data-phase="4">
+                        <div class="text-left mb-8 mt-4">
+                            <h2 class="text-4xl font-serif font-bold mb-2">Thank you. Based on your answers, I'd like to personally prepare a custom plan for you.</h2>
+                            <p class="text-gray-500">Please select a time below for me to call and present your options. I will use the time beforehand to do some research with our carriers based on your specific needs.</p>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-gray-800 mb-2" id="meeting-type-label">1. How would you like to meet?</h3>
+                                <div class="flex flex-col sm:flex-row gap-3" id="meeting-type-cards" role="radiogroup" aria-labelledby="meeting-type-label">
+                                    <div class="card cursor-pointer flex-1 flex items-center" data-value="Phone" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="font-bold text-base flex-grow">Phone Call</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                                    <div class="card cursor-pointer flex-1 flex items-center" data-value="Zoom" tabindex="0" role="radio" aria-checked="false"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mr-4"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span class="font-bold text-base flex-grow">Zoom Meeting</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></div>
+                                </div>
+                            </div>
+                            <div id="time-selection-container" class="hidden space-y-4">
+                                <div><h3 class="font-bold text-gray-800 mb-2" id="date-label">2. What day works best?</h3><div class="flex flex-col sm:flex-row gap-3" id="date-cards" role="radiogroup" aria-labelledby="date-label"></div></div>
+                                <div id="time-window-container" class="hidden">
+                                    <h3 class="font-bold text-gray-800 mb-2" id="time-label">3. What time?</h3>
+                                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="time-cards" role="radiogroup" aria-labelledby="time-label">
+                                        <div class="card cursor-pointer text-center" data-value="Morning" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Morning</span><p class="text-sm text-gray-600">9am - 12pm</p></div>
+                                        <div class="card cursor-pointer text-center" data-value="Afternoon" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Afternoon</span><p class="text-sm text-gray-600">1pm - 4pm</p></div>
+                                        <div class="card cursor-pointer text-center" data-value="Evening" tabindex="0" role="radio" aria-checked="false"><span class="font-bold text-base">Evening</span><p class="text-sm text-gray-600">6pm - 8pm</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
             };
 
             // --- CORE FORM LOGIC (Functions are collapsed for brevity, no changes to internal logic unless noted) ---
@@ -542,6 +542,19 @@
 
             const submitForm = async (isUpdate = false) => {
                 if (typeof fbq === 'function' && !isUpdate) { fbq('track', 'Lead'); console.log("Facebook 'Lead' event fired."); }
+                
+                // --- GOOGLE ADS CONVERSION --- ADDED
+                // This fires the conversion event snippet for Google Ads when a lead is submitted.
+                if (typeof gtag === 'function' && !isUpdate) {
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17447405875/xpxjCL7Sz4EBELOSYf9A',
+                        'value': 1.0,
+                        'currency': 'USD'
+                    });
+                    console.log("Google Ads 'conversion' event fired.");
+                }
+                // --- END GOOGLE ADS CONVERSION ---
+
                 formData.leadTimestamp = new Date().toISOString();
                 const webhookUrl = 'https://hooks.zapier.com/hooks/catch/19410211/ubzcrab/';
                 console.log("Sending data to Zapier:", JSON.stringify(formData, null, 2));
@@ -549,7 +562,7 @@
                     await fetch(webhookUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData), });
                     console.log('Data sent to Zapier webhook.');
                     if (!isUpdate) {
-                       generatePlan(formData);
+                        generatePlan(formData);
                     }
                 } catch (error) {
                     console.error('Error sending data to Zapier webhook:', error);
@@ -661,59 +674,59 @@
 
                         <!-- Section 2: The Plan & Budget -->
                         <section class="p-8">
-                             <div class="text-center">
-                                <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-12 mx-auto mb-4 logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x60/0d9488/ffffff?text=Noble+Life+Co.';">
-                                <h1 class="font-serif text-4xl font-bold text-gray-900">Your Noble Life Plan</h1>
-                                <p class="mt-2 text-lg text-gray-600">Specially prepared for ${data.contact.firstName} ${data.contact.lastName}</p>
-                            </div>
-                            <div class="mt-8 border-t border-b border-gray-200 py-6 max-w-md mx-auto">
-                                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Preferred Rate Estimate</h3>
-                                <p class="text-6xl font-bold text-gray-900 mt-2 text-center">$${illustrativeQuote.split('.')[0]}<span class="text-3xl font-medium text-gray-500">.${illustrativeQuote.split('.')[1]}/mo</span></p>
-                                <p class="text-sm text-gray-600 mt-4 text-center">For a <span class="font-bold">$${parseInt(coverage).toLocaleString()}</span> ${data.goal.replace(/([A-Z])/g, ' $1').trim()} plan.</p>
-                            </div>
-                            
-                            <!-- Test-Close / Budget Slider -->
-                            <div class="mt-10 max-w-lg mx-auto bg-gray-50 p-6 rounded-lg border">
-                                <h2 class="font-bold text-gray-800 text-center text-lg mb-1">Let's Talk Budget</h2>
-                                <p class="text-sm text-gray-600 text-center mb-4">To help me prepare the best options, how does this estimate fit your budget?</p>
-                                <input id="budget-slider" type="range" min="50" max="150" value="100" class="w-full">
-                                <div class="flex justify-between text-xs text-gray-500 px-1 mt-1">
-                                    <span>A little high</span>
-                                    <span>Just right</span>
-                                    <span>I can do more</span>
+                                <div class="text-center">
+                                    <img src="https://i.imgur.com/AJ0ugyo.png" alt="Noble Life Co. Logo" class="h-12 mx-auto mb-4 logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x60/0d9488/ffffff?text=Noble+Life+Co.';">
+                                    <h1 class="font-serif text-4xl font-bold text-gray-900">Your Noble Life Plan</h1>
+                                    <p class="mt-2 text-lg text-gray-600">Specially prepared for ${data.contact.firstName} ${data.contact.lastName}</p>
                                 </div>
-                                <div class="mt-4 text-center">
-                                    <p>Your preferred monthly budget is: <strong id="budget-display" class="text-xl font-bold text-gray-800">$${illustrativeQuote}</strong></p>
+                                <div class="mt-8 border-t border-b border-gray-200 py-6 max-w-md mx-auto">
+                                    <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Preferred Rate Estimate</h3>
+                                    <p class="text-6xl font-bold text-gray-900 mt-2 text-center">$${illustrativeQuote.split('.')[0]}<span class="text-3xl font-medium text-gray-500">.${illustrativeQuote.split('.')[1]}/mo</span></p>
+                                    <p class="text-sm text-gray-600 mt-4 text-center">For a <span class="font-bold">$${parseInt(coverage).toLocaleString()}</span> ${data.goal.replace(/([A-Z])/g, ' $1').trim()} plan.</p>
                                 </div>
-                                <div class="mt-6 text-center">
-                                    <button id="confirm-budget-btn" class="bg-gray-800 text-white font-bold py-2 px-5 rounded-lg hover:bg-gray-700 transition-colors text-sm">Confirm & Send My Preference</button>
-                                    <p id="budget-confirmation-msg" class="mt-2 text-green-600 font-semibold" style="display: none;">Thank you! Your preference has been saved.</p>
+                                
+                                <!-- Test-Close / Budget Slider -->
+                                <div class="mt-10 max-w-lg mx-auto bg-gray-50 p-6 rounded-lg border">
+                                    <h2 class="font-bold text-gray-800 text-center text-lg mb-1">Let's Talk Budget</h2>
+                                    <p class="text-sm text-gray-600 text-center mb-4">To help me prepare the best options, how does this estimate fit your budget?</p>
+                                    <input id="budget-slider" type="range" min="50" max="150" value="100" class="w-full">
+                                    <div class="flex justify-between text-xs text-gray-500 px-1 mt-1">
+                                        <span>A little high</span>
+                                        <span>Just right</span>
+                                        <span>I can do more</span>
+                                    </div>
+                                    <div class="mt-4 text-center">
+                                        <p>Your preferred monthly budget is: <strong id="budget-display" class="text-xl font-bold text-gray-800">$${illustrativeQuote}</strong></p>
+                                    </div>
+                                    <div class="mt-6 text-center">
+                                        <button id="confirm-budget-btn" class="bg-gray-800 text-white font-bold py-2 px-5 rounded-lg hover:bg-gray-700 transition-colors text-sm">Confirm & Send My Preference</button>
+                                        <p id="budget-confirmation-msg" class="mt-2 text-green-600 font-semibold" style="display: none;">Thank you! Your preference has been saved.</p>
+                                    </div>
                                 </div>
-                            </div>
                         </section>
                         
                         <hr class="my-12">
 
                         <!-- Section 3: Your Specialist -->
                         <section class="px-8">
-                             <div class="text-center mb-8">
-                                <h2 class="font-serif text-3xl font-bold text-gray-900">Your Assigned Specialist</h2>
-                             </div>
-                             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                                 <div class="md:col-span-1 text-center">
-                                     <img src="https://i.imgur.com/kt25vEy.png" alt="Michael Henry, Specialist" class="w-32 h-32 rounded-full shadow-lg mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/128x128';">
-                                     <h3 class="font-serif text-2xl font-semibold text-gray-900 mt-4">Michael Henry</h3>
-                                     <p class="text-teal-600 font-bold">Licensed Agent</p>
-                                 </div>
-                                 <div class="md:col-span-2">
-                                     <h4 class="font-bold text-gray-800 mb-2">My Commitment To Your Family</h4>
-                                     <div class="space-y-3 text-gray-700 text-sm leading-relaxed">
-                                         <p>This isn't just a job for me—it's a mission born from personal experience. In March 2020, my father passed away from a sudden heart attack. In the space of seven hours, my family went from a normal conversation with him to making choices we were completely unprepared for.</p>
-                                         <p>The second shock came at the funeral home: a bill for thousands of dollars due immediately. I used money I had saved to move my own family to honor my father, a choice no son should have to make. That moment taught me that even with love, families can be crushed by the financial weight of a final farewell.</p>
-                                         <p>I dedicated my life to ensuring no other family has to face that struggle. My goal is to make this process simple and clear, so your family can focus on what truly matters: honoring your memory without the burden of financial stress. I'm here to be your advocate.</p>
-                                     </div>
-                                 </div>
-                             </div>
+                                <div class="text-center mb-8">
+                                    <h2 class="font-serif text-3xl font-bold text-gray-900">Your Assigned Specialist</h2>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                                    <div class="md:col-span-1 text-center">
+                                        <img src="https://i.imgur.com/kt25vEy.png" alt="Michael Henry, Specialist" class="w-32 h-32 rounded-full shadow-lg mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/128x128';">
+                                        <h3 class="font-serif text-2xl font-semibold text-gray-900 mt-4">Michael Henry</h3>
+                                        <p class="text-teal-600 font-bold">Licensed Agent</p>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <h4 class="font-bold text-gray-800 mb-2">My Commitment To Your Family</h4>
+                                        <div class="space-y-3 text-gray-700 text-sm leading-relaxed">
+                                            <p>This isn't just a job for me—it's a mission born from personal experience. In March 2020, my father passed away from a sudden heart attack. In the space of seven hours, my family went from a normal conversation with him to making choices we were completely unprepared for.</p>
+                                            <p>The second shock came at the funeral home: a bill for thousands of dollars due immediately. I used money I had saved to move my own family to honor my father, a choice no son should have to make. That moment taught me that even with love, families can be crushed by the financial weight of a final farewell.</p>
+                                            <p>I dedicated my life to ensuring no other family has to face that struggle. My goal is to make this process simple and clear, so your family can focus on what truly matters: honoring your memory without the burden of financial stress. I'm here to be your advocate.</p>
+                                        </div>
+                                    </div>
+                                </div>
                         </section>
 
                         <hr class="my-12">
@@ -765,7 +778,7 @@
 
                 const faqContainer = document.getElementById('faq-container');
                 if (faqContainer) {
-                    const faqs = [ { q: "What if I have health problems? Can I still qualify?", a: "Yes, most people can qualify. Final expense policies are designed for this purpose, and many don't require a medical exam—just a health questionnaire. We work with over 30 carriers to find coverage for almost every health condition." }, { q: "Is this policy permanent? Will my rate ever go up?", a: "Yes, the policies we specialize in are a type of whole life insurance. As long as you pay your premiums, your coverage will never decrease, your policy will never expire, and your monthly payment is locked in for life—it will never increase, regardless of changes to your age or health." }, { q: "What happens if I move to another state?", a: "Your policy is yours to keep and is valid anywhere in the United States. Your coverage moves with you, ensuring your family is protected no matter where you live." }, { q: "How is this different from pre-paying a funeral home?", a: "Pre-paying a funeral home locks you into one specific provider. If that home goes out of business or you move, your plan may not be transferable. A final expense policy pays a cash benefit to your family, giving them the freedom to choose any funeral home they wish and use any remaining funds for other expenses." } ];
+                    const faqs = [ { q: "What if I have health problems? Can I still qualify?", a: "Yes, most people can qualify. Final expense policies are designed for this purpose, and many don't require a medical exam—just a health questionnaire. We work with over 30 carriers to find coverage for almost every health condition." }, { q: "Is this policy permanent? Will my rate ever go up?", a: "Yes, the policies we specialize in are a type of whole life insurance. As long as you pay your premiums, your coverage will never decrease, your policy will never expire, and your monthly payment is locked in for life—it will never increase, regardless of changes to your age or health." }, { q: "What if I move to another state?", a: "Your policy is yours to keep and is valid anywhere in the United States. Your coverage moves with you, ensuring your family is protected no matter where you live." }, { q: "How is this different from pre-paying a funeral home?", a: "Pre-paying a funeral home locks you into one specific provider. If that home goes out of business or you move, your plan may not be transferable. A final expense policy pays a cash benefit to your family, giving them the freedom to choose any funeral home they wish and use any remaining funds for other expenses." } ];
                     faqContainer.innerHTML = faqs.map(faq => `<details class="faq-item bg-gray-50 rounded-lg border p-4"><summary class="font-semibold text-gray-800 flex justify-between items-center">${faq.q}<svg class="w-5 h-5 text-gray-500 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="mt-3 text-gray-600 text-sm leading-relaxed">${faq.a}</div></details>`).join('');
                 }
             };
