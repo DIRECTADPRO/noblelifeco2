@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A life insurance plan from Noble Life Co. is more than a policy—it's a promise to protect your family's future and build a lasting legacy.">
+    <meta name="keywords" content="life insurance, term life, IUL, legacy planning, family protection, Noble Life Co.">
+    <title>Life Insurance: Protect Your Family & Build a Legacy | Noble Life Co.</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d9488'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Life Insurance: Protect Your Family & Build a Legacy | Noble Life Co.">
+    <meta property="og:description" content="Discover a smarter life insurance strategy that protects your family's dreams today and builds tax-free wealth for tomorrow.">
+    <meta property="og:image" content="https://i.imgur.com/sIzPnyV.png">
+    <meta property="og:url" content="https://noblelifeco.com/life-insurance.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://noblelifeco.com/life-insurance.html">
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://res.cloudinary.com/dse1cikja/image/upload/v1752455582/pexels-cottonbro-7086039_1_bgcjfw.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fonts & Scripts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"></noscript>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Styles -->
+    <style>
+        :root {
+            --teal-600: #0d9488; --teal-700: #0f766e; --teal-500: #14b8a6;
+            --bg-color: #fdfdfd; --text-color: #1f2937;
+            --header-bg: rgba(255, 255, 255, 0.8);
+            --section-bg: #f9fafb; --card-bg: #ffffff;
+            --heading-color: #111827; --subtle-text: #6b7280;
+            --border-color: #e5e7eb;
+        }
+        [data-theme="dark"] {
+            --bg-color: #111827; --text-color: #d1d5db;
+            --header-bg: rgba(17, 24, 39, 0.85);
+            --section-bg: #1f2937; --card-bg: #1f2937;
+            --heading-color: #f9fafb; --subtle-text: #9ca3af;
+            --border-color: #374151;
+        }
+        body {
+            background-color: var(--bg-color); color: var(--text-color);
+            font-family: 'Inter', sans-serif; margin: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .font-serif { font-family: 'Lora', serif; }
+        .cta-button {
+            background-color: var(--teal-600); color: white;
+            font-weight: 700; padding: 1rem 2.5rem; border-radius: 0.5rem;
+            transition: all 0.3s ease; text-decoration: none;
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .cta-button:hover {
+            background-color: var(--teal-700); transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
+        }
+        .cta-button:focus-visible { outline: 3px solid var(--teal-600); outline-offset: 2px; }
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1rem; } }
+        #sticky-header { background-color: var(--header-bg); }
+        .logo-teal { transition: filter 0.3s ease; }
+        [data-theme="dark"] .logo-teal { filter: brightness(0) invert(1); }
+        .hero-gradient { background-color: var(--bg-color); background-image: radial-gradient(circle at 80% 80%, hsla(175, 84%, 88%, 0.1) 0, transparent 40%); }
+        #how-it-works, #final-cta { background-color: var(--section-bg); }
+        .calculator-input {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--heading-color);
+        }
+        .calculator-input:focus {
+            border-color: var(--teal-600);
+            box-shadow: 0 0 0 1px var(--teal-600);
+            outline: 2px solid transparent;
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+            color: var(--subtle-text);
+        }
+        .tab-button.active {
+            color: var(--teal-600);
+            border-bottom-color: var(--teal-600);
+        }
+        [data-theme="dark"] .tab-button.active {
+            color: var(--teal-500);
+            border-bottom-color: var(--teal-500);
+        }
+        .tab-button:hover { color: var(--heading-color); }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .text-main { color: var(--text-color); }
+        .text-heading { color: var(--heading-color); }
+        .text-subtle { color: var(--subtle-text); }
+        .bg-card { background-color: var(--card-bg); }
+        .border-card { border-color: var(--border-color); }
+        .text-teal-strong { color: var(--teal-600); }
+        [data-theme="dark"] .text-teal-strong { color: var(--teal-500); }
+        .inner-shadow-bottom { box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.05); }
+    </style>
+    <!-- SEO: JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceService",
+      "name": "Life Insurance",
+      "serviceType": ["Term Life Insurance", "Indexed Universal Life Insurance", "Whole Life Insurance"],
+      "provider": {
+        "@type": "Organization",
+        "name": "Noble Life Co."
+      },
+      "description": "Life insurance plans to protect your family's financial future and build a lasting, tax-free legacy.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "US"
+      }
+    }
+    </script>
+    <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '315290065977990'); // Your Pixel ID
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
+/></noscript>
+</head>
+<body class="antialiased text-main">
+
+    <!-- Header -->
+    <header id="sticky-header" class="backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm" role="banner">
+        <nav class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
+            <a href="index.html" aria-label="Noble Life Co. Home">
+                <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 w-auto logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="form.html?goal=Legacy" class="cta-button !py-3 !px-8 text-base hidden sm:inline-flex">Get My Free Plan</a>
+                <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-400" aria-label="Toggle dark mode">
+                    <svg id="theme-icon-light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg id="theme-icon-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="section-padding hero-gradient" role="region" aria-labelledby="hero-heading">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="text-center md:text-left">
+                        <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold text-heading leading-tight">Life Insurance Isn't Just a Policy. It's a Promise for Their Future.</h1>
+                        <p class="mt-4 text-lg md:text-xl text-main max-w-xl mx-auto md:mx-0">A smart life insurance plan does more than just protect your family if you're gone—it helps you build a tax-free legacy for their biggest dreams. We'll show you how to get affordable protection today while building wealth for tomorrow.</p>
+                        <a href="form.html?goal=Legacy" class="cta-button mt-8 text-lg">
+                            <span>Build My Legacy Plan</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                    </div>
+                    <div class="flex justify-center p-4">
+                        <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455582/pexels-cottonbro-7086039_1_bgcjfw.jpg" class="rounded-lg shadow-2xl w-full max-w-md" width="448" height="448" alt="A parent helping their child with homework, symbolizing a protected future." loading="eager" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHANGE: Added Trust & Credibility Section for consistency -->
+        <section class="py-12 bg-gray-50 bg-card inner-shadow-bottom fade-in-section" role="region" aria-labelledby="trust-heading">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 id="trust-heading" class="text-sm font-bold text-subtle tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center px-4">
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/mutual-removebg-preview_jyfzme.png" alt="Mutual of Omaha Logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/Prudential-Financial-logo_sahr64.png" alt="Prudential Logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Prudential</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/gerber-4-logo-png-transparent_cqjrnd.png" alt="Gerber Life Logo" class="max-h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Gerber Life</figcaption></figure>
+                    <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/transamerica-logo_ehlnvs.png" alt="Transamerica Logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Transamerica</figcaption></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section-padding fade-in-section" role="region" aria-labelledby="how-it-works-heading">
+            <div class="container mx-auto max-w-5xl text-center">
+                <h2 id="how-it-works-heading" class="text-3xl md:text-4xl font-serif font-bold text-heading">Three Powerful Paths to Your Legacy</h2>
+                <p class="mt-4 text-lg text-main max-w-3xl mx-auto">Every family is different. That's why we help you choose the right strategy to protect your loved ones and secure their future.</p>
+                
+                <div id="legacy-paths" class="mt-12 max-w-4xl mx-auto">
+                    <div class="border-b border-card">
+                        <div role="tablist" aria-label="Legacy Paths" class="-mb-px flex flex-wrap justify-center gap-x-4 sm:gap-x-8 gap-y-2">
+                            <button id="tab-path1" role="tab" aria-selected="true" aria-controls="panel-path1" class="tab-button active whitespace-nowrap py-3 px-1 border-b-2 font-medium text-lg" data-tab="path1">
+                                Protect My Income
+                            </button>
+                            <button id="tab-path2" role="tab" aria-selected="false" aria-controls="panel-path2" class="tab-button whitespace-nowrap py-3 px-1 border-b-2 font-medium text-lg" data-tab="path2">
+                                Protect & Grow
+                            </button>
+                            <button id="tab-path3" role="tab" aria-selected="false" aria-controls="panel-path3" class="tab-button whitespace-nowrap py-3 px-1 border-b-2 font-medium text-lg" data-tab="path3">
+                                Guaranteed Legacy
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <div id="panel-path1" role="tabpanel" tabindex="0" aria-labelledby="tab-path1" class="tab-panel active text-left p-8 bg-card rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold text-heading">Path 1: Protect My Income</h3>
+                            <p class="mt-4 text-main"><strong>Term Life Insurance</strong> is the most affordable way to get the largest possible death benefit. It's a pure protection tool designed to replace your income and ensure your family's lifestyle is secure if the unexpected happens.</p>
+                        </div>
+                        <div id="panel-path2" role="tabpanel" tabindex="0" aria-labelledby="tab-path2" class="tab-panel text-left p-8 bg-card rounded-lg shadow-lg">
+                             <h3 class="text-2xl font-bold text-heading">Path 2: Protect & Grow</h3>
+                            <p class="mt-4 text-main">An <strong>Indexed Universal Life (IUL)</strong> policy combines a death benefit with a cash value component that is never directly invested in the market. Instead, it's linked to a market index, allowing you to participate in the upside while a 0% floor protects you from all market losses. This creates a powerful, tax-free asset for college, retirement, or any of life's big moments.</p>
+                        </div>
+                        <div id="panel-path3" role="tabpanel" tabindex="0" aria-labelledby="tab-path3" class="tab-panel text-left p-8 bg-card rounded-lg shadow-lg">
+                            <h3 class="text-2xl font-bold text-heading">Path 3: Guaranteed Legacy</h3>
+                            <p class="mt-4 text-main">For specific situations where an iron-clad guarantee is the top priority—like funding a trust or a business agreement—a traditional <strong>Whole Life</strong> policy can be the right tool. It provides a guaranteed death benefit and cash value growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="relative bg-gray-900 fade-in-section">
+            <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752456902/pexels-kampus-8829174_mrhzqn.jpg" alt="A family enjoying a moment together, symbolizing a multi-generational legacy" class="absolute inset-0 w-full h-full object-cover object-cover opacity-20" loading="lazy" decoding="async">
+            <div class="relative container mx-auto max-w-6xl px-4 py-24 sm:py-32 text-center text-white">
+                 <h2 class="text-4xl lg:text-5xl font-serif font-bold leading-tight">A Promise for Generations.</h2>
+                 <p class="mt-4 text-lg text-teal-200 max-w-2xl mx-auto">Build a foundation of security that supports your family's dreams, today and for all their tomorrows.</p>
+                 <a href="form.html?goal=Legacy" class="cta-button inline-block mt-8 !py-3 !px-8">Build My Legacy Plan</a>
+            </div>
+        </section>
+
+        <!-- Legacy Calculator -->
+        <section id="final-cta" class="section-padding fade-in-section" role="region" aria-labelledby="cta-heading">
+            <div class="container mx-auto max-w-3xl text-center">
+                <h2 id="cta-heading" class="text-3xl md:text-4xl font-serif font-bold text-heading">Calculate Your Legacy</h2>
+                <p class="mt-4 text-lg text-main max-w-2xl mx-auto">Use this tool to see the income your family would need to replace and how a life insurance policy can provide for them.</p>
+                <div id="legacy-calculator" class="mt-12 bg-white bg-card p-6 sm:p-8 rounded-2xl shadow-xl border border-card max-w-2xl mx-auto">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="annualIncome" class="block text-sm font-medium text-subtle text-left mb-1">Your Annual Income</label>
+                            <div class="relative"><div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"><span class="text-subtle sm:text-sm">$</span></div><input type="text" id="annualIncome" class="calculator-input block w-full rounded-md pl-7 pr-4 py-2" placeholder="80,000" value="80,000" inputmode="numeric"></div>
+                        </div>
+                        <div>
+                            <label for="protectionYears" class="block text-sm font-medium text-subtle text-left mb-1">Years to Protect</label>
+                            <input type="number" id="protectionYears" class="calculator-input block w-full rounded-md px-4 py-2" placeholder="20" value="20" inputmode="numeric">
+                        </div>
+                    </div>
+                    <div class="mt-6 border-t border-b border-card py-6">
+                        <p class="text-sm text-subtle">Your family would need this much to replace your income:</p>
+                        <p id="income-replacement-amount" class="text-4xl font-bold my-1 text-teal-strong" aria-live="polite">$1,600,000</p>
+                    </div>
+                    <div class="mt-6">
+                        <label for="coverage-amount" class="block text-sm font-medium text-subtle text-left mb-1">Life Insurance Coverage Amount</label>
+                         <div class="relative"><div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center"><span class="text-subtle sm:text-sm">$</span></div><input type="text" id="coverage-amount" class="calculator-input block w-full rounded-md pl-7 pr-4 py-2 text-lg font-semibold"></div>
+                    </div>
+                     <div id="paycheck-summary" class="mt-4 text-center text-main" aria-live="polite">
+                        <p>This provides your family with a tax-free "paycheck" of approximately <strong class="text-heading">$6,667</strong> per month for <strong class="text-heading">20</strong> years, ensuring their life can continue with the support you always planned to provide.</p>
+                    </div>
+                    <a id="quote-button" href="form.html" class="cta-button mt-8 text-lg w-full sm:w-auto"><span>Design My Legacy Plan</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300" role="contentinfo">
+        <div class="container mx-auto max-w-6xl py-12 px-4">
+            <div class="text-center mb-8"><a href="index.html" aria-label="Noble Life Co. Home"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. logo with a white shield icon" class="h-14 w-auto mb-2 mx-auto logo-white" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';"></a><p class="text-sm text-gray-400">A promise for their future.</p></div>
+            <div class="flex justify-center space-x-6 mb-8"><a href="terms.html" class="text-sm text-gray-400 hover:text-white">Terms of Service</a><a href="privacy.html" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a></div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-400">
+                 <div class="max-w-4xl mx-auto space-y-2">
+                    <p>© 2025 Noble Life Co. All rights reserved. <br>Not available in all states.</p>
+                    <p>Life insurance policies and their availability vary by state. Acceptance, coverage, and final rates are based on underwriting approval and factors including but not limited to age, gender, and health. All policies are issued by various highly-rated insurance carriers.</p>
+                    <p>By providing your information, you agree to be contacted by a licensed insurance professional about life insurance products and services, even if your number is on any state or federal "Do Not Call" list. This is an invitation to receive information about insurance coverage options, not an offer of insurance.</p>
+                    <p class="pt-6 text-gray-500 italic">"A good man leaves an inheritance to his children's children." - Proverbs 13:22</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition-all duration-300 opacity-0 transform translate-y-2 pointer-events-none" aria-label="Back to top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const debounce = (func, wait) => {
+                let timeout;
+                return (...args) => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                };
+            };
+            
+            const formatCurrency = (value) => {
+                const number = parseFloat(String(value).replace(/[^0-9.]+/g, ''));
+                return isNaN(number) ? '' : number.toLocaleString('en-US', { maximumFractionDigits: 0 });
+            };
+
+            const handleHeader = () => {
+                const header = document.getElementById('sticky-header');
+                const main = document.getElementById('main-content');
+                if (!header || !main) return;
+                const setPadding = () => main.style.paddingTop = `${header.offsetHeight}px`;
+                const setShadow = () => header.classList.toggle('shadow-lg', window.scrollY > 20);
+                setPadding();
+                setShadow();
+                window.addEventListener('resize', debounce(setPadding, 100));
+                window.addEventListener('scroll', debounce(setShadow, 50));
+            };
+
+            const handleBackToTop = () => {
+                const btn = document.getElementById('back-to-top');
+                if (!btn) return;
+                const toggleVisibility = () => {
+                    const isVisible = window.scrollY > 200;
+                    btn.classList.toggle('opacity-0', !isVisible);
+                    btn.classList.toggle('pointer-events-none', !isVisible);
+                };
+                btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+                window.addEventListener('scroll', debounce(toggleVisibility, 50));
+                toggleVisibility();
+            };
+
+            const handleThemeToggle = () => {
+                const btn = document.getElementById('theme-toggle');
+                if (!btn) return;
+                const lightIcon = document.getElementById('theme-icon-light');
+                const darkIcon = document.getElementById('theme-icon-dark');
+                const applyTheme = (theme) => {
+                    document.documentElement.dataset.theme = theme;
+                    localStorage.setItem('theme', theme);
+                    if (lightIcon) lightIcon.classList.toggle('hidden', theme === 'dark');
+                    if (darkIcon) darkIcon.classList.toggle('hidden', theme === 'light');
+                };
+                btn.addEventListener('click', () => {
+                    const newTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+                    applyTheme(newTheme);
+                });
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                applyTheme(savedTheme);
+            };
+
+            const handleLegacyTabs = () => {
+                const container = document.getElementById('legacy-paths');
+                if (!container) return;
+                const tabs = container.querySelectorAll('[role="tab"]');
+                const panels = container.querySelectorAll('[role="tabpanel"]');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        tabs.forEach(t => t.classList.remove('active'));
+                        panels.forEach(p => p.classList.remove('active'));
+                        tab.classList.add('active');
+                        const targetPanel = document.getElementById(tab.getAttribute('aria-controls'));
+                        if (targetPanel) targetPanel.classList.add('active');
+                        tabs.forEach(t => t.setAttribute('aria-selected', t === tab));
+                    });
+                });
+            };
+
+            const handleLegacyCalculator = () => {
+                const calculator = document.getElementById('legacy-calculator');
+                if (!calculator) return;
+                const incomeInput = document.getElementById('annualIncome');
+                const yearsInput = document.getElementById('protectionYears');
+                const replacementEl = document.getElementById('income-replacement-amount');
+                const coverageInput = document.getElementById('coverage-amount');
+                const paycheckSummary = document.getElementById('paycheck-summary');
+                const quoteButton = document.getElementById('quote-button');
+
+                const updateCalculator = () => {
+                    const income = parseFloat(incomeInput.value.replace(/,/g, '')) || 0;
+                    const years = parseInt(yearsInput.value, 10) || 0;
+                    const totalReplacement = income * years;
+                    replacementEl.textContent = `$${formatCurrency(totalReplacement)}`;
+                    if (document.activeElement !== coverageInput) {
+                        coverageInput.value = formatCurrency(totalReplacement);
+                    }
+                    const coverage = parseFloat(coverageInput.value.replace(/,/g, '')) || 0;
+                    const monthlyPaycheck = (coverage > 0 && years > 0) ? (coverage / years) / 12 : 0;
+                    const paycheckTextEl = paycheckSummary.querySelector('p');
+                    paycheckTextEl.innerHTML = `This provides your family with a tax-free "paycheck" of approximately <strong class="text-heading">$${formatCurrency(Math.round(monthlyPaycheck))}</strong> per month for <strong class="text-heading">${years}</strong> years, ensuring their life can continue with the support you always planned to provide.`;
+                    if (quoteButton) {
+                        quoteButton.href = `form.html?goal=Legacy&income=${income}&years=${years}&coverage=${coverage}`;
+                    }
+                };
+                
+                const handleCurrencyInput = (e) => {
+                    const input = e.target;
+                    const cursorPosition = input.selectionStart;
+                    const originalLength = input.value.length;
+                    input.value = formatCurrency(input.value);
+                    const newLength = input.value.length;
+                    input.setSelectionRange(cursorPosition + (newLength - originalLength), cursorPosition + (newLength - originalLength));
+                    debounce(updateCalculator, 300)();
+                };
+
+                incomeInput.addEventListener('input', handleCurrencyInput);
+                coverageInput.addEventListener('input', handleCurrencyInput);
+                yearsInput.addEventListener('input', updateCalculator);
+
+                updateCalculator();
+            };
+            
+            const handleScrollAnimations = () => {
+                const sections = document.querySelectorAll('.fade-in-section');
+                if (sections.length === 0) return;
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            };
+
+            handleHeader();
+            handleBackToTop();
+            handleThemeToggle();
+            handleLegacyTabs();
+            handleLegacyCalculator();
+            handleScrollAnimations();
+        });
+    </script>
+</body>
+</html>
