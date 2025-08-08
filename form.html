@@ -262,8 +262,8 @@
                         <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2" id="final-expense-label">Final Expense Planning</h2><p class="text-gray-500">Your preferences help us calculate the right coverage. Average burial costs are $9k-$12k, while cremation averages $3k-$6k.</p></div>
                         <div class="space-y-6">
                             <div role="radiogroup" aria-labelledby="final-expense-label"><label class="font-semibold text-sm">Have you decided between cremation or traditional burial?</label><div class="flex flex-col gap-3 mt-2"><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Burial" required class="sr-only"><span class="font-bold flex-grow">Planning on burial</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Cremation" required class="sr-only"><span class="font-bold flex-grow">Planning on cremation</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label><label class="card cursor-pointer flex items-center" tabindex="0"><input type="radio" name="burialType" value="Undecided" required class="sr-only"><span class="font-bold flex-grow">Haven't decided yet</span><div class="radio-custom"><svg class="w-4 h-4 checkmark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg></div></label></div><p class="error-message">Please select an option.</p></div>
+                        </div>
                     </div>
-                </div>
                 `,
                 lifeInsurance: `
                     <div class="form-step" data-step-name="lifeInsurance" data-step-title="Legacy Plan" data-phase="2">
@@ -385,31 +385,31 @@
                     <div class="form-step" data-step-name="contact" data-step-title="Contact Information" data-phase="4">
                         <div class="text-left mb-8 mt-4"><h2 class="text-4xl font-serif font-bold mb-2">Where can we send your plan?</h2><p class="text-gray-500">A licensed agent will reach out with your personalized quote.</p></div>
                         <div class="space-y-4">
-                              <div><label for="first-name" class="font-semibold text-sm sr-only">First Name</label><input type="text" id="first-name" name="firstName" required class="form-input" placeholder="First Name"><p class="error-message">This field is required.</p></div>
-                              <div><label for="last-name" class="font-semibold text-sm sr-only">Last Name</label><input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Last Name"><p class="error-message">This field is required.</p></div>
-                              <div><label for="phone" class="font-semibold text-sm sr-only">Phone Number</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="Phone Number"><p class="error-message">Please enter a valid phone number.</p></div>
-                              <div><label for="email" class="font-semibold text-sm sr-only">Email Address</label><input type="email" id="email" name="email" required class="form-input" placeholder="Email Address"><p class="error-message" id="email-error">Please enter a valid email address.</p></div>
-                              <div><label for="state" class="font-semibold text-sm sr-only">State</label><select id="state" name="state" required class="form-input"><option value="">Select a state...</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><p class="error-message">Please select a state.</p></div>
-                              <div class="relative flex items-start pt-4 border-t">
-                                  <div class="flex h-6 items-center">
-                                      <input id="mail-plan-checkbox" name="mailPlan" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500">
-                                  </div>
-                                  <div class="ml-3 text-sm leading-6">
-                                      <label for="mail-plan-checkbox" class="font-medium text-gray-900 cursor-pointer">Yes, please mail me a printed copy of my plan options.</label>
-                                  </div>
-                              </div>
-                              <div id="address-fields" class="hidden space-y-4 ml-9">
-                                  <p id="mail-plan-confirmation" class="text-xs text-gray-500 hidden">Great! We'll mail your personalized plan booklet within 3-5 business days.</p>
-                                  <div><label for="street-address" class="sr-only">Street address</label><input type="text" name="streetAddress" id="street-address" class="form-input" placeholder="Street address"><p class="error-message">This field is required.</p></div>
-                                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                      <div><label for="city" class="sr-only">City</label><input type="text" name="city" id="city" class="form-input" placeholder="City"><p class="error-message">This field is required.</p></div>
-                                      <div><label for="zip-code" class="sr-only">ZIP / Postal code</label><input type="text" name="zipCode" id="zip-code" class="form-input" placeholder="ZIP / Postal code"><p class="error-message">This field is required.</p></div>
-                                  </div>
-                              </div>
-                              <div class="mt-6 p-4 bg-gray-50 rounded-lg flex items-center gap-4 border border-gray-200">
-                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 002.166 5c0 1.606.346 3.138.956 4.533 1.141 2.586 3.06 4.739 5.884 6.354a1.001 1.001 0 001.19 0c2.824-1.615 4.743-3.768 5.884-6.354.61-1.395.956-2.927.956-4.533A11.954 11.954 0 0010 1.944zM9 13a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM10 4a1 1 0 011 1v3a1 1 0 11-2 0V5a1 1 0 011-1z" clip-rule="evenodd" /></svg>
-                                  <p class="text-xs text-gray-500">Your information is secure. We use 256-bit SSL encryption and will never sell your data.</p>
-                              </div>
+                                <div><label for="first-name" class="font-semibold text-sm sr-only">First Name</label><input type="text" id="first-name" name="firstName" required class="form-input" placeholder="First Name"><p class="error-message">This field is required.</p></div>
+                                <div><label for="last-name" class="font-semibold text-sm sr-only">Last Name</label><input type="text" id="last-name" name="lastName" required class="form-input" placeholder="Last Name"><p class="error-message">This field is required.</p></div>
+                                <div><label for="phone" class="font-semibold text-sm sr-only">Phone Number</label><input type="tel" id="phone" name="phone" required class="form-input" placeholder="Phone Number"><p class="error-message">Please enter a valid phone number.</p></div>
+                                <div><label for="email" class="font-semibold text-sm sr-only">Email Address</label><input type="email" id="email" name="email" required class="form-input" placeholder="Email Address"><p class="error-message" id="email-error">Please enter a valid email address.</p></div>
+                                <div><label for="state" class="font-semibold text-sm sr-only">State</label><select id="state" name="state" required class="form-input"><option value="">Select a state...</option><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="CA">California</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="OH">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PA">Pennsylvania</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><p class="error-message">Please select a state.</p></div>
+                                <div class="relative flex items-start pt-4 border-t">
+                                    <div class="flex h-6 items-center">
+                                        <input id="mail-plan-checkbox" name="mailPlan" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-teal-600 focus:ring-teal-500">
+                                    </div>
+                                    <div class="ml-3 text-sm leading-6">
+                                        <label for="mail-plan-checkbox" class="font-medium text-gray-900 cursor-pointer">Yes, please mail me a printed copy of my plan options.</label>
+                                    </div>
+                                </div>
+                                <div id="address-fields" class="hidden space-y-4 ml-9">
+                                    <p id="mail-plan-confirmation" class="text-xs text-gray-500 hidden">Great! We'll mail your personalized plan booklet within 3-5 business days.</p>
+                                    <div><label for="street-address" class="sr-only">Street address</label><input type="text" name="streetAddress" id="street-address" class="form-input" placeholder="Street address"><p class="error-message">This field is required.</p></div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div><label for="city" class="sr-only">City</label><input type="text" name="city" id="city" class="form-input" placeholder="City"><p class="error-message">This field is required.</p></div>
+                                        <div><label for="zip-code" class="sr-only">ZIP / Postal code</label><input type="text" name="zipCode" id="zip-code" class="form-input" placeholder="ZIP / Postal code"><p class="error-message">This field is required.</p></div>
+                                    </div>
+                                </div>
+                                <div class="mt-6 p-4 bg-gray-50 rounded-lg flex items-center gap-4 border border-gray-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 002.166 5c0 1.606.346 3.138.956 4.533 1.141 2.586 3.06 4.739 5.884 6.354a1.001 1.001 0 001.19 0c2.824-1.615 4.743-3.768 5.884-6.354.61-1.395.956-2.927.956-4.533A11.954 11.954 0 0010 1.944zM9 13a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zM10 4a1 1 0 011 1v3a1 1 0 11-2 0V5a1 1 0 011-1z" clip-rule="evenodd" /></svg>
+                                    <p class="text-xs text-gray-500">Your information is secure. We use 256-bit SSL encryption and will never sell your data.</p>
+                                </div>
                         </div>
                     </div>
                 `,
@@ -647,6 +647,9 @@
                 }
             };
 
+            // --- FIX START: This function has been updated to be more robust. ---
+            // It now checks if the price quote is a valid number before trying to display it.
+            // This prevents errors on the summary page if the calculation fails for any reason.
             const generatePlan = (data) => {
                 mainContent.style.display = 'none';
                 planOutputContainer.style.display = 'block';
@@ -655,7 +658,12 @@
                 const coverage = data.coverage || '100000';
                 const illustrativeQuote = calculateIllustrativeQuote(data.age, data.health.gender, data.health.smoking, parseInt(coverage), data.goal);
                 
-                // CHANGE: This entire HTML block has been redesigned for better UX/UI
+                // Check if the returned quote is a valid number.
+                const isQuoteValid = illustrativeQuote && !isNaN(parseFloat(illustrativeQuote));
+                // Safely prepare the dollar and cent parts for display.
+                const dollars = isQuoteValid ? illustrativeQuote.split('.')[0] : 'N/A';
+                const cents = isQuoteValid ? illustrativeQuote.split('.')[1] : '';
+
                 const redesignedPlanHTML = `
                     <div class="no-print mb-6 flex justify-end items-center">
                         <button onclick="window.print()" class="bg-gray-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors flex items-center gap-2">
@@ -681,7 +689,7 @@
                                 </div>
                                 <div class="mt-8 border-t border-b border-gray-200 py-6 max-w-md mx-auto">
                                     <h3 class="text-sm font-bold text-gray-500 uppercase tracking-widest text-center">Preferred Rate Estimate</h3>
-                                    <p class="text-6xl font-bold text-gray-900 mt-2 text-center">$${illustrativeQuote.split('.')[0]}<span class="text-3xl font-medium text-gray-500">.${illustrativeQuote.split('.')[1]}/mo</span></p>
+                                    <p class="text-6xl font-bold text-gray-900 mt-2 text-center">$${dollars}${isQuoteValid ? `<span class="text-3xl font-medium text-gray-500">.${cents}/mo</span>` : ''}</p>
                                     <p class="text-sm text-gray-600 mt-4 text-center">For a <span class="font-bold">$${parseInt(coverage).toLocaleString()}</span> ${data.goal.replace(/([A-Z])/g, ' $1').trim()} plan.</p>
                                 </div>
                                 
@@ -696,7 +704,7 @@
                                         <span>I can do more</span>
                                     </div>
                                     <div class="mt-4 text-center">
-                                        <p>Your preferred monthly budget is: <strong id="budget-display" class="text-xl font-bold text-gray-800">$${illustrativeQuote}</strong></p>
+                                        <p>Your preferred monthly budget is: <strong id="budget-display" class="text-xl font-bold text-gray-800">${isQuoteValid ? '$' + illustrativeQuote : 'N/A'}</strong></p>
                                     </div>
                                     <div class="mt-6 text-center">
                                         <button id="confirm-budget-btn" class="bg-gray-800 text-white font-bold py-2 px-5 rounded-lg hover:bg-gray-700 transition-colors text-sm">Confirm & Send My Preference</button>
@@ -755,12 +763,20 @@
                 const confirmationMsg = document.getElementById('budget-confirmation-msg');
 
                 if (budgetSlider && budgetDisplay && confirmBtn) {
-                    const baseQuote = parseFloat(illustrativeQuote);
-                    budgetSlider.addEventListener('input', () => {
-                        const percentage = parseInt(budgetSlider.value, 10) / 100;
-                        const newBudgetValue = (baseQuote * percentage).toFixed(2);
-                        budgetDisplay.textContent = `$${newBudgetValue}`;
-                    });
+                    // Only enable the budget slider if the initial quote was valid.
+                    if (isQuoteValid) {
+                        const baseQuote = parseFloat(illustrativeQuote);
+                        budgetSlider.addEventListener('input', () => {
+                            const percentage = parseInt(budgetSlider.value, 10) / 100;
+                            const newBudgetValue = (baseQuote * percentage).toFixed(2);
+                            budgetDisplay.textContent = `$${newBudgetValue}`;
+                        });
+                    } else {
+                        budgetSlider.disabled = true;
+                        confirmBtn.disabled = true;
+                        confirmBtn.style.opacity = '0.5';
+                        confirmBtn.style.cursor = 'not-allowed';
+                    }
 
                     confirmBtn.addEventListener('click', async () => {
                         const finalBudgetValue = budgetDisplay.textContent;
@@ -782,6 +798,7 @@
                     faqContainer.innerHTML = faqs.map(faq => `<details class="faq-item bg-gray-50 rounded-lg border p-4"><summary class="font-semibold text-gray-800 flex justify-between items-center">${faq.q}<svg class="w-5 h-5 text-gray-500 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></summary><div class="mt-3 text-gray-600 text-sm leading-relaxed">${faq.a}</div></details>`).join('');
                 }
             };
+            // --- END OF FIX ---
 
             // --- INITIALIZATION ---
             initializeForm();
