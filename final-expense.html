@@ -31,18 +31,17 @@
    
    <style>
         :root {
-            --teal-50: #f0fdfa; --teal-100: #ccfbf1; --teal-200: #99f6e4; --teal-600: #0d9488; --teal-700: #0f766e; --teal-800: #115e59; --teal-500: #14b8a6;
-            --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-200: #e5e7eb; --gray-700: #374151; --gray-800: #1f2937; --gray-900: #111827;
-            --bg-color: #ffffff; --text-color: #374151;
+            --teal-50: #f0fdfa; --teal-600: #0d9488; --teal-700: #0f766e; --teal-500: #14b8a6;
+            --bg-color: #fdfdfd; --text-color: #1f2937;
             --header-bg: rgba(255, 255, 255, 0.8);
-            --section-bg: var(--gray-50); --card-bg: #ffffff;
-            --heading-color: var(--gray-900); --subtle-text: #6b7280;
-            --border-color: var(--gray-200);
-            --track-bg-color: var(--teal-100);
-            --thumb-color: var(--teal-600);
+            --section-bg: #f9fafb; --card-bg: #ffffff;
+            --heading-color: #111827; --subtle-text: #6b7280;
+            --border-color: #e5e7eb;
+            --track-bg-color: #d1fae5;
+            --thumb-color: #0d9488;
         }
         [data-theme="dark"] {
-            --bg-color: var(--gray-900); --text-color: #d1d5db;
+            --bg-color: #111827; --text-color: #d1d5db;
             --header-bg: rgba(17, 24, 39, 0.85);
             --section-bg: #1f2937; --card-bg: #283347;
             --heading-color: #f9fafb; --subtle-text: #9ca3af;
@@ -61,23 +60,22 @@
             background-color: var(--teal-600); color: white;
             font-weight: 700; padding: 1rem 2.5rem; border-radius: 0.5rem;
             transition: all 0.3s ease; text-decoration: none;
-            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2), 0 1px 2px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
             display: inline-flex; align-items: center; justify-content: center;
         }
         .cta-button:hover {
-            background-color: var(--teal-700); transform: translateY(-3px);
-            box-shadow: 0 7px 25px rgba(13, 148, 136, 0.25), 0 3px 5px rgba(0,0,0,0.08);
+            background-color: var(--teal-700); transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.3);
         }
         .cta-button:focus-visible { outline: 3px solid var(--teal-600); outline-offset: 2px; }
-        .section-padding { padding: 5rem 1.5rem; }
-        @media (min-width: 768px) { .section-padding { padding: 7rem 1rem; } }
+        .section-padding { padding: 4rem 1.5rem; }
+        @media (min-width: 768px) { .section-padding { padding: 6rem 1rem; } }
         #sticky-header { background-color: var(--header-bg); }
         .logo-teal { transition: filter 0.3s ease; }
         [data-theme="dark"] .logo-teal { filter: brightness(0) invert(1); }
-        .hero-gradient { background-color: var(--bg-color); background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 92%, 0.25) 0, transparent 45%); }
-        [data-theme="dark"] .hero-gradient { background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 20%, 0.15) 0, transparent 45%); }
+        .hero-gradient { background-color: var(--bg-color); background-image: radial-gradient(circle at 80% 20%, hsla(175, 84%, 88%, 0.1) 0, transparent 40%); }
         #testimonials, #how-it-works, #final-cta { background-color: var(--section-bg); }
-        .inner-shadow-bottom { box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.03); }
+        .inner-shadow-bottom { box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.05); }
         input[type="range"] {
             -webkit-appearance: none; appearance: none;
             width: 100%; height: 8px;
@@ -90,20 +88,20 @@
             width: 24px; height: 24px;
             background: var(--thumb-color);
             cursor: pointer; border-radius: 50%;
-            border: 4px solid var(--card-bg);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 3px solid var(--card-bg);
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
         input[type="range"]::-moz-range-thumb {
             width: 24px; height: 24px;
             background: var(--thumb-color);
             cursor: pointer; border-radius: 50%;
-            border: 4px solid var(--card-bg);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 3px solid var(--card-bg);
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
         }
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
         .fade-in-section.is-visible {
             opacity: 1;
@@ -117,8 +115,7 @@
         .divide-card { border-color: var(--border-color); }
         .text-teal-strong { color: var(--teal-600); }
         [data-theme="dark"] .text-teal-strong { color: var(--teal-500); }
-        .soft-shadow { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07); }
-        .soft-shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07); }
+        [data-theme="dark"] .signature-image { filter: invert(1) brightness(1.5); }
     </style>
      <!-- SEO: JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -153,29 +150,18 @@
     <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
     /></noscript>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17447405875">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17447405875');
-</script>
 </head>
 <body class="antialiased text-main">
 
     <!-- Header -->
     <header id="sticky-header" class="backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm" role="banner">
-        <nav class="container mx-auto max-w-7xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
+        <nav class="container mx-auto max-w-6xl px-4 py-3 flex justify-between items-center" aria-label="Main Navigation">
             <a href="index.html" aria-label="Noble Life Co. Home">
                 <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 md:h-16 w-auto logo-teal" onerror="this.onerror=null;this.src='https://placehold.co/240x64/0d9488/ffffff?text=Noble+Life+Co.';">
             </a>
             <div class="flex items-center space-x-4">
-                <a href="form.html?goal=FinalExpense" class="cta-button !py-3 !px-6 text-base hidden sm:inline-flex">Get My Free Quote</a>
-                <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-400" aria-label="Toggle dark mode">
+                <a href="form.html?goal=FinalExpense" class="cta-button !py-3 !px-8 text-base hidden sm:inline-flex">Get My Free Quote</a>
+                <button id="theme-toggle" class="p-2 rounded-full text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-400" aria-label="Toggle dark mode">
                     <svg id="theme-icon-light" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     <svg id="theme-icon-dark" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                 </button>
@@ -186,18 +172,19 @@
     <main id="main-content">
         <!-- Hero Section -->
         <section id="hero" class="section-padding hero-gradient" role="region" aria-labelledby="hero-heading">
-            <div class="container mx-auto max-w-7xl">
+            <div class="container mx-auto max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div class="text-center md:text-left">
                         <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold text-heading leading-tight">I'm Mike, and I'm dedicated to helping families find peace of mind.</h1>
-                        <p class="mt-6 text-lg md:text-xl text-main max-w-xl mx-auto md:mx-0">When you're gone, ensure your family receives a check to celebrate your life, not a bill to pay for it. A final expense plan is a simple, loving way to cover funeral costs and leave behind a legacy of care.</p>
+                        <p class="mt-4 text-lg md:text-xl text-main max-w-xl mx-auto md:mx-0">When you're gone, ensure your family receives a check to celebrate your life, not a bill to pay for it. A final expense plan is a simple, loving way to cover funeral costs and leave behind a legacy of care.</p>
                         
-                        <div class="mt-8 flex flex-col items-center md:items-start">
-                            <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1753964280/MICAHAsset_3_3x-8_lydt2b.png" alt="Mike Henry Signature" class="w-40" loading="lazy" decoding="async">
+                        <!-- Signature Block -->
+                        <div class="mt-6 flex flex-col items-center md:items-start">
+                            <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1753964280/MICAHAsset_3_3x-8_lydt2b.png" alt="Mike Henry Signature" class="w-40 signature-image" loading="lazy" decoding="async">
                             <p class="text-sm text-subtle mt-1 font-semibold">Mike Henry, Founder of Noble Life Co.</p>
                         </div>
                         
-                        <a href="form.html?goal=FinalExpense" class="cta-button inline-flex items-center justify-center mt-10 text-lg">
+                        <a href="form.html?goal=FinalExpense" class="cta-button inline-flex items-center justify-center mt-8 text-lg">
                             <span>Get My Free Quote</span>
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                         </a>
@@ -214,8 +201,8 @@
         </section>
 
         <!-- Trust & Credibility Section -->
-        <section class="py-12 bg-white dark:bg-gray-800 inner-shadow-bottom fade-in-section" role="region" aria-label="Trusted Carriers">
-            <div class="container mx-auto max-w-6xl text-center">
+        <section class="py-12 bg-gray-50 bg-card inner-shadow-bottom fade-in-section" role="region" aria-label="Trusted Carriers">
+            <div class="container mx-auto max-w-5xl text-center">
                 <h2 class="text-sm font-bold text-subtle tracking-widest uppercase">Access to Over 30+ of America's Most Trusted Carriers</h2>
                 <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center px-4">
                     <figure class="flex justify-center items-center h-20"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/mutual-removebg-preview_jyfzme.png" alt="Mutual of Omaha Logo" class="max-h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" decoding="async"><figcaption class="sr-only">Mutual of Omaha</figcaption></figure>
@@ -228,21 +215,20 @@
 
         <!-- Testimonials Section -->
         <section id="testimonials" class="section-padding fade-in-section">
-            <div class="container mx-auto max-w-7xl">
+            <div class="container mx-auto max-w-6xl">
                 <div class="text-center max-w-3xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-serif font-bold text-heading">Trusted by Families Like Yours</h2>
-                    <p class="mt-4 text-lg text-main">We're honored to have helped families secure their legacy and find peace of mind.</p>
+                    <p class="mt-4 text-lg text-main">We're honored to have helped countless families secure their legacy and find peace of mind.</p>
                 </div>
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Testimonial 1 -->
-                    <div class="bg-card p-8 rounded-xl soft-shadow-lg border border-card flex flex-col relative overflow-hidden">
-                        <svg class="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-32 h-32 text-gray-100 dark:text-gray-700/50" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 2.5a2.5 2.5 0 00-5 0v10a2.5 2.5 0 005 0V2.5zM15.5 2.5a2.5 2.5 0 00-5 0v10a2.5 2.5 0 005 0V2.5z"></path></svg>
-                        <div class="flex text-yellow-400 mb-4 z-10">
-                            <!-- 5 Stars -->
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    <div class="bg-card p-6 rounded-lg shadow-lg border border-card flex flex-col">
+                        <div class="flex text-yellow-400 mb-4">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         </div>
-                        <p class="text-main flex-grow italic z-10">"Mike made the whole process so easy to understand. We finally have peace of mind knowing our kids won't have to worry. I can't recommend him enough."</p>
-                        <div class="mt-6 flex items-center pt-6 border-t border-card z-10">
+                        <p class="text-main flex-grow italic">"Mike made the whole process so easy to understand. We finally have peace of mind knowing our kids won't have to worry. I can't recommend him enough."</p>
+                        <div class="mt-6 flex items-center pt-4 border-t border-card">
                             <img src="https://placehold.co/48x48/e2e8f0/4a5568?text=MK" class="w-12 h-12 rounded-full mr-4" alt="Mary K." onerror="this.onerror=null;this.src='https://placehold.co/48x48';">
                             <div>
                                 <p class="font-bold text-heading">Mary K.</p>
@@ -251,13 +237,12 @@
                         </div>
                     </div>
                     <!-- Testimonial 2 -->
-                    <div class="bg-card p-8 rounded-xl soft-shadow-lg border border-card flex flex-col relative overflow-hidden">
-                        <svg class="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-32 h-32 text-gray-100 dark:text-gray-700/50" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 2.5a2.5 2.5 0 00-5 0v10a2.5 2.5 0 005 0V2.5zM15.5 2.5a2.5 2.5 0 00-5 0v10a2.5 2.5 0 005 0V2.5z"></path></svg>
-                        <div class="flex text-yellow-400 mb-4 z-10">
+                    <div class="bg-card p-6 rounded-lg shadow-lg border border-card flex flex-col">
+                        <div class="flex text-yellow-400 mb-4">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         </div>
-                        <p class="text-main flex-grow italic z-10">"After my father passed, I realized I needed a plan of my own. Mike found an affordable policy that fits my budget perfectly. The process was simple enough."</p>
-                        <div class="mt-6 flex items-center pt-6 border-t border-card z-10">
+                        <p class="text-main flex-grow italic">"After my father passed, I realized I needed a plan of my own. Mike found an affordable policy that fits my budget perfectly. The process was so simple."</p>
+                        <div class="mt-6 flex items-center pt-4 border-t border-card">
                             <img src="https://placehold.co/48x48/e2e8f0/4a5568?text=DJ" class="w-12 h-12 rounded-full mr-4" alt="David J." onerror="this.onerror=null;this.src='https://placehold.co/48x48';">
                             <div>
                                 <p class="font-bold text-heading">David J.</p>
@@ -266,13 +251,12 @@
                         </div>
                     </div>
                     <!-- Testimonial 3 -->
-                    <div class="bg-card p-8 rounded-xl soft-shadow-lg border border-card flex flex-col relative overflow-hidden">
-                        <svg class="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-32 h-32 text-gray-100 dark:text-gray-700/50" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 2.5a2.5 2.5 0 00-5 0v10a2.5 2.5 0 005 0V2.5zM15.5 2.5a2.5 2.5 0 00-5 0v10a2.5 2.5 0 005 0V2.5z"></path></svg>
-                        <div class="flex text-yellow-400 mb-4 z-10">
+                    <div class="bg-card p-6 rounded-lg shadow-lg border border-card flex flex-col">
+                        <div class="flex text-yellow-400 mb-4">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                         </div>
-                        <p class="text-main flex-grow italic z-10">"I was worried about the medical side of things, but was so relieved to find out one wasn't needed. The approval was fast, and now my final wishes are secured."</p>
-                        <div class="mt-6 flex items-center pt-6 border-t border-card z-10">
+                        <p class="text-main flex-grow italic">"I was worried about the medical exam, but was so relieved to find out one wasn't needed. The approval was fast, and now my final wishes are secured."</p>
+                        <div class="mt-6 flex items-center pt-4 border-t border-card">
                             <img src="https://placehold.co/48x48/e2e8f0/4a5568?text=SH" class="w-12 h-12 rounded-full mr-4" alt="Susan H." onerror="this.onerror=null;this.src='https://placehold.co/48x48';">
                             <div>
                                 <p class="font-bold text-heading">Susan H.</p>
@@ -285,61 +269,105 @@
         </section>
 
         <!-- The Problem & The Proof Section -->
-        <section id="how-it-works" class="section-padding fade-in-section">
+        <section id="how-it-works" class="section-padding fade-in-section" role="region" aria-labelledby="problem-heading">
             <div class="container mx-auto max-w-5xl">
                 <div class="text-center max-w-3xl mx-auto">
-                    <div class="flex justify-center mb-12"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455582/pexels-cottonbro-7086039_1_bgcjfw.jpg" alt="A serene, happy family, representing the peace of mind that comes with planning." class="w-56 h-56 rounded-full object-cover border-8 border-white dark:border-gray-800 shadow-xl" loading="lazy" decoding="async"></div>
+                    <div class="flex justify-center mb-12"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752455582/pexels-cottonbro-7086039_1_bgcjfw.jpg" alt="A serene, happy family, representing the peace of mind that comes with planning." class="w-56 h-56 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-lg" loading="lazy" decoding="async"></div>
                     <h2 id="problem-heading" class="text-3xl md:text-4xl font-serif font-bold text-heading">Ensure Your Final Wishes Are a Gift, Not a Burden.</h2>
                     <p class="mt-4 text-lg text-main">During a time of grief, the last thing your family should face is a financial crisis. Unfortunately, many common safety nets fall short, leaving loved ones to cover thousands in funeral costs.</p>
-                    <div class="mt-12 text-left bg-card p-6 sm:p-8 rounded-2xl soft-shadow-lg border-card border divide-y divide-card">
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-700 shadow-sm"><span class="text-2xl font-bold text-orange-600 dark:text-orange-400">$255</span></div><div><h3 class="font-bold text-heading text-lg">Social Security</h3><p class="text-main mt-1">Provides a one-time payment of just <strong class="text-orange-600 dark:text-orange-400 font-bold">$255</strong>—an amount that hasn't changed since 1954.</p></div></div>
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-700 shadow-sm"><span class="text-2xl font-bold text-blue-600 dark:text-blue-400">$796</span></div><div><h3 class="font-bold text-heading text-lg">Veterans Benefits (VA)</h3><p class="text-main mt-1">For most non-service-related deaths, the VA provides only <strong class="text-blue-600 dark:text-blue-400 font-bold">$796</strong>.</p></div></div>
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-700 shadow-sm"><span class="text-2xl font-bold text-yellow-600 dark:text-yellow-400">$1.2k</span></div><div><h3 class="font-bold text-heading text-lg">GoFundMe</h3><p class="text-main mt-1">The average campaign raises only <strong class="text-yellow-600 dark:text-yellow-400 font-bold">$1,200</strong>, leaving a huge shortfall.</p></div></div>
-                        <div class="flex items-center space-x-4 sm:space-x-6 py-5"><div class="flex-shrink-0 w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-700 shadow-sm"><span class="text-2xl font-bold text-red-600 dark:text-red-400">$0</span></div><div><h3 class="font-bold text-heading text-lg">Medicare</h3><p class="text-main mt-1">Provides <strong class="text-red-600 dark:text-red-400 font-bold">$0</strong> for funeral expenses. Health insurance does not cover funeral costs.</p></div></div>
-                    </div>
+                    <div class="max-w-2xl w-full">
+    <!-- The component now includes dark mode classes that will be activated when the 'dark' class is on the <html> tag. -->
+    <div class="mt-10 text-left bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl shadow-gray-200/60 dark:shadow-none border border-gray-200 dark:border-gray-700 divide-y divide-gray-200 dark:divide-gray-700">
+        
+        <!-- Social Security Item -->
+        <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+            <div class="flex-shrink-0 w-20 h-20 bg-orange-100 dark:bg-orange-900/50 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-sm">
+                <span class="text-2xl font-bold text-orange-600 dark:text-orange-300">$255</span>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-100 text-lg">Social Security</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">Provides a one-time payment of just <strong class="text-orange-600 dark:text-orange-300 font-bold">$255</strong>—an amount that hasn't changed since 1954.</p>
+            </div>
+        </div>
+
+        <!-- Veterans Benefits (VA) Item -->
+        <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+            <div class="flex-shrink-0 w-20 h-20 bg-sky-100 dark:bg-sky-900/50 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-sm">
+                <span class="text-2xl font-bold text-sky-600 dark:text-sky-300">$796</span>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-100 text-lg">Veterans Benefits (VA)</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">For most non-service-related deaths, the VA provides only <strong class="text-sky-600 dark:text-sky-300 font-bold">$796</strong>.</p>
+            </div>
+        </div>
+        
+        <!-- GoFundMe Item -->
+        <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+            <div class="flex-shrink-0 w-20 h-20 bg-amber-100 dark:bg-amber-900/50 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-sm">
+                <span class="text-2xl font-bold text-amber-600 dark:text-amber-300">$1.2k</span>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-100 text-lg">GoFundMe</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">The average campaign raises only <strong class="text-amber-600 dark:text-amber-300 font-bold">$1,200</strong>, leaving a huge shortfall.</p>
+            </div>
+        </div>
+
+        <!-- Medicare Item -->
+        <div class="flex items-center space-x-4 sm:space-x-6 py-5">
+            <div class="flex-shrink-0 w-20 h-20 bg-rose-100 dark:bg-rose-900/50 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-sm">
+                <span class="text-2xl font-bold text-rose-600 dark:text-rose-300">$0</span>
+            </div>
+            <div>
+                <h3 class="font-bold text-gray-800 dark:text-gray-100 text-lg">Medicare</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">Provides <strong class="text-rose-600 dark:text-rose-300 font-bold">$0</strong> for funeral expenses. Health insurance does not cover funeral costs.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
                     <p class="text-center text-xs text-subtle mt-8">Sources: Social Security Administration, U.S. Department of Veterans Affairs, GoFundMe data analysis.</p>
                 </div>
             </div>
         </section>
         
         <!-- Final CTA Section -->
-        <section id="final-cta" class="section-padding fade-in-section">
+        <section id="final-cta" class="section-padding fade-in-section" role="region" aria-labelledby="cta-heading">
             <div class="container mx-auto max-w-3xl text-center">
                 <h2 id="cta-heading" class="text-3xl md:text-4xl font-serif font-bold text-heading">Lock In Your Rate Before Your Next Birthday</h2>
                 <p class="mt-2 text-md text-subtle max-w-2xl mx-auto">Rates increase with age. Securing your plan now guarantees the lowest possible premium for life.</p>
                 <p class="mt-4 text-lg text-main max-w-2xl mx-auto">Your age is the primary factor in your premium. The rate you lock in today is guaranteed for life, but waiting means it will only cost more. See your personalized rate in seconds.</p>
                 
-                <div class="mt-12 bg-card p-8 rounded-2xl soft-shadow-lg border-card border max-w-2xl mx-auto">
+                <div class="mt-12 bg-white bg-card p-8 rounded-2xl shadow-xl border-card border max-w-2xl mx-auto">
                     <div class="grid grid-cols-2 gap-4 items-end">
                         <div class="text-left">
-                            <label for="ageSlider" class="text-sm font-semibold text-subtle">Your Current Age</label>
+                            <label for="ageSlider" class="text-sm text-subtle">Your Current Age</label>
                             <p id="ageDisplay" class="text-3xl sm:text-4xl font-bold text-heading">55</p>
                         </div>
                         <div class="text-right">
-                            <p class="text-sm font-semibold text-subtle">Illustrative Monthly Payment</p>
+                            <p class="text-sm text-subtle">Illustrative Monthly Payment</p>
                             <p id="rateDisplay" class="text-3xl sm:text-4xl font-bold text-teal-strong">$42 / month</p>
                         </div>
                     </div>
                     <div class="mt-6">
                         <input type="range" min="50" max="85" value="55" id="ageSlider" class="w-full" aria-label="Adjust age to see illustrative monthly payment">
                     </div>
-                    <div id="tooltipContainer" class="mt-8 rounded-xl p-4 text-center transition-all duration-300" aria-live="polite">
-                        <!-- Content injected by JS -->
+                    <div id="tooltipContainer" class="mt-6 rounded-lg p-4 text-center transition-colors duration-300" aria-live="polite">
+                        <p id="savingsMessage"></p>
                     </div>
-                    <a href="form.html?goal=FinalExpense" class="cta-button inline-flex items-center justify-center mt-8 text-lg w-full sm:w-auto">
+                    <a href="form.html?goal=FinalExpense" class="cta-button inline-flex items-center justify-center mt-6 text-lg w-full sm:w-auto">
                         <span>Calculate My Final Rate</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                      </a>
-                     <p class="text-xs text-subtle mt-4">We absolutely NEVER sell or share your information, under any circumstances.</p>
+                     <p class="text-xs text-subtle mt-4">30-Day Money-Back Guarantee. No questions asked.</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="bg-gray-800 text-gray-300" role="contentinfo">
-        <div class="container mx-auto max-w-7xl py-12 px-4">
+        <div class="container mx-auto max-w-6xl py-12 px-4">
             <div class="text-center mb-8"><a href="index.html" aria-label="Noble Life Co. Home"><img src="https://res.cloudinary.com/dse1cikja/image/upload/v1752589770/DIRECTAsset_16_2x-8_ikik2p.png" alt="Noble Life Co. Logo" class="h-14 w-auto mb-2 mx-auto logo-white" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://placehold.co/240x56/e5e7eb/9ca3af?text=Noble+Life+Co.';"></a><p class="text-sm text-gray-400">A promise for their future.</p></div>
-            <div class="flex justify-center space-x-6 mb-8"><a href="terms.html" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a><a href="privacy.html" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a></div>
+            <div class="flex justify-center space-x-6 mb-8"><a href="terms.html" class="text-sm text-gray-400 hover:text-white">Terms of Service</a><a href="privacy.html" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a></div>
             <div class="mt-8 pt-8 border-t border-gray-700 text-center text-xs text-gray-400">
                  <div class="max-w-4xl mx-auto space-y-2">
                     <p>© 2025 Noble Life Co. All rights reserved. <br>Not available in all states.</p>
@@ -390,6 +418,7 @@
                 const ageDisplay = document.getElementById('ageDisplay');
                 const rateDisplay = document.getElementById('rateDisplay');
                 const tooltipContainer = document.getElementById('tooltipContainer');
+                const savingsMessage = document.getElementById('savingsMessage');
 
                 const calculateRate = (age) => 30 * Math.pow(1.07, age - 50);
 
@@ -399,28 +428,23 @@
                     const currentRate = calculateRate(age);
                     rateDisplay.textContent = `$${Math.round(currentRate)} / month`;
                     
-                    if (tooltipContainer) {
+                    if (tooltipContainer && savingsMessage) {
                         const isDark = document.documentElement.dataset.theme === 'dark';
-                        let color, icon, message;
-                        
                         if (age <= 80) {
                             const costOfWaiting = (calculateRate(age + 1) - currentRate) * 12;
-                            message = `Waiting one year could cost <strong>$${Math.round(costOfWaiting)} more annually.</strong> Lock in your rate at age <strong>${age}</strong>.`;
-                            color = age <= 65 ? 'green' : 'yellow';
-                            icon = `<svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+                            savingsMessage.innerHTML = `Waiting one year could cost <strong>$${Math.round(costOfWaiting)} more annually.</strong> Lock in your rate at age <strong>${age}</strong>.`;
+                            const color = age <= 65 ? 'green' : 'yellow';
+                            tooltipContainer.className = `mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-${color}-100 text-${color}-800`;
+                             if (isDark) {
+                                tooltipContainer.classList.add('dark:bg-opacity-20', `dark:text-${color}-300`);
+                            }
                         } else {
-                            message = `At age <strong>${age}</strong>, options are limited and costs are higher. Act now to ensure you're protected.`;
-                            color = 'red';
-                            icon = `<svg class="w-6 h-6 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`;
+                            savingsMessage.innerHTML = `At age <strong>${age}</strong>, options are limited and costs are higher. Act now to ensure you're protected.`;
+                            tooltipContainer.className = 'mt-6 rounded-lg p-4 text-center transition-colors duration-300 bg-red-100 text-red-800';
+                            if (isDark) {
+                                tooltipContainer.classList.add('dark:bg-opacity-20', 'dark:text-red-300');
+                            }
                         }
-
-                        tooltipContainer.className = `mt-8 rounded-xl p-4 text-center transition-all duration-300 border bg-${color}-50 border-${color}-200 text-${color}-800`;
-                        if (isDark) {
-                            tooltipContainer.classList.remove(`bg-${color}-50`, `border-${color}-200`, `text-${color}-800`);
-                            tooltipContainer.classList.add(`dark:bg-${color}-900/20`, `dark:border-${color}-700/50`, `dark:text-${color}-200`);
-                        }
-                        
-                        tooltipContainer.innerHTML = `<div class="flex items-center justify-center">${icon}<span>${message}</span></div>`;
                     }
                 };
                 ageSlider.addEventListener('input', updateSimulator);
