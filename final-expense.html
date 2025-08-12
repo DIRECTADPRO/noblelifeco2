@@ -135,21 +135,23 @@
       }
     }
     </script>
+    <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '315290065977990'); // Your Pixel ID
-      fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '739513858958033');
+    fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=315290065977990&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=739513858958033&ev=PageView&noscript=1"
     /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body class="antialiased text-main">
 
@@ -174,7 +176,12 @@
         <section id="hero" class="section-padding hero-gradient" role="region" aria-labelledby="hero-heading">
             <div class="container mx-auto max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="text-center md:text-left">
+                    <!-- IMAGE COLUMN - Appears first on mobile -->
+                    <div class="flex justify-center p-4 md:order-last">
+                         <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1754581419/IMAGEAsset_2_3x-8_l1m83o.png" class="rounded-lg shadow-2xl w-full max-w-md" alt="Mike Henry, founder of Noble Life Co." loading="eager" decoding="async">
+                    </div>
+                    <!-- TEXT COLUMN - Appears second on mobile -->
+                    <div class="text-center md:text-left md:order-first">
                         <h1 id="hero-heading" class="text-4xl lg:text-5xl font-serif font-bold text-heading leading-tight">I'm Mike, and I'm dedicated to helping families find peace of mind.</h1>
                         <p class="mt-4 text-lg md:text-xl text-main max-w-xl mx-auto md:mx-0">When you're gone, ensure your family receives a check to celebrate your life, not a bill to pay for it. A final expense plan is a simple, loving way to cover funeral costs and leave behind a legacy of care.</p>
                         
@@ -192,9 +199,6 @@
                             <div class="flex items-center"><svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>Your Rate is Locked-In for Life</span></div>
                             <div class="flex items-center"><svg class="w-5 h-5 text-teal-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span>No Medical Exam to Qualify</span></div>
                         </div>
-                    </div>
-                    <div class="flex justify-center p-4">
-                         <img src="https://res.cloudinary.com/dse1cikja/image/upload/v1754581419/IMAGEAsset_2_3x-8_l1m83o.png" class="rounded-lg shadow-2xl w-full max-w-md" alt="Close-up of an older couple's hands, showing their wedding rings and a lifetime of commitment." loading="eager" decoding="async">
                     </div>
                 </div>
             </div>
