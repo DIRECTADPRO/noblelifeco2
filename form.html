@@ -556,7 +556,7 @@
                 // --- END GOOGLE ADS CONVERSION ---
 
                 formData.leadTimestamp = new Date().toISOString();
-                const webhookUrl = https://hooks.zapier.com/hooks/catch/19410211/u6jbd5o/;
+                const webhookUrl = 'https://hooks.zapier.com/hooks/catch/19410211/u6jbd5o/';
                 console.log("Sending data to Zapier:", JSON.stringify(formData, null, 2));
                 try {
                     await fetch(webhookUrl, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData), });
